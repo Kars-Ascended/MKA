@@ -3,6 +3,7 @@
     --secondary-color: #c08080;
     --accent-color: #342250;
 
+    --light-almost-black: #363636;
     --almost-black: #1a1a1a;
     --almost-white: #f0f0f0;
 }
@@ -21,7 +22,7 @@ body {
     background-color: var(--almost-black);
 }
 
-input, select, button {
+input, select, .button, .main{
     border-radius: 0.5em;
     padding: 0.4em;
 }

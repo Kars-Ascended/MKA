@@ -5,6 +5,8 @@
 </head>
 <body>
     <p>test</p>
-
+    <div class="main">
+        <h1 centre>Test</h1>
+    </div>
 </body>
 </html>

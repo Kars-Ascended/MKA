@@ -1,5 +1,17 @@
+.main {
+    margin: auto;
+    width: 70vw; min-height: 5em;
+    background-color: var(--light-almost-black);
+    border: 1px solid var(--accent-color);
+}
+
+
 .nav a, button {
     background-color: var(--accent-color);
     border-radius: 0.5em;
     padding: 0.5em 1em;
 }
+
+[centre] {
+    text-align: center;
+  }
