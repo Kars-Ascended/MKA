@@ -11,9 +11,9 @@ $headers = fgetcsv($file);  // Skip the header row
 // Prepare the SQL statement for upsert (INSERT OR REPLACE)
 $stmt = $db->prepare("
     INSERT OR REPLACE INTO tracks (
-        album, track_number, track_title, duration, lyrics, spotify_link, youtube_link, path, explicit, volume
+        album, track_number, track_title, duration, lyrics, spotify_link, youtube_link, path, explicit, volume, discog
     ) VALUES (
-        :album, :track_number, :track_title, :duration, :lyrics, :spotify_link, :youtube_link, :path, :explicit, :volume
+        :album, :track_number, :track_title, :duration, :lyrics, :spotify_link, :youtube_link, :path, :explicit, :volume, :discog
     )
 ");
 
@@ -30,6 +30,7 @@ while (($row = fgetcsv($file)) !== FALSE) {
     $stmt->bindValue(':path', $row[7]);
     $stmt->bindValue(':explicit', $row[8] == 'TRUE' ? 1 : 0);  // Convert TRUE/FALSE to 1/0
     $stmt->bindValue(':volume', $row[9] == 'TRUE' ? 1 : 0);  // Convert TRUE/FALSE to 1/0
+    $stmt->bindValue(':discog', $row[10]);
 
     // Execute the SQL statement
     $stmt->execute();

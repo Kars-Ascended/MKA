@@ -1,12 +1,10 @@
-<?php include '../backend/table_display.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include '../backend/meta-include.php'; ?>
+    <?php include '../backend/table_display.php'; ?>
 </head>
 <body>
-
     <h1>Music Archive</h1>
 
     <!-- Filter Form -->

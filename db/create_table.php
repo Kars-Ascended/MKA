@@ -15,6 +15,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS tracks (
     path TEXT,
     explicit BOOLEAN,
     volume BOOLEAN,
+    discog TEXT, -- Main | Pre-2010 | Remix | Single | Cover --
     UNIQUE(album, track_number)  -- This ensures no duplicate album/track entries
 )");
 

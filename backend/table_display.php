@@ -31,6 +31,11 @@ if (!empty($_GET['lyrics'])) {
     $params[':lyrics'] = '%' . $_GET['lyrics'] . '%';
 }
 
+if (!empty($_GET['discog'])) {
+    $conditions[] = "discog = :discog";
+    $params[':discog'] = $_GET['discog'];
+}
+
 // Combine conditions into SQL query
 $where = $conditions ? 'WHERE ' . implode(' AND ', $conditions) : '';
 $query = "SELECT * FROM tracks $where ORDER BY album, track_number";

@@ -1,19 +1,25 @@
-<?php include '../backend/table_display.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include '../backend/meta-include.php'; ?>
+    <?php include '../backend/table_display.php'; ?>
 </head>
 <body>
-
     <h1>Music Archive</h1>
 
     <!-- Filter Form -->
     <form method="get">
         <label>
-            Album: <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
+            Album:
+            <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
         </label>
+
+        <label>
+            Search Title:
+            <input type="text" name="title" value="<?php echo htmlspecialchars($_GET['title'] ?? ''); ?>">
+        </label>
+
         <label>
             Explicit:
             <select name="explicit">
@@ -22,8 +28,21 @@
                 <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
         </label>
+
         <label>
-            Loud / Breakcore:
+            Discog type:
+            <select name="discog">
+                <option value="">-- Any --</option>
+                <option value="Main" <?php if (($_GET['discog'] ?? '') === 'Main') echo 'selected'; ?>>Main</option>
+                <option value="Pre-2010" <?php if (($_GET['discog'] ?? '') === 'Pre-2010') echo 'selected'; ?>>Pre-2010</option>
+                <option value="Remix" <?php if (($_GET['discog'] ?? '') === 'Remix') echo 'selected'; ?>>Remix</option>
+                <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
+                <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
+            </select>
+        </label>
+
+        <label>
+            Breakcore:
             <select name="volume">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
@@ -31,10 +50,6 @@
             </select>
         </label>
         
-        <label>
-            Search Title:
-            <input type="text" name="title" value="<?php echo htmlspecialchars($_GET['title'] ?? ''); ?>">
-        </label>
         <button type="submit">Filter</button>
     </form>
 
@@ -50,6 +65,7 @@
             <th>YouTube</th>
             <th>Explicit?</th>
             <th>Loud / Breakcore?</th>
+            <th>Discog Type</th>
         </tr>
 
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
@@ -62,6 +78,7 @@
             <td><?php echo !empty($row['youtube_link']) ? "<a href=\"" . htmlspecialchars($row['youtube_link']) . "\" target=\"_blank\">YouTube</a>" : ""; ?></td>
             <td><?php echo $row['explicit'] ? 'Yes' : 'No'; ?></td>
             <td><?php echo $row['volume'] ? 'Yes' : 'No'; ?></td>
+            <td><?php echo htmlspecialchars($row['discog']); ?></td>
         </tr>
         <?php endwhile; ?>
 

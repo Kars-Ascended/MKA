@@ -1,164 +1,308 @@
-ALBUM,TRACK #,TRACK TITLE,DURATION,Lyrics,spotify_link,youtube_link,path,explicit,volume
-D E Δ T H,001,"Inhale, Exhale",4:43:87,"""Rub the salt into my wound \n This is what I've done to you \n You left because you were not strong \n Don’t hold your breath, I won't be long \n \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you can trust \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you, can, trust \n \n Broken glass beneath my feet \n I will not admit defeat \n The sun burns deep into my eyes \n I will not give into lies \n \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you can trust \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you, can, trust""",https://open.spotify.com/track/1CXR1WOvb9E8RKbDC8LhZu,,,FALSE,FALSE
-D E Δ T H,002,Someday,3:41:26,,,,,,
-D E Δ T H,003,Neverending Nights,5:12:05,,,,,,
-D E Δ T H,004,Bleed Black,4:24:05,,,,,,
-D E Δ T H,005,Haunts,4:24:05,,,,,,
-D E Δ T H,006,Gold,3:32:04,,,,,,
-D E Δ T H,007,Fight Your Friends,2:49:63,,,,,,
-D E Δ T H,008,Constellations,4:34:32,,,,,,
-D E Δ T H,009,White Tiger,2:50:35,,,,,,
-D E Δ T H,010,††,3:33:86,,,,,,
-D E Δ T H,011,Disintegrate,3:40:49,,,,,,
-D E Δ T H,012,It is all true,4:03:74,,,,,,
-D E Δ T H,013,Mirror Casket,3:30:62,,,,,,
-D E Δ T H,014,My Favorite Ghost,4:18:24,,,,,,
-D E Δ T H,015,Resurrection,5:47:11,,,,,,
-ETERNITY,001,44 Days,4:44:21,,,,,,
-ETERNITY,002,Messiah,5:49:13,,,,,,
-ETERNITY,003,Lost Children,5:27:14,,,,,,
-ETERNITY,004,Mother Mary,5:28:03,,,,,,
-ETERNITY,005,Night Terror,2:08:04,,,,,,
-ETERNITY,006,Don't Worry,4:28:51,,,,,,
-ETERNITY,007,Uncarresed,3:56:83,,,,,,
-ETERNITY,008,Evaporating Sun,5:51:48,,,,,,
-ETERNITY,009,Hands,4:31:49,,,,,,
-ETERNITY,010,Destroy Me,5:54:14,,,,,,
-ETERNITY,011,Carnations,3:58:13,,,,,,
-ETERNITY,012,A New Hour,5:12:05,,,,,,
-ETERNITY,013,Detach,4:16:03,,,,,,
-ETERNITY,014,Breath Control,4:11:11,,,,,,
-ETERNITY,015,Modern Romance,4:41:18,,,,,,
-LIFE,001,Insects,3:56:83,,,,,,
-LIFE,002,Heaven,4:33:26,,,,,,
-LIFE,003,Unstable,4:14:59,,,,,,
-LIFE,004,Sacrifice,5:29:18,,,,,,
-LIFE,005,Holy Death,3:36:05,,,,,,
-LIFE,006,Labyrinth,4:00:05,,,,,,
-LIFE,007,Scars,4:18:72,,,,,,
-LIFE,008,Drown,4:24:05,,,,,,
-LIFE,009,London,4:03:74,,,,,,
-LIFE,010,Dearlove,4:44:21,,,,,,
-LIFE,011,Choke,3:44:04,,,,,,
-LIFE,012,Years,3:34:20,,,,,,
-LIFE,013,Escape,4:57:65,,,,,,
-LIFE,014,Amnesia,3:54:70,,,,,,
-LIFE,015,Father,3:16:13,,,,,,
-TIME,001,XIII,3:36:19,,,,,,
-TIME,002,Rats,3:29:52,,,,,,
-TIME,003,Glow,3:44:76,,,,,,
-TIME,004,Hollow,4:12:17,,,,,,
-TIME,005,Devour,4:13:10,,,,,,
-TIME,006,Neglect,3:36:19,,,,,,
-TIME,007,Serenity,4:06:02,,,,,,
-TIME,008,Pathogen,3:19:68,,,,,,
-TIME,009,After Dark,4:19:18,,,,,,
-TIME,010,Laceration,3:40:51,,,,,,
-TIME,011,Black Truth,3:49:58,,,,,,
-TIME,012,Into Nothing,4:29:47,,,,,,
-TIME,013,Hold Me Down,3:56:71,,,,,,
-TIME,014,Shadow Dancer,4:15:48,,,,,,
-TIME,015,Child of the Earth,4:13:75,,,,,,
-FRAGMENTS,001,Hell,3:54:71,,,,,,
-FRAGMENTS,002,Mother,3:44:55,,,,,,
-FRAGMENTS,003,Entwine,3:49:62,,,,,,
-FRAGMENTS,004,Shanghai,4:08:92,,,,,,
-FRAGMENTS,005,I Lost You,3:52:99,,,,,,
-FRAGMENTS,006,Discolored,3:34:20,,,,,,
-FRAGMENTS,007,In Your Blood,3:44:05,,,,,,
-FRAGMENTS,008,Flowers For Boys,4:10:17,,,,,,
-FRAGMENTS,009,Cycle Of Violence,4:04:58,,,,,,
-FRAGMENTS,010,Spirit Of The Forest,4:29:14,,,,,,
--+,0,Hurt,4:33:26,,,,,,
--+,0,Let Go,4:04:54,,,,,,
--+,0,In Loving Memory,3:54:70,,,,,,
--+,0,Everything Will Be Okay,4:54:05,,,,,,
--+,0,The Rose Of Versailles,4:18:50,,,,,,
--+,0,The Glass Inside Your Skull,4:09:65,,,,,,
-A.I.,001,I...,1:44:04,,,,,,
-A.I.,002,Undo,2:51:05,,,,,,
-A.I.,003,Habits,4:13:75,,,,,,
-A.I.,004,Forget,3:31:80,,,,,,
-A.I.,005,give/take,3:46:32,,,,,,
-A.I.,006,No Heart,4:00:05,,,,,,
-A.I.,007,Malformed,3:16:10,,,,,,
-A.I.,008,Crisis Point,3:12:19,,,,,,
-A.I.,009,Earthstones,3:24:74,,,,,,
-A.I.,010,Lamentation,3:54:70,,,,,,
-A.I.,011,Dream Diver,4:23:16,,,,,,
-A.I.,012,Birds Of Prey,3:08:50,,,,,,
-A.I.,013,Healing Waters,3:24:48,,,,,,
-A.I.,014,Greater Than Us,4:17:32,,,,,,
-A.I.,015,I Hope You Fall Apart,4:10:18,,,,,,
-EPHEMERAL,001,Wait,4:22:20,,,,,,
-EPHEMERAL,002,From Liquid,3:45:50,,,,,,
-EPHEMERAL,003,My Weak Side,3:56:35,,,,,,
-EPHEMERAL,004,Disconnect Lover,4:23:16,,,,,,
-EPHEMERAL,005,The View Isn't The Same,3:56:66,,,,,,
-EPHEMERAL,006,Molt ,4:33:22,,,,,,
-EPHEMERAL,007,Trauma,3:30:96,,,,,,
-EPHEMERAL,008,Melting Core,4:08:93,,,,,,
-EPHEMERAL,009,Empty Phases,3:42:05,,,,,,
-EPHEMERAL,010,I Want To Hurt Myself,3:25:49,,,,,,
-EPHEMERAL,011,Rain,3:36:05,,,,,,
-EPHEMERAL,012,Be Alive,3:56:66,,,,,,
-EPHEMERAL,013,0% Angel,3:54:70,,,,,,
-EPHEMERAL,014,Puzzle Heart,4:07:54,,,,,,
-EPHEMERAL,015,Destruction Of Us,4:06:89,,,,,,
-EPHEMERAL,016,Cyst,3:38:86,,,,,,
-EPHEMERAL,017,Bullet,4:08:62,,,,,,
-EPHEMERAL,018,Immurement,4:07:42,,,,,,
-EPHEMERAL,019,In Your Arms,3:40:99,,,,,,
-EPHEMERAL,020,Died On The Land,3:18:89,,,,,,
-EPHEMERAL,021,Home,4:00:05,,,,,,
-EPHEMERAL,022,Anguish,3:26:26,,,,,,
-EPHEMERAL,023,Bloodletting,2:59:59,,,,,,
-EPHEMERAL,024,Not Dead Yet,3:34:58,,,,,,
-EPHEMERAL,025,I Want To Hurt You,3:18:89,,,,,,
-EPHEMERAL,026,Whip,4:00:05,,,,,,
-EPHEMERAL,027,Hornet,2:52:18,,,,,,
-EPHEMERAL,028,Make It Right,4:19:70,,,,,,
-EPHEMERAL,029,Sanctum Of Ash,3:52:03,,,,,,
-EPHEMERAL,030,I Did It All For You,4:56:04,,,,,,
-EPHEMERAL,N/A,Wound,3:18:31,,,,,,
-EPHEMERAL,N/A,Voices,4:30:26,,,,,,
-UNREAL,001,Flame,N/A,,,,,,
-UNREAL,002,Terror,N/A,,,,,,
-UNREAL,003,Martyr,N/A,,,,,,
-UNREAL,004,Memories,N/A,,,,,,
-UNREAL,005,Alter Ego,N/A,,,,,,
-UNREAL,006,6x6,N/A,,,,,,
-UNREAL,007,Below,N/A,,,,,,
-UNREAL,008,Dirt,N/A,,,,,,
-UNREAL,009,I'm Not Around,N/A,,,,,,
-UNREAL,010,Music Box,N/A,,,,,,
-UNREAL,011,Parasite,N/A,,,,,,
-UNREAL,012,Sand,N/A,,,,,,
-UNREAL,013,Torment,N/A,,,,,,
-UNREAL,014,Chainsaw,N/A,,,,,,
-UNREAL,015,Invisible,N/A,,,,,,
-UNREAL,016,My Head Hurts,N/A,,,,,TRUE,
-UNREAL,017,Part Of You,N/A,,,,,,
-UNREAL,018,Unreal,N/A,,,,,,
-UNREAL,019,Angels,N/A,,,,,,
-UNREAL,020,Sea Lion I Love You,N/A,,,,,,
-UNREAL,021,Glycerin,N/A,,,,,,
-UNREAL,022,Chrome,N/A,,,,,,
-UNREAL,023,Leave Everything,N/A,,,,,,
-UNREAL,024,Never,N/A,,,,,,
-UNREAL,025,Spin,N/A,,,,,,
-UNREAL,026,Annihilation,N/A,,,,,,
-UNREAL,027,Cold,N/A,,,,,,
-UNREAL,028,Good Enough,N/A,,,,,,
-UNREAL,029,Nightmare,N/A,,,,,TRUE,
-UNREAL,030,Reason,N/A,,,,,,
-UNREAL,031,Violence,N/A,,,,,,
-UNREAL,032,Bedroom Popstar,N/A,,,,,,
-UNREAL,033,Crying,N/A,,,,,TRUE,
-UNREAL,034,Heavy,N/A,,,,,,
-UNREAL,035,What I Want,N/A,,,,,,
-UNREAL,036,The Things I Do,N/A,,,,,,
-UNREAL,037,Remind,N/A,,,,,,
-UNREAL,038,Veil,N/A,,,,,,
-UNREAL,039,No Longer Human,N/A,,,,,,
-UNREAL,040,Perpetual,N/A,,,,,,
+ALBUM,TRACK #,TRACK TITLE,DURATION,Lyrics,spotify_link,youtube_link,path,explicit,volume,discog
+D E Δ T H,001,"Inhale, Exhale",4:43:87,"""Rub the salt into my wound \n This is what I've done to you \n You left because you were not strong \n Don’t hold your breath, I won't be long \n \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you can trust \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you, can, trust \n \n Broken glass beneath my feet \n I will not admit defeat \n The sun burns deep into my eyes \n I will not give into lies \n \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you can trust \n Inhale exhale poison fumes \n Precious cancers inside you \n Inhale exhale magic dust \n We are strangers you, can, trust""",https://open.spotify.com/track/1CXR1WOvb9E8RKbDC8LhZu,,,FALSE,FALSE,Main
+D E Δ T H,002,Someday,3:41:26,"""I know what types of sounds you like \n 'Cause I watched you from the street last night \n And I know what types of colors you'd choose \n And I'm sure that I would choose them too \n  \n I'm losing my mind \n I'm losing all time \n The end is not here \n This is what I fear \n  \n Someday you will miss me and I won't be here \n And someday you'll miss me, I'll be gone \n And someday you will miss me and I won't be here \n And someday you will miss me and I'll be gone \n  \n Ooh ah-oh, oh oh oh \n Ooh ah-oh, oh oh oh \n  \n I'm losing my mind \n I'm losing all time \n The end is not here \n This is what I fear \n  \n Someday you will miss me and I won't be here \n And someday you'll miss me, I'll be gone \n And someday you will miss me and I won't be here \n And someday you will miss me and I'll be gone""",https://open.spotify.com/track/7gPO3Xx8ydPgwxxw0V18iV,,,,,Main
+D E Δ T H,003,Neverending Nights,5:12:05,"""From my sun-drenched window I look down at this frozen city \n I have given everything that I can give \n From my sun-drenched window I look down at this frozen city \n There is nothing left for me here \n  \n These bad days will end (Will end) \n These bad days will stop (Will stop) \n These bad days will end (Will end) \n These bad days will stop (Will stop) \n  \n City lights \n Cigarette smoke fills my empty lungs \n Lonely nights \n As I wait for you to come back home \n City lights \n Harmful ashes turn to tender dust \n Endless fights \n Just remember you are not alone \n  \n From my sun-drenched window I look down at this frozen city \n Everything just seems so vague \n From my sun-drenched window I look down at this frozen city \n I don't remember anything anymore \n  \n These bad days will end (Will end) \n These bad days will stop (Will stop) \n These bad days will end (Will end) \n These bad days will stop (Will stop) \n  \n City lights \n Cigarette smoke fills my empty lungs \n Lonely nights \n As I wait for you to come back home \n City lights \n Harmful ashes to to tender dust \n Endless fights \n Just remember you are not alone \n  \n (Ah-ah-oh) \n Just remember you are not alone \n (Ah-ah-oh) \n Just remember you are not alone \n (Ah-ah-oh) \n Just remember you are not alone \n (Ah-ah-oh) \n Just remember you are not alone""",https://open.spotify.com/track/4SbvHXjItGZLKxs5rnXvKd,,,,,Main
+D E Δ T H,004,Bleed Black,4:24:05,"""We lived our lives in black \n We lived our lives in black \n We lived our lives in black \n We lived our lives in black \n  \n You're gonna die \n You can't stop now \n The more you do the less you feel \n It's not enough \n They pulled you in \n But it's a lie, you cannot heal \n You're gonna die \n You can't stop now \n The more you do the less you feel \n It's not enough \n They pulled you in \n But it's a lie, you cannot heal \n  \n Open your eyes \n Take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take, take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take, take your meds \n Go back to sleep \n Then wake up dead \n  \n Nothing is wrong \n Too late to change \n You can't escape, can't help you now \n They'll lift you up \n They'll throw you down \n All senses fail into the ground \n Nothing is wrong \n Too late to change \n You can't escape \n Can't help you now \n They'll lift you up \n They'll throw you down \n All senses fail into the ground \n  \n Open your eyes \n Take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take, take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take your meds \n Go back to sleep \n Then wake up dead \n Open your eyes \n Take, take your meds \n Go back to sleep \n Then wake up dead""",https://open.spotify.com/track/6445BjY5Yzw0N6lSOStgRj,,,,,Main
+D E Δ T H,005,Haunts,4:24:05,"""One two three four  \n \nIt haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n It haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n Die  \n \nIt haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n It haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n Die \n  \n It haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n It haunts me \n When you taunt me \n Into darkness \n And it haunts me \n It haunts me so \n  \n Incandescent lights \n Show me what is right \n Incandescent lights \n Show me what is right \n Incandescent lights \n Show me what is right \n Incandescent lights \n Show me what is right""",https://open.spotify.com/track/3IVLIGUxRKGat9ilBF3f7F,,,,,Main
+D E Δ T H,006,Gold,3:32:04,"""I feel it coming on again \n The sadness, the tears \n I feel it coming on again \n My demons, my fears \n  \n As my face grows old \n My blood runs cold \n The years of my youth \n Begin to unfold \n  \n Turn my friends into gold \n You'll never understand \n How can I be so cold? \n Your heart is in my hand \n Turn my friends into gold \n You’ll never understand \n How can I be so cold? \n Your heart is in my hand  \n \nI feel it coming on again \n The pain, the sorrow \n I feel it coming on again \n I'll be dead by tomorrow \n As my face grows old \n My blood runs cold \n The years of my youth \n Begin to unfold \n  \n Turn my friends into gold \n You'll never understand \n How can I be so cold? \n Your heart is in my hand \n Turn my friends into gold \n You’ll never understand \n How can I be so cold? \n Your heart is in my hand \n (Heart is in my hand)""",https://open.spotify.com/track/4Um9aN82L8X0W99DHn4rES,,,,,Main
+D E Δ T H,007,Fight Your Friends,2:49:63,"""Last night I broke all my teeth (Broke all my teeth) \n My smile laying there, right on the street \n And I watched you (I watched you) \n As you walked away (As you walked away) \n Bloodstains that color your hands (Color your hands) \n Did I not meet your highest demands? \n Am I worthy? (Worthy) \n Should I be alive? (Should I be alive?) \n  \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night) \n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends) \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night) \n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends) \n  \n Last night ended something like this (Like this) \n A deadly hug and a passionate kiss \n Your body (Body) \n Lays motionless (Lays motionless) \n Into the ocean with no regrets (No regrets) \n Walking alone as the sun resets \n Unworthy (Unworthy) \n I'm still alive (I'm still alive) \n  \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night) \n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends) \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night) \n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends) \n \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night)\n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends) \n If we're all even then why should we fight? (Why should we fight?) \n These endless battles in the heat of the night (Heat of the night) \n We are not enemies but let's just pretend (Let's just pretend) \n Pick up your weapons and fight your friends (Your friends)""",https://open.spotify.com/track/473AtOPLGvPSEjfAnmsVMg,,,,,Main
+D E Δ T H,008,Constellations,4:34:32,"""We stalk the night while the weak still sleep \n You are not here now, your lungs don't breathe \n We stalk the night while the weak still sleep \n You are not here now, your lungs don't breathe \n We stalk the night while the weak still sleep \n You are not here now, your lungs don't breathe \n We stalk the night while the weak still sleep \n You are not here now, your lungs don't breathe \n  \n These stars above (These stars above) \n These stars above (These stars above) \n Open your heart (Open your heart) \n To Lucifer (To Lucifer) \n These stars above (These stars above) \n These stars above (These stars above) \n Just play your part (Just play your part) \n You won't get hurt (You won't get hurt) \n  \n You fell so hard from the darkened sky \n You feel like you're dead, inside you cry \n You fell so hard from the darkened sky \n You feel like you're dead, inside you cry \n You fell so hard from the darkened sky \n You feel like you're dead, inside you cry \n You fell so hard from the darkened sky \n You feel like you're dead, inside you cry \n \n These stars above (These stars above) \n These stars above (These stars above) \n Open your heart (Open your heart) \n To Lucifer (To Lucifer) \n These stars above (These stars above) \n These stars above (These stars above) \n Just play your part (Just play your part) \n You won't get hurt (You won't get hurt)  \n \nI'd hurt myself to heal (Self to heal) \n I don't know what is real (What is real) \n I'd hurt myself to heal (Self to heal) \n I don't know what is real (What is real) \n  \n These stars above (These stars above) \n These stars above (These stars above) \n Open your heart (Open your heart) \n To Lucifer (To Lucifer) \n These stars above (These stars above) \n These stars above (These stars above) \n Just play your part (Just play your part) \n You won't get hurt (You won't get hurt) \n \n Make us city survivors \n (Make us city survivors) \n Make us city survivors \n (Make us city survivors) \n Make us city survivors \n (Make us city survivors) \n Make us city survivors \n (Make us city survivors)""",https://open.spotify.com/track/6KYIJsbCyu0lqCmxkkjHAX,,,,,Main
+D E Δ T H,009,White Tiger,2:50:35,"""I've fallen from the sky \n Only to protect \n Notice my third eye \n The vision is direct \n You are the math \n I need to learn \n You are the taste \n I need to test  \n \nWhen days are dark \n Our friends are few \n Bad days will end \n With the likes of you \n You're my mistake \n I've given up \n I'm yours to take \n I've lost all hope  \n \nWe will never know \n We will never know \n We will never know \n We will never know \n We will never know the answers \n We will never know the truth \n We will never know the answers \n We will never know the truth \n We will never know the answers \n We will never know the truth \n We will never know the answers \n We will never know the truth""",https://open.spotify.com/track/3tknp8Lm2Bxu4e0XIZ3CHJ,,,,,Main
+D E Δ T H,010,††,3:33:86,"""Cleanse my soul \n I am not pure \n Holy words \n Are not the cure \n Holy books \n I dare defy \n Without your god \n Your life's a lie \n  \n Cross (cross), cross (cross) \n I am blind \n Cross (cross), cross (cross) \n Leave behind \n Cross (cross), cross (cross) \n Take my hand \n Cross (cross), cross (cross) \n Demon's land \n Cross (cross), cross (cross) \n I am blind \n Cross (cross), cross (cross) \n Leave behind \n Cross (cross), cross (cross) \n Take my hand \n Cross (cross), cross (cross) \n Demon's land \n  \n Close my eyes \n An empty room \n Close my mind \n Inside the womb \n Unreal friends \n They might prevail \n These beliefs \n Are fairy tales \n  \n Cross (cross), cross (cross) \n I am blind \n Cross (cross), cross (cross) \n Leave behind \n Cross (cross), cross (cross) \n Take my hand \n Cross (cross), cross (cross) \n Demon's land \n Cross (cross), cross (cross) \n I am blind \n Cross (cross), cross (cross) \n Leave behind \n Cross (cross), cross (cross) \n Take my hand \n Cross (cross), cross (cross) \n Demon's land""",https://open.spotify.com/track/3F7OFiWhhqqZbd8cM4gKad,,,,,Main
+D E Δ T H,011,Disintegrate,3:40:49,"""Our tears, our laughter \n Time passes, hearts die \n We drown our sorrows \n In absence, they cry \n Our tears, our laughter \n Time passes, hearts die \n We drown our sorrows \n In absence, they cry \n  \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate  \n \nMy eyes, my lungs \n Nothing is left \n I've slept enough \n To feel like death \n My eyes, my lungs \n Nothing is left \n I've slept enough \n To feel like death \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n I'm ready to disintegrate \n  \n """,https://open.spotify.com/track/1PNBSZy8C4ZSk7i80V0yDr,,,,,Main
+D E Δ T H,012,It is all true,4:03:74,"""Finding out is not the same \n As holding out your hands \n For a stranger to take \n I know your plan \n  \n Into the dark \n I'm beginning to fear \n That my body is not alive \n These eyes are dry \n Waiting for sleep to take me by surprise \n  \n Send, send, sending out my heart \n Over pixelated screens \n Over telegraph \n Wires that no longer beep \n  \n Oh, oh, oh-oh-oh, oh \n Oh, oh, oh-oh-oh, oh \n Oh, oh, oh, oh-oh-oh, oh, oh \n Oh, oh, oh, oh-oh-oh, oh, oh \n  \n We are the monsters with no hearts \n (We are the monsters with no hearts) \n Break down emotions into little parts \n (Break down emotions into little parts) \n We are the monsters with no hearts \n (We are the monsters with no hearts) \n Break down emotions into little parts \n (Break down emotions into little parts) \n  \n Through my heart and through your head \n You shot me down, I shot you dead \n Through my heart and through your head \n You shot me down, I shot you dead \n  \n Oh, oh, oh-oh-oh, oh \n Oh, oh, oh-oh-oh, oh \n Oh, oh, oh, oh-oh-oh, oh, oh \n Oh, oh, oh, oh-oh-oh, oh, oh \n  \n We are the monsters with no hearts \n (We are the monsters with no hearts) \n Break down emotions into little parts \n (Break down emotions into little parts) \n We are the monsters with no hearts \n (We are the monsters with no hearts) \n Break down emotions into little parts \n (Break down emotions into little parts)""",https://open.spotify.com/track/1nPEAGLwAeIfwjlyH64xwS,,,,,Main
+D E Δ T H,013,Mirror Casket,3:30:62,"""Nine portraits painted \n (Nine portraits painted) \n Nearly complete \n (Nearly complete) \n These hands are tainted \n (These hands are tainted) \n Echoes repeat \n (Echoes repeat) \n Our bones are broken \n (Our bones are broken) \n Reflect my mind \n (Reflect my mind) \n These thoughts unspoken \n (These thoughts unspoken) \n Rot from inside \n  \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n \n Light hits the surface \n (Light hits the surface) \n I see the end \n (I see the end) \n Nothing will hurt us \n (Nothing will hurt us) \n Our hands defend \n (Our hands defend) \n Glass shards slice open \n (Glass shards slice open) \n My paper skin \n (My paper skin) \n My cuts will show them \n (My cuts will show them) \n That they can't win \n  \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n  \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet u-u-u-u-u-u-u-u \n  \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under \n Shatter, shatter, shatter \n Into fragments \n Scatter, scatter, scatter \n All the pieces \n Bury, bury, bury \n We're all corpses \n I'll shine when I'm six feet under""",https://open.spotify.com/track/4OLd8ZxUOgLzF4q56DJyMr,,,,,Main
+D E Δ T H,014,My Favorite Ghost,4:18:24,"""You tell me of your dreams \n (You tell me of your dreams) \n It's better when you're dead \n (It's better when you're dead) \n After all of these years \n (After all of these years) \n I'm still inside your head \n (I'm still inside your head) \n  \n Tell me who possesses you \n I won't say, I won't tell \n Tell me who possesses you \n I won't say, I won't tell \n  \n Nowhere to run \n Visions aren't clear \n The time has come \n Befriend your fears \n I've let you in \n Let's have a toast \n You have become \n My favorite ghost \n  \n I might be hard to find \n (I might be hard to find) \n Blood coursing through the veins \n (Blood coursing through the veins) \n Your heart's as black as mine \n (Your heart's as black as mine) \n A ribbon hides your pains \n (A ribbon hides your pains) \n  \n Tell me who possesses you \n I won't say, I won't tell \n Tell me who possesses you \n I won't say, I won't tell \n Tell me who possesses you \n I won't say, I won't tell \n Tell me who possesses you \n I won't say, I won't tell \n  \n Nowhere to run \n Visions aren't clear \n The time has come \n Befriend your fears \n I've let you in \n Let's have a toast \n You have become \n My favorite ghost \n """,https://open.spotify.com/track/7jNXWAajE4JWtxyfNYM27C,,,,,Main
+D E Δ T H,015,Resurrection,5:47:11,,https://open.spotify.com/track/5PSRPfE3EwRxh14holvptk,,,,,Main
+ETERNITY,001,44 Days,4:44:21,,https://open.spotify.com/track/4VpLMLQnwFOPsO5QoYkSp8,https://youtu.be/0qGcOZVAgBU,,,,Main
+ETERNITY,002,Messiah,5:49:13,,https://open.spotify.com/track/4dmxAuFQkHVqwNZ264DVrz,https://youtu.be/__W5YCaxsDE,,,,Main
+ETERNITY,003,Lost Children,5:27:14,,https://open.spotify.com/track/4A5o2VlPspuhhJDnLuzMPE,https://youtu.be/DGDWb1IkEGs,,,,Main
+ETERNITY,004,Mother Mary,5:28:03,,https://open.spotify.com/track/1dtXMb58PWopTTiVVHYQLh,https://youtu.be/vJe7diwiyHc,,,,Main
+ETERNITY,005,Night Terror,2:08:04,,https://open.spotify.com/track/64TlQf1KTADIstxeOaq68J,https://youtu.be/zmkmL4uyZ-s,,,,Main
+ETERNITY,006,Don't Worry,4:28:51,,https://open.spotify.com/track/7ryA7jzO8sQCyNmDsKNt8G,https://youtu.be/_1RLF6qQuck,,,,Main
+ETERNITY,007,Uncarresed,3:56:83,,https://open.spotify.com/track/1J134qaUgcU6NycjwQ3wbN,https://youtu.be/8DtGyNUINR8,,,,Main
+ETERNITY,008,Evaporating Sun,5:51:48,,https://open.spotify.com/track/3ovZLmvtCR5eD0egcU4fxR,https://youtu.be/joKG5D7JrYY,,,,Main
+ETERNITY,009,Hands,4:31:49,,https://open.spotify.com/track/1XuwUlBnqf7KUDZHuzqhX5,https://youtu.be/E0j58QxPRWo,,,,Main
+ETERNITY,010,Destroy Me,5:54:14,,https://open.spotify.com/track/4GFF8KTXPeL3Omy31aD8A4,https://youtu.be/9FSVPnVLUUQ,,,,Main
+ETERNITY,011,Carnations,3:58:13,,https://open.spotify.com/track/1bdjTrtZqdzEwFyTOIHAhe,https://youtu.be/JA-SrwdhtkI,,,,Main
+ETERNITY,012,A New Hour,5:12:05,,https://open.spotify.com/track/1rBFhvp9QskjiCt98xpos4,https://youtu.be/qovlQ1M-1R0,,,,Main
+ETERNITY,013,Detach,4:16:03,,https://open.spotify.com/track/3WUHmnPr9KD8gXpFaprU2q,https://youtu.be/oUbLePtJ5I0,,,,Main
+ETERNITY,014,Breath Control,4:11:11,,https://open.spotify.com/track/6k5koXHN3eGWfpVxnbcC62,https://youtu.be/PkMEYRnk9aY,,,,Main
+ETERNITY,015,Modern Romance,4:41:18,,https://open.spotify.com/track/0xx56LHkMfdCQgtQKI2u6K,https://youtu.be/po0hXk3X7Rk,,,,Main
+LIFE,001,Insects,3:56:83,,,,,,,Main
+LIFE,002,Heaven,4:33:26,,,,,,,Main
+LIFE,003,Unstable,4:14:59,,,,,,,Main
+LIFE,004,Sacrifice,5:29:18,,,,,,,Main
+LIFE,005,Holy Death,3:36:05,,,,,,,Main
+LIFE,006,Labyrinth,4:00:05,,,,,,,Main
+LIFE,007,Scars,4:18:72,,,,,,,Main
+LIFE,008,Drown,4:24:05,,,,,,,Main
+LIFE,009,London,4:03:74,,,,,,,Main
+LIFE,010,Dearlove,4:44:21,,,,,,,Main
+LIFE,011,Choke,3:44:04,,,,,,,Main
+LIFE,012,Years,3:34:20,,,,,,,Main
+LIFE,013,Escape,4:57:65,,,,,,,Main
+LIFE,014,Amnesia,3:54:70,,,,,,,Main
+LIFE,015,Father,3:16:13,,,,,,,Main
+TIME,001,XIII,3:36:19,,,,,,,Main
+TIME,002,Rats,3:29:52,,,,,,,Main
+TIME,003,Glow,3:44:76,,,,,,,Main
+TIME,004,Hollow,4:12:17,,,,,,,Main
+TIME,005,Devour,4:13:10,,,,,,,Main
+TIME,006,Neglect,3:36:19,,,,,,,Main
+TIME,007,Serenity,4:06:02,,,,,,,Main
+TIME,008,Pathogen,3:19:68,,,,,,,Main
+TIME,009,After Dark,4:19:18,,,,,,,Main
+TIME,010,Laceration,3:40:51,,,,,,,Main
+TIME,011,Black Truth,3:49:58,,,,,,,Main
+TIME,012,Into Nothing,4:29:47,,,,,,,Main
+TIME,013,Hold Me Down,3:56:71,,,,,,,Main
+TIME,014,Shadow Dancer,4:15:48,,,,,,,Main
+TIME,015,Child of the Earth,4:13:75,,,,,,,Main
+FRAGMENTS,001,Hell,3:54:71,,,,,,,Main
+FRAGMENTS,002,Mother,3:44:55,,,,,,,Main
+FRAGMENTS,003,Entwine,3:49:62,,,,,,,Main
+FRAGMENTS,004,Shanghai,4:08:92,,,,,,,Main
+FRAGMENTS,005,I Lost You,3:52:99,,,,,,,Main
+FRAGMENTS,006,Discolored,3:34:20,,,,,,,Main
+FRAGMENTS,007,In Your Blood,3:44:05,,,,,,,Main
+FRAGMENTS,008,Flowers For Boys,4:10:17,,,,,,,Main
+FRAGMENTS,009,Cycle Of Violence,4:04:58,,,,,,,Main
+FRAGMENTS,010,Spirit Of The Forest,4:29:14,,,,,,,Main
+-+,1,Hurt,4:33:26,,,,,,,Main
+-+,2,Let Go,4:04:54,,,,,,,Main
+-+,3,In Loving Memory,3:54:70,,,,,,,Main
+-+,4,Everything Will Be Okay,4:54:05,,,,,,,Main
+-+,5,The Rose Of Versailles,4:18:50,,,,,,,Main
+-+,6,The Glass Inside Your Skull,4:09:65,,,,,,,Main
+A.I.,001,I...,1:44:04,,,,,,,Main
+A.I.,002,Undo,2:51:05,,,,,,,Main
+A.I.,003,Habits,4:13:75,,,,,,,Main
+A.I.,004,Forget,3:31:80,,,,,,,Main
+A.I.,005,give/take,3:46:32,,,,,,,Main
+A.I.,006,No Heart,4:00:05,,,,,,,Main
+A.I.,007,Malformed,3:16:10,,,,,,,Main
+A.I.,008,Crisis Point,3:12:19,,,,,,,Main
+A.I.,009,Earthstones,3:24:74,,,,,,,Main
+A.I.,010,Lamentation,3:54:70,,,,,,,Main
+A.I.,011,Dream Diver,4:23:16,,,,,,,Main
+A.I.,012,Birds Of Prey,3:08:50,,,,,,,Main
+A.I.,013,Healing Waters,3:24:48,,,,,,,Main
+A.I.,014,Greater Than Us,4:17:32,,,,,,,Main
+A.I.,015,I Hope You Fall Apart,4:10:18,,,,,,,Main
+EPHEMERAL,001,Wait,4:22:20,,,,,,,Main
+EPHEMERAL,002,From Liquid,3:45:50,,,,,,,Main
+EPHEMERAL,003,My Weak Side,3:56:35,,,,,,,Main
+EPHEMERAL,004,Disconnect Lover,4:23:16,,,,,,,Main
+EPHEMERAL,005,The View Isn't The Same,3:56:66,,,,,,,Main
+EPHEMERAL,006,Molt ,4:33:22,,,,,,,Main
+EPHEMERAL,007,Trauma,3:30:96,,,,,,,Main
+EPHEMERAL,008,Melting Core,4:08:93,,,,,,,Main
+EPHEMERAL,009,Empty Phases,3:42:05,,,,,,,Main
+EPHEMERAL,010,I Want To Hurt Myself,3:25:49,,,,,,,Main
+EPHEMERAL,011,Rain,3:36:05,,,,,,,Main
+EPHEMERAL,012,Be Alive,3:56:66,,,,,,,Main
+EPHEMERAL,013,0% Angel,3:54:70,,,,,,,Main
+EPHEMERAL,014,Puzzle Heart,4:07:54,,,,,,,Main
+EPHEMERAL,015,Destruction Of Us,4:06:89,,,,,,,Main
+EPHEMERAL,016,Cyst,3:38:86,,,,,,,Main
+EPHEMERAL,017,Bullet,4:08:62,,,,,,,Main
+EPHEMERAL,018,Immurement,4:07:42,,,,,,,Main
+EPHEMERAL,019,In Your Arms,3:40:99,,,,,,,Main
+EPHEMERAL,020,Died On The Land,3:18:89,,,,,,,Main
+EPHEMERAL,021,Home,4:00:05,,,,,,,Main
+EPHEMERAL,022,Anguish,3:26:26,,,,,,,Main
+EPHEMERAL,023,Bloodletting,2:59:59,,,,,,,Main
+EPHEMERAL,024,Not Dead Yet,3:34:58,,,,,,,Main
+EPHEMERAL,025,I Want To Hurt You,3:18:89,,,,,,,Main
+EPHEMERAL,026,Whip,4:00:05,,,,,,,Main
+EPHEMERAL,027,Hornet,2:52:18,,,,,,,Main
+EPHEMERAL,028,Make It Right,4:19:70,,,,,,,Main
+EPHEMERAL,029,Sanctum Of Ash,3:52:03,,,,,,,Main
+EPHEMERAL,030,I Did It All For You,4:56:04,,,,,,,Main
+EPHEMERAL,N/A,Wound,3:18:31,,,,,,,Main
+EPHEMERAL,N/A,Voices,4:30:26,,,,,,,Main
+UNREAL,001,Flame,N/A,,,,,,,Main
+UNREAL,002,Terror,N/A,,,,,,,Main
+UNREAL,003,Martyr,N/A,,,,,,,Main
+UNREAL,004,Memories,N/A,,,,,,,Main
+UNREAL,005,Alter Ego,N/A,,,,,,,Main
+UNREAL,006,6x6,N/A,,,,,,,Main
+UNREAL,007,Below,N/A,,,,,,,Main
+UNREAL,008,Dirt,N/A,,,,,,,Main
+UNREAL,009,I'm Not Around,N/A,,,,,,,Main
+UNREAL,010,Music Box,N/A,,,,,,,Main
+UNREAL,011,Parasite,N/A,,,,,,,Main
+UNREAL,012,Sand,N/A,,,,,,,Main
+UNREAL,013,Torment,N/A,,,,,,,Main
+UNREAL,014,Chainsaw,N/A,,,,,,,Main
+UNREAL,015,Invisible,N/A,,,,,,,Main
+UNREAL,016,My Head Hurts,N/A,,,,,TRUE,,Main
+UNREAL,017,Part Of You,N/A,,,,,,,Main
+UNREAL,018,Unreal,N/A,,,,,,,Main
+UNREAL,019,Angels,N/A,,,,,,,Main
+UNREAL,020,Sea Lion I Love You,N/A,,,,,,,Main
+UNREAL,021,Glycerin,N/A,,,,,,,Main
+UNREAL,022,Chrome,N/A,,,,,,,Main
+UNREAL,023,Leave Everything,N/A,,,,,,,Main
+UNREAL,024,Never,N/A,,,,,,,Main
+UNREAL,025,Spin,N/A,,,,,,,Main
+UNREAL,026,Annihilation,N/A,,,,,,,Main
+UNREAL,027,Cold,N/A,,,,,,,Main
+UNREAL,028,Good Enough,N/A,,,,,,,Main
+UNREAL,029,Nightmare,N/A,,,,,TRUE,,Main
+UNREAL,030,Reason,N/A,,,,,,,Main
+UNREAL,031,Violence,N/A,,,,,,,Main
+UNREAL,032,Bedroom Popstar,N/A,,,,,,,Main
+UNREAL,033,Crying,N/A,,,,,TRUE,,Main
+UNREAL,034,Heavy,N/A,,,,,,,Main
+UNREAL,035,What I Want,N/A,,,,,,,Main
+UNREAL,036,The Things I Do,N/A,,,,,,,Main
+UNREAL,037,Remind,N/A,,,,,,,Main
+UNREAL,038,Veil,N/A,,,,,,,Main
+UNREAL,039,No Longer Human,N/A,,,,,,,Main
+UNREAL,040,Perpetual,N/A,,,,,,,Main
+Fold,001,Cautious,N/A,,,,,,,Pre-2010
+Fold,002,Wireless Wednesday,N/A,,,,,,,Pre-2010
+Fold,003,Fourty Knives,N/A,,,,,,,Pre-2010
+Fold,004,My Abstract Mind,N/A,,,,,,,Pre-2010
+BoxCore,001,Underground Cardboard Service,N/A,,,,,,,Pre-2010
+BoxCore,002,Memorial No.2,N/A,,,,,,,Pre-2010
+BoxCore,003,I Like You When You're Sad,N/A,,,,,,,Pre-2010
+BoxCore,004,Romancing Needle Fight,N/A,,,,,,,Pre-2010
+BoxCore,005,Pills And Drills,N/A,,,,,,,Pre-2010
+BoxCore,006,Why Did You Die?,N/A,,,,,,,Pre-2010
+Fortune Cookies,001,Kill Me With Your Love,N/A,,,,,,,Pre-2010
+Fortune Cookies,002,Glass Hearts,N/A,,,,,,,Pre-2010
+Fortune Cookies,003,A Clockwork Lovely,N/A,,,,,,,Pre-2010
+Fortune Cookies,004,We Are Murderers,N/A,,,,,,,Pre-2010
+Fortune Cookies,005,Obliteration Station,N/A,,,,,,,Pre-2010
+Fuck Around At 800BPM,001,Fuck Around At 800bpm,N/A,,,,,,,Pre-2010
+Fuck Around At 800BPM,002,Th3 Am3n Drugz,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,001,Intro,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,002,Big Hair,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,003,Crunchy Angel Skulls,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,004,Industrial Breakbeats,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,005,Memorial,N/A,,,,,,,Pre-2010
+Heaven Is For Sale,006,Shini Bana,N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,001,Kaylicore,N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,002,"Break It, Break It!",N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,003,NaniNane,N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,004,Monochromatic Love,N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,005,Infected Bloodstream,N/A,,,,,,,Pre-2010
+Me And My Chibi Anime Cat,006,Cuntface,N/A,,,,,TRUE,,Pre-2010
+Nintendo Beats,001,NintendoOnDrugz,N/A,,,,,,,Pre-2010
+Nintendo Beats,002,Bits Don't Lie,N/A,,,,,,,Pre-2010
+Nintendo Beats,003,Crazy,N/A,,,,,,,Pre-2010
+Nintendo Beats,004,Twilighttown Techno,N/A,,,,,,,Pre-2010
+Nintendo Beats,005,LoveParadeRemix,N/A,,,,,,,Pre-2010
+Nintendo Beats,006,Somebody Press Start,N/A,,,,,,,Pre-2010
+Prisonerr Of Breakcore,001,MumzNotHome,N/A,,,,,,,Pre-2010
+Prisonerr Of Breakcore,002,KittyCatDance,N/A,,,,,,,Pre-2010
+Prisonerr Of Breakcore,003,Starzrbliind,N/A,,,,,,,Pre-2010
+Satanic Breakbeats,001,Demonic Beatz,N/A,,,,,,,Pre-2010
+Satanic Breakbeats,002,God Payed Me To Kill,N/A,,,,,,,Pre-2010
+Satanic Breakbeats,003,Screaming Intestines,N/A,,,,,,,Pre-2010
+Satanic Breakbeats,004,A Myspace Predator,N/A,,,,,TRUE,,Pre-2010
+Satanic Breakbeats,005,Emowhore Samantha,N/A,,,,,TRUE,,Pre-2010
+Satanic Breakbeats,006,Miserable To You,N/A,,,,,,,Pre-2010
+Silent Hill Remixes,001,You're Still Not Here,N/A,,,,,,,Pre-2010
+Silent Hill Remixes,002,Theme Of Heather,N/A,,,,,,,Pre-2010
+Silent Hill Remixes,003,Letter To Heather,N/A,,,,,,,Pre-2010
+Anarchy Is For Lovers,001,Cemetary Lounge,N/A,,,,,,,Pre-2010
+Anarchy Is For Lovers,002,Die Together,N/A,,,,,,,Pre-2010
+Anarchy Is For Lovers,003,Coffins In The Sky,N/A,,,,,,,Pre-2010
+Anarchy Is For Lovers,004,Red Bandana,N/A,,,,,,,Pre-2010
+Anarchy Is For Lovers,005,Butterfly Suicide,N/A,,,,,,,Pre-2010
+Forever Nintendo,001,Cartridge,N/A,,,,,,,Pre-2010
+Forever Nintendo,002,Extra Lives,N/A,,,,,,,Pre-2010
+Forever Nintendo,003,Origami Octopus,N/A,,,,,,,Pre-2010
+Forever Nintendo,004,D-Pad Disco,N/A,,,,,,,Pre-2010
+Forever Nintendo,005,Press Start,N/A,,,,,,,Pre-2010
+Forever Nintendo,006,At The Gates Of Sanity,N/A,,,,,,,Pre-2010
+Forever Nintendo,007,Chasing Dreams,N/A,,,,,,,Pre-2010
+Forever Nintendo,008,Return To Vorkuta,N/A,,,,,,,Pre-2010
+Forever Nintendo,009,One Trillion Dollars (Remix),N/A,,,,,,,Pre-2010
+Forever Nintendo,010,Go Ask Alice!,N/A,,,,,,,Pre-2010
+Friend,001,I Am Dead,N/A,,,,,,,Pre-2010
+Friend,002,Airplane,N/A,,,,,,,Pre-2010
+Friend,003,Gravity,N/A,,,,,,,Pre-2010
+Friend,004,Photograph,N/A,,,,,,,Pre-2010
+Friend,005,Exclude My Prescence,N/A,,,,,,,Pre-2010
+Friend,006,Lifeform 5010,N/A,,,,,,,Pre-2010
+Gemini,001,Sleep,N/A,,,,,,,Pre-2010
+Gemini,002,Melancholy Thoughts,N/A,,,,,,,Pre-2010
+Gemini,003,Distant Emotions,N/A,,,,,,,Pre-2010
+Gemini,004,Glitched Happiness,N/A,,,,,,,Pre-2010
+Gemini,005,Parasite 044,N/A,,,,,,,Pre-2010
+Gemini,006,Metro Feline,N/A,,,,,,,Pre-2010
+Heart Of Darkness,001,Him,N/A,,,,,,,Pre-2010
+Heart Of Darkness,002,Moon Flower,N/A,,,,,,,Pre-2010
+Heart Of Darkness,003,Overdoser,N/A,,,,,,,Pre-2010
+Heart Of Darkness,004,Recycle,N/A,,,,,,,Pre-2010
+Heart Of Darkness,005,Violet,N/A,,,,,,,Pre-2010
+Heart Of Darkness,006,Water's Sorrow,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,001,The Skeleton Bride,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,002,Ride The Bass,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,003,Lemon Breakbeats,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,004,White Cat Symphony,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,005,Underground Hollister Kid,N/A,,,,,,,Pre-2010
+Pocket Sized Psycho,006,Windows XP Has The Palsey,N/A,,,,,,,Pre-2010
+Sorrow Underground,001,Sir William,N/A,,,,,,,Pre-2010
+Sorrow Underground,002,Lovely Skeleton,N/A,,,,,,,Pre-2010
+Sorrow Underground,003,Decompose,N/A,,,,,,,Pre-2010
+Sorrow Underground,004,Our Last Words,N/A,,,,,,,Pre-2010
+Sorrow Underground,005,Headshot,N/A,,,,,,,Pre-2010
+The Other Side,001,Cat's Sanctuary,N/A,,,,,,,Pre-2010
+The Other Side,002,Song Of Danbo,N/A,,,,,,,Pre-2010
+The Other Side,003,Ice Castle,N/A,,,,,,,Pre-2010
+The Other Side,004,Fatal Memories,N/A,,,,,,,Pre-2010
+The Other Side,005,Invisible Dream,N/A,,,,,,,Pre-2010
+The Other Side,006,When The Sky Falls,N/A,,,,,,,Pre-2010
+The Other Side,007,Maybe Tomorrow,N/A,,,,,,,Pre-2010
+The Other Side,008,Funeral For A Friend,N/A,,,,,,,Pre-2010
+The Other Side,009,Elephant On Wheels,N/A,,,,,,,Pre-2010
+The Other Side,010,Holographic Sanctuary,N/A,,,,,,,Pre-2010
+The Other Side,011,I Don't Want To Remember,N/A,,,,,,,Pre-2010
+"Hello, My Darling",001,Maybe Tomorrow,N/A,,,,,,,Pre-2010
+"Hello, My Darling",002,Funeral For A Friend,N/A,,,,,,,Pre-2010
+"Hello, My Darling",003,Elephant On Wheels,N/A,,,,,,,Pre-2010
+"Hello, My Darling",004,Holographic Sanctuary,N/A,,,,,,,Pre-2010
+"Hello, My Darling",005,I Don't Want To Remember,N/A,,,,,,,Pre-2010
+L.S.D,001,In Silence,N/A,,,,,,,Pre-2010
+L.S.D,002,Tears Of A Fallen Angel,N/A,,,,,,,Pre-2010
+L.S.D,003,Hallucinate,N/A,,,,,,,Pre-2010
+L.S.D,004,Kitten R.I.P,N/A,,,,,,,Pre-2010
+L.S.D,005,Courtney's Song,N/A,,,,,,,Pre-2010
+Scene Kids,001,Nemesis,N/A,,,,,,,Pre-2010
+Scene Kids,002,Dreams,N/A,,,,,,,Pre-2010
+Scene Kids,003,It's Barbie Bitch!,N/A,,,,,,,Pre-2010
+Scene Kids,004,Im So Scene,N/A,,,,,,,Pre-2010
+Scene Kids,005,I'm So Scene (Mr.Kitty Remix),N/A,,,,,,,Pre-2010
+Survive,001,Rebirth,N/A,,,,,,,Pre-2010
+Survive,002,Empty Spaces,N/A,,,,,,,Pre-2010
+Survive,003,Rainy Day,N/A,,,,,,,Pre-2010
+Survive,004,Ghost Mirror,N/A,,,,,,,Pre-2010
+Survive,005,Birds,N/A,,,,,,,Pre-2010
+Birds,001,Birds (Original),N/A,,,,,,,Pre-2010
+Birds,002,Birds (Disco),N/A,,,,,,,Pre-2010
+Birds,003,Birds (Chiptune),N/A,,,,,,,Pre-2010
+Birds,004,Birds (Part II),N/A,,,,,,,Pre-2010
+F.E.A.R.S,001,Ashes & Snow,N/A,,,,,,,Pre-2010
+F.E.A.R.S,002,Knives,N/A,,,,,,,Pre-2010
+F.E.A.R.S,003,Lion's Ambition,N/A,,,,,,,Pre-2010
+F.E.A.R.S,004,Mannequin,N/A,,,,,,,Pre-2010
+F.E.A.R.S,005,Awakening,N/A,,,,,,,Pre-2010
+Illusions,001,False Realities,N/A,,,,,,,Pre-2010
+Illusions,002,"Sunrise, Sunset",N/A,,,,,,,Pre-2010
+Illusions,003,Persistance Of Loss,N/A,,,,,,,Pre-2010
+Illusions,004,Embryo,N/A,,,,,,,Pre-2010
+Illusions,005,Without Identity,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,001,Exorcism,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,002,Wrists,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,003,Everything Will Be Okay,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,004,Scars,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,005,Shapeshift,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,006,Wander,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,007,For Stars Will Rise Again,N/A,,,,,,,Pre-2010
+Until Death Do Us Part,008,Until Death Do Us Part,N/A,,,,,,,Pre-2010
