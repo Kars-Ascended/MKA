@@ -1,0 +1,13 @@
+.nav {
+    position: absolute;
+    top:0; left:0;
+    width: 100vw;
+    height: 4em; /* Reflect this in the body padding-top */
+
+    line-height: 4em;
+    border-bottom: 1px solid var(--almost-white);
+
+    a {
+        margin: 1em;
+    }
+}

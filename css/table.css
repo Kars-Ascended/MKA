@@ -1,0 +1,23 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border: 1px solid gray; text-align: left; }
+th { background-color: var(--almost-black); }
+tr:nth-child(even) { background-color:#383838; }
+tr:nth-child(odd) { background-color:#242424; }
+
+label input, label select {background-color: var(--almost-black);}
+form button {background-color: var(--almost-black);}
+
+
+/* CSS for lyrics.php table */
+.lyrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.lyrics-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}

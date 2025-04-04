@@ -1,0 +1,5 @@
+.nav a, button {
+    background-color: var(--accent-color);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}

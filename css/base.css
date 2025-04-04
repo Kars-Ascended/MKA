@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #9c3d3d;
+    --secondary-color: #c08080;
+    --accent-color: #342250;
+
+    --almost-black: #1a1a1a;
+    --almost-white: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:white;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 4em; /* Space for the nav bar */
+
+    background-color: var(--almost-black);
+}
+
+input, select, button {
+    border-radius: 0.5em;
+    padding: 0.4em;
+}
