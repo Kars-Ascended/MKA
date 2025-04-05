@@ -5,7 +5,10 @@
     <?php include '../backend/table_display.php'; ?>
 </head>
 <body class="main">
-    <h1>Music Archive</h1>
+
+    <main-element>
+        <h1 center>Lyrics Archive</h1>
+    </main-element>
 
     <!-- Filter Form -->
     <form method="get">
@@ -28,7 +31,7 @@
             </select>
         </label>
 
-        <label>
+        <div class="option-dropdown">
             Discog type:
             <select name="discog">
                 <option value="">-- Any --</option>
@@ -38,7 +41,7 @@
                 <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
                 <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
             </select>
-        </label>
+        </div>
 
         <label>
             Breakcore:

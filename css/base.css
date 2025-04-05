@@ -8,8 +8,8 @@
     /* Colours */
     --main: #202030;
     --secondary: #39304A;
-    --accent: rgb(120, 60, 177);
-    --accent-secondary: #A1869E;
+    --accent: #783cb1;
+    --accent-secondary: #b338ec;
     --white: #F2F4F3;
 }
 
@@ -26,11 +26,15 @@ body {
     background-color: var(--main);
 }
 
-a {
+[button] {
     background-color: var(--accent);
     padding: 0.5em;
     border-radius: var(--main-br-radius);
     transition: all 0.3s ease-in-out;
+}
+
+a:not([button]){
+    color: var(--accent-secondary)
 }
 
 img { border-radius: var(--main-br-radius-x2); }

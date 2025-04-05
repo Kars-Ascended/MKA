@@ -4,7 +4,7 @@
 
 <!-- Page metadata -->
 <title>NAME REQUIRED</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets\icons\mk-logo.png" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
 <link rel="stylesheet" href="../css/base.css">
@@ -15,8 +15,8 @@
 
 <!-- NAV -->
 <div class="nav">
-    <a href="index.php">Home</a>
-    <a href="/db">db files</a>
-    <a href="songs.php">db table view</a>
-    <a href="lyrics.php">db table view (lyrics)</a>
+    <a button href="index.php">Home</a>
+    <a button href="songs.php">Songs Database</a>
+    <a button href="lyrics.php">Lyrics Database</a>
+    <a button href="/db" style="float: right; line-height: 2em;">db file view [delete on launch]</a>
 </div>

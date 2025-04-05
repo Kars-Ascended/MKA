@@ -4,7 +4,9 @@ main-element {
     display: block;
     margin: auto; margin-block: 2em; padding-inline: 0.75em; padding-block: 0.5em;
     width: 80vw;
+}
 
+main-element, .lyrics-item {
     background-color: var(--secondary);
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);

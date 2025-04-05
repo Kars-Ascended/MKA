@@ -5,11 +5,13 @@
     <?php include '../backend/table_display.php'; ?>
 </head>
 <body class="main">
+
     <main-element>
         <h1 center>Music Archive</h1>
     </main-element>
 
     <!-- Filter Form -->
+    <div class="column-controls">
     <form method="get">
         <label>
             Album:
@@ -53,8 +55,22 @@
         
         <button type="submit">Filter</button>
     </form>
+    <br>
+    <!-- Column Visibility Controls -->
+    
+        <label><input type="checkbox" class="toggle-column" data-column="0" checked> Album</label>
+        <label><input type="checkbox" class="toggle-column" data-column="1" checked> Track #</label>
+        <label><input type="checkbox" class="toggle-column" data-column="2" checked> Title</label>
+        <label><input type="checkbox" class="toggle-column" data-column="3" checked> Duration</label>
+        <label><input type="checkbox" class="toggle-column" data-column="4" checked> Spotify</label>
+        <label><input type="checkbox" class="toggle-column" data-column="5" checked> YouTube</label>
+        <label><input type="checkbox" class="toggle-column" data-column="6" checked> Explicit</label>
+        <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
+        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Discog Type</label>
+    </div>
 
     <!-- Results Table -->
+    <script src="/js/column_hide.js"></script>
     <table>
         
         <tr>

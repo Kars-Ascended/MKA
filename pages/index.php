@@ -14,7 +14,13 @@
     </main-element>
 
     <main-element>
-        <p>test</p>
+        <h2>Welcome</h2>
+        <p>Welcome to the Mr. Kitty Archive! This is a fan-made archive of all things Mr. Kitty, we hope to soon host his songs and social posts made.</p>
+    </main-element>
+
+    <main-element>
+        <h2>Connect</h2>
+        <p>Join us on the <a href="https://reddit.com/r/mrkittyfans" target="_blank">subreddit</a> and <a href="https://discord.gg/H8MWmdkGcZ" target="_blank">discord</a>.</p>
     </main-element>
 </body>
 </html>

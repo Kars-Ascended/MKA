@@ -12,7 +12,7 @@
     background-color: var(--secondary);
     border-bottom: 1px solid var(--accent);
     
-    a {
+    [button] {
         text-decoration: none;
         margin: 0.5em;
     }

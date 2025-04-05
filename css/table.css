@@ -1,15 +1,31 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 10px; border: 1px solid gray; text-align: left; }
-th { background-color: var(--almost-black); }
+/* Base table css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid gray;
+    text-align: left;
+    background-color: var(--almost-black);
+}
+
+/* Color each 2nd row */
 tr:nth-child(even) { background-color:#383838; }
 tr:nth-child(odd) { background-color:#242424; }
 
 label input, label select {background-color: var(--almost-black);}
 form button {background-color: var(--almost-black);}
 
+form {
+    display: flex;
+    gap: 1em;
+}
 
-/* CSS for lyrics.php table */
+
+/* CSS for lyrics table */
 .lyrics-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -20,4 +36,27 @@ form button {background-color: var(--almost-black);}
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
+
+    
+}   
+
+/* For column hiding box */
+.column-controls {
+    margin: 1em 0;
+    padding: 1em;
+    background: var(--secondary);
+    border-radius: 4px;
+    border: 1px solid var(--accent)
+}
+.column-controls label {
+    margin-right: 1em;
+    white-space: nowrap;
+}
+.hidden-column {
+    display: none;
+}
+
+.option-dropdown {
+  position: relative;
+  font-family: Arial;
 }
