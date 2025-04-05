@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include '../backend/meta-include.php'; ?>
     <?php include '../backend/table_display.php'; ?>
 </head>
-<body>
-    <h1>Music Archive</h1>
+<body class="main">
+    <main-element>
+        <h1 center>Music Archive</h1>
+    </main-element>
 
     <!-- Filter Form -->
     <form method="get">

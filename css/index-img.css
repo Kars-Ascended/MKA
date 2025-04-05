@@ -1,0 +1,28 @@
+/* Css for the index page */
+
+.welcome {
+  display: flex;
+  height: 15em;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+}
+
+.left img {
+  height: 100%; /* Image maintains height of parent */
+  width: auto; /* Ensures the div only takes up as much space as the image */
+  object-fit: contain; /* Ensures the entire image is visible */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3.5em;
+}

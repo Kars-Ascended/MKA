@@ -1,13 +1,19 @@
 .nav {
     position: absolute;
-    top:0; left:0;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 4em; /* Reflect this in the body padding-top */
-
+    height: 4em;
+    z-index: 1000;
+    
+    padding-inline: 0.5em;
     line-height: 4em;
-    border-bottom: 1px solid var(--almost-white);
-
+    
+    background-color: var(--secondary);
+    border-bottom: 1px solid var(--accent);
+    
     a {
-        margin: 1em;
+        text-decoration: none;
+        margin: 0.5em;
     }
 }
