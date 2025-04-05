@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php include '../backend/meta-include.php'; ?>
+    <title>Mr. Kitty Archive</title>
 </head>
 <body>
     <main-element class="welcome">

@@ -3,6 +3,7 @@
 <head>
     <?php include '../backend/meta-include.php'; ?>
     <?php include '../backend/table_display.php'; ?>
+    <title>Song Database</title>
 </head>
 <body class="main">
 

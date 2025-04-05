@@ -3,7 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Makes it mobile-friendly -->
 
 <!-- Page metadata -->
-<title>NAME REQUIRED</title>
 <link rel="icon" href="assets\icons\mk-logo.png" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
