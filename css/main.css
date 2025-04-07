@@ -17,4 +17,16 @@ main-element, .lyrics-item {
 .welcome {
     width: 90vw !important;
 }
+  
+.custom-select select, label input {
+    cursor: pointer;
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+}
 
+option {
+    background-color: var(--secondary);
+    color: var(--text);
+    border-radius: var(--main-br-radius);
+    border: 1px solid var(--accent);
+}

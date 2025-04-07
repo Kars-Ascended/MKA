@@ -13,6 +13,8 @@
     border-bottom: 1px solid var(--accent);
     
     [button] {
+        float: left;
+        line-height: 2em;
         text-decoration: none;
         margin: 0.5em;
     }

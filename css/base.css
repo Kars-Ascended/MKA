@@ -26,12 +26,23 @@ body {
     background-color: var(--main);
 }
 
-[button] {
-    background-color: var(--accent);
+[button], button{
+    background-color: var(--accent) !important;
+    border: none;
     padding: 0.5em;
     border-radius: var(--main-br-radius);
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
+
+:not(nav) button {
+    background-color: var(--secondary) !important;
+    border: 1px solid var(--accent) !important;
+}
+
+[button]:hover {
+    transition: all 0.1s ease-in-out;
+    scale: 1.05;
+    }
 
 a:not([button]){
     color: var(--accent-secondary)

@@ -12,8 +12,9 @@
     </main-element>
 
     <!-- Filter Form -->
+    <div class="column-controls">
     <form method="get">
-    <label>
+        <label>
             Album:
             <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
         </label>
@@ -24,6 +25,14 @@
         </label>
 
         <label>
+            Search Lyrics:
+            <input type="text" name="lyrics" value="<?php echo htmlspecialchars($_GET['lyrics'] ?? ''); ?>">
+        </label>
+
+    
+        <button type="submit">Filter</button>
+
+        <label>
             Explicit:
             <select name="explicit">
                 <option value="">-- Any --</option>
@@ -32,7 +41,7 @@
             </select>
         </label>
 
-        <div class="option-dropdown">
+        <label>
             Discog type:
             <select name="discog">
                 <option value="">-- Any --</option>
@@ -42,7 +51,7 @@
                 <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
                 <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
             </select>
-        </div>
+        </label>
 
         <label>
             Breakcore:
@@ -52,13 +61,8 @@
                 <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
         </label>
-        <label>
-            Search Lyrics:
-            <input type="text" name="lyrics" value="<?php echo htmlspecialchars($_GET['lyrics'] ?? ''); ?>">
-        </label>
-        <button type="submit">Filter</button>
     </form>
-
+    </div>
     <!-- Results Table -->
     <style>
     </style>

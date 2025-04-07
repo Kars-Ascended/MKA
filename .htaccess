@@ -1,11 +1,9 @@
 RewriteEngine On
 
-# Redirect root URL to /pages/home
-RewriteRule ^$ /home [L,R=302]
+# Serve /pages/index.php for root URL
+RewriteRule ^$ /pages/index.php [L]
 
-RewriteRule ^home$ index.php [L]
-
-# hide 'pages' from url
+# Hide 'pages' from URL
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /pages/$1 [L]

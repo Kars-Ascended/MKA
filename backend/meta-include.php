@@ -16,6 +16,6 @@
 <div class="nav">
     <a button href="index.php">Home</a>
     <a button href="songs.php">Songs Database</a>
-    <a button href="lyrics.php">Lyrics Database</a>
-    <a button href="/db" style="float: right; line-height: 2em;">db file view [delete on launch]</a>
+    <a button href="lyrics.php" style="">Lyrics Database</a>
+    <a button href="/db" style="float: left; line-height: 2em;">db file view [delete on launch]</a>
 </div>

@@ -25,15 +25,18 @@
         </label>
 
         <label>
+            <div class="custom-select">
             Explicit:
-            <select name="explicit">
-                <option value="">-- Any --</option>
-                <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
-            </select>
+                <select name="explicit">
+                    <option value="">-- Any --</option>
+                    <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                    <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                </select>
+            </div>
         </label>
 
         <label>
+            <div class="custom-select">
             Discog type:
             <select name="discog">
                 <option value="">-- Any --</option>
@@ -43,24 +46,29 @@
                 <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
                 <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
             </select>
+            </div>
         </label>
 
         <label>
+            <div class="custom-select">
             Breakcore:
             <select name="volume">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
                 <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
+            </div>
         </label>
 
-        <label>
+        <label> 
+            <div class="custom-select">
             Has Features:
             <select name="has_features">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
                 <option value="0" <?php if (($_GET['has_features'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
+            </div>
         </label>
         
         <button type="submit">Filter</button>
