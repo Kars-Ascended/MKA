@@ -1,9 +1,14 @@
 RewriteEngine On
 
-# Serve /pages/index.php for root URL
-RewriteRule ^$ /pages/index.php [L]
+# Redirect root URL to /home
+RewriteRule ^$ /home [L,R=302]
 
-# Hide 'pages' from URL
+# Friendly URLs
+RewriteRule ^home$ /pages/index.php [L]
+RewriteRule ^songs$ /pages/songs.php [L]
+RewriteRule ^lyrics$ /pages/lyrics.php [L]
+
+# Hide 'pages' from all other URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /pages/$1 [L]
