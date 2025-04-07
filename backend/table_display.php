@@ -31,9 +31,22 @@ if (!empty($_GET['lyrics'])) {
     $params[':lyrics'] = '%' . $_GET['lyrics'] . '%';
 }
 
+if (!empty($_GET['featured_artists'])) {
+    $conditions[] = "featured_artists LIKE :featured_artists";
+    $params[':featured_artists'] = '%' . $_GET['featured_artists'] . '%';
+}
+
 if (!empty($_GET['discog'])) {
     $conditions[] = "discog = :discog";
     $params[':discog'] = $_GET['discog'];
+}
+
+if (isset($_GET['has_features'])) {
+    if ($_GET['has_features'] === '1') {
+        $conditions[] = "featured_artists IS NOT NULL AND featured_artists != '' AND featured_artists != 'FALSE'";
+    } else if ($_GET['has_features'] === '0') {
+        $conditions[] = "(featured_artists IS NULL OR featured_artists = '' OR featured_artists = 'FALSE')";
+    }
 }
 
 // Combine conditions into SQL query

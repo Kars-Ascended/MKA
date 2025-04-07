@@ -53,6 +53,15 @@
                 <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
         </label>
+
+        <label>
+            Has Features:
+            <select name="has_features">
+                <option value="">-- Any --</option>
+                <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                <option value="0" <?php if (($_GET['has_features'] ?? '') === '0') echo 'selected'; ?>>No</option>
+            </select>
+        </label>
         
         <button type="submit">Filter</button>
     </form>
@@ -67,7 +76,8 @@
         <label><input type="checkbox" class="toggle-column" data-column="5" checked> YouTube</label>
         <label><input type="checkbox" class="toggle-column" data-column="6" checked> Explicit</label>
         <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
-        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Discog Type</label>
+        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Featured Artists</label>
+        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Discog Type</label>
     </div>
 
     <!-- Results Table -->
@@ -83,6 +93,7 @@
             <th>YouTube</th>
             <th>Explicit?</th>
             <th>Loud / Breakcore?</th>
+            <th>Featured Artists</th>
             <th>Discog Type</th>
         </tr>
 
@@ -96,6 +107,7 @@
             <td><?php echo !empty($row['youtube_link']) ? "<a href=\"" . htmlspecialchars($row['youtube_link']) . "\" target=\"_blank\">YouTube</a>" : ""; ?></td>
             <td><?php echo $row['explicit'] ? 'Yes' : 'No'; ?></td>
             <td><?php echo $row['volume'] ? 'Yes' : 'No'; ?></td>
+            <td><?php echo ($row['featured_artists'] && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
             <td><?php echo htmlspecialchars($row['discog']); ?></td>
         </tr>
         <?php endwhile; ?>
