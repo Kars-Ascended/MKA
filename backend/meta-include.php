@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="../css/meta-include.css">
 <link rel="stylesheet" href="../css/table.css">
 
+<!-- JS Scripts -->
+<script src="/js/column_hide.js"></script>
+
 <!-- NAV -->
 <div class="nav">
     <a button href="home">Home</a>

@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.getElementById('columnSelector').addEventListener('change', function() {
+    const columns = this.value;
+    document.querySelector('.lyrics-grid').style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+  });
+  

@@ -61,11 +61,22 @@
                 <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
         </label>
+
+        <label>
+            Wrap every:
+            <select id="columnSelector">
+                <option value="1">1 column</option>
+                <option value="2" selected>2 columns</option>
+                <option value="3">3 columns</option>
+                <option value="4">4 columns</option>
+                <option value="5">5 columns</option>
+            </select>
+        </label>
+
     </form>
     </div>
     <!-- Results Table -->
-    <style>
-    </style>
+    <script src="/js/column_hide.js"></script>
 
     <div class="lyrics-grid">
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>

@@ -10,13 +10,25 @@
                 <img src="../assets/icons/mk-logo.png" alt="Image">
             </div>
             <div class="right">
-                <p>Hey, welcome to the <u>M</u>r. <u>K</u>itty <u>A</u>rchive</p>
+                <h1>Hey, welcome to the <u>M</u>r. <u>K</u>itty <u>A</u>rchive</h1>
             </div>
     </main-element>
 
     <main-element>
         <h2>Welcome</h2>
-        <p>Welcome to the Mr. Kitty Archive! This is a fan-made archive of all things Mr. Kitty, we hope to soon host his songs and social posts made.</p>
+        <p>Welcome to the MKA [Mr. Kitty Archive]</p>
+    </main-element>
+
+    <main-element>
+        <h2>FAQ</h2>
+        <h3>- Where are the songs?</h3>
+        <p>Currently i use a free host that has a file limit of ~2Gb, so as of now the songs cannot be hosted on here. if this does not change in the future i will find alternate hosting solutions to get the music on here.</p>
+
+        <h3>- What else do you plan to archive?</h3>
+        <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find. the real hard part is figuring out how to store them and also figuring out how to display them.</p>
+
+        <h3>- "I found a problem / something incorrect on the site"</h3>
+        <p>Let me know in the discord or subreddit linked below.</p>
     </main-element>
 
     <main-element>
