@@ -14,8 +14,8 @@
     
     [button] {
         float: left;
-        line-height: 2em;
+        line-height: 1em;
         text-decoration: none;
-        margin: 0.5em;
+        margin: 0.5em; margin-top: 1em;
     }
 }

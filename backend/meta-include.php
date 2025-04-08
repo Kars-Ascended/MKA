@@ -17,5 +17,5 @@
     <a button href="home">Home</a>
     <a button href="songs.php">Songs Database</a>
     <a button href="lyrics.php" style="">Lyrics Database</a>
-    <a button href="/db" style="float: left; line-height: 2em;">db file view [delete on launch]</a>
+    <a button href="/db" style="float: right;">DB View</a>
 </div>
