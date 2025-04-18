@@ -11,71 +11,69 @@
         <h1 center>Music Archive</h1>
     </main-element>
 
-    <!-- Filter Form -->
     <div class="column-controls">
-    <form method="get">
-        <label>
-            Album:
-            <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
-        </label>
+        <form method="get"> <!-- Search Filters -->
+            <label>
+                Album:
+                <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
+            </label>
 
-        <label>
-            Search Title:
-            <input type="text" name="title" value="<?php echo htmlspecialchars($_GET['title'] ?? ''); ?>">
-        </label>
+            <label>
+                Search Title:
+                <input type="text" name="title" value="<?php echo htmlspecialchars($_GET['title'] ?? ''); ?>">
+            </label>
 
-        <label>
-            <div class="custom-select">
-            Explicit:
-                <select name="explicit">
-                    <option value="">-- Any --</option>
-                    <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                    <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
-                </select>
-            </div>
-        </label>
+            <label>
+                <div class="custom-select">
+                    Explicit:
+                    <select name="explicit">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
 
-        <label>
-            <div class="custom-select">
-            Discog type:
-            <select name="discog">
-                <option value="">-- Any --</option>
-                <option value="Main" <?php if (($_GET['discog'] ?? '') === 'Main') echo 'selected'; ?>>Main</option>
-                <option value="Pre-2010" <?php if (($_GET['discog'] ?? '') === 'Pre-2010') echo 'selected'; ?>>Pre-2010</option>
-                <option value="Remix" <?php if (($_GET['discog'] ?? '') === 'Remix') echo 'selected'; ?>>Remix</option>
-                <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
-                <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
-            </select>
-            </div>
-        </label>
+            <label>
+                <div class="custom-select">
+                    Discog type:
+                    <select name="discog">
+                        <option value="">-- Any --</option>
+                        <option value="Main" <?php if (($_GET['discog'] ?? '') === 'Main') echo 'selected'; ?>>Main</option>
+                        <option value="Pre-2010" <?php if (($_GET['discog'] ?? '') === 'Pre-2010') echo 'selected'; ?>>Pre-2010</option>
+                        <option value="Remix" <?php if (($_GET['discog'] ?? '') === 'Remix') echo 'selected'; ?>>Remix</option>
+                        <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
+                        <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
+                    </select>
+                </div>
+            </label>
 
-        <label>
-            <div class="custom-select">
-            Breakcore:
-            <select name="volume">
-                <option value="">-- Any --</option>
-                <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
-            </select>
-            </div>
-        </label>
+            <label>
+                <div class="custom-select">
+                    Breakcore:
+                    <select name="volume">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
 
-        <label> 
-            <div class="custom-select">
-            Has Features:
-            <select name="has_features">
-                <option value="">-- Any --</option>
-                <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                <option value="0" <?php if (($_GET['has_features'] ?? '') === '0') echo 'selected'; ?>>No</option>
-            </select>
-            </div>
-        </label>
-        
-        <button type="submit">Filter</button>
-    </form>
-    <br>
-    <!-- Column Visibility Controls -->
+            <label> 
+                <div class="custom-select">
+                    Has Features:
+                    <select name="has_features">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['has_features'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
+            
+            <button type="submit">Filter</button>
+        </form>
     
+        <!-- Column Visibility Controls -->
         <label><input type="checkbox" class="toggle-column" data-column="0" checked> Album</label>
         <label><input type="checkbox" class="toggle-column" data-column="1" checked> Track #</label>
         <label><input type="checkbox" class="toggle-column" data-column="2" checked> Title</label>
@@ -89,10 +87,9 @@
     </div>
 
     <!-- Results Table -->
-    <script src="/js/column_hide.js"></script>
     <table>
         
-        <tr>
+        <tr> <!-- Table Header -->
             <th>Album</th>
             <th>Track #</th>
             <th>Title</th>

@@ -76,7 +76,6 @@
     </form>
     </div>
     <!-- Results Table -->
-    <script src="/js/column_hide.js"></script>
 
     <div class="lyrics-grid">
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
