@@ -15,11 +15,6 @@
     </main-element>
 
     <main-element>
-        <h2>Welcome</h2>
-        <p>Welcome to the MKA [Mr. Kitty Archive]</p>
-    </main-element>
-
-    <main-element>
         <h2>FAQ</h2>
         <h3>- Where are the songs?</h3>
         <p>Currently i use a free host that has a file limit of ~2Gb, so as of now the songs cannot be hosted on here. if this does not change in the future i will find alternate hosting solutions to get the music on here.</p>

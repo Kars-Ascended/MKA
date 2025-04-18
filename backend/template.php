@@ -6,7 +6,7 @@
 </head>
 <body>
     <main-element>
-            <h2>Template</h2>
+            <h1>Title</h1>
     </main-element>
 </body>
 </html>
