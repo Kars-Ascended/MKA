@@ -1,5 +1,4 @@
-/* Base table css */
-
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -12,66 +11,49 @@ th, td {
     background-color: var(--almost-black);
 }
 
-/* Color each 2nd row */
-tr:nth-child(even) { background-color:#383838; }
-tr:nth-child(odd) { background-color:#242424; }
+tr:nth-child(even) {
+    background-color: #383838;
+}
 
-label input, label select {background-color: var(--almost-black);}
-form button {background-color: var(--almost-black);}
+tr:nth-child(odd) {
+    background-color: #242424;
+}
 
+/* Table Controls */
+.column-controls {
+    margin: 1em 0;
+    padding: 1em;
+    background: var(--secondary);
+    border-radius: 4px;
+    border: 1px solid var(--accent);
+}
+
+.column-controls label {
+    margin-right: 1em;
+    white-space: nowrap;
+}
+
+.hidden-column {
+    display: none;
+}
+
+/* Form Layout */
 form {
     display: flex;
     gap: 1em;
 }
 
-
-/* CSS for lyrics table */
+/* Lyrics Table */
 .lyrics-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }
+
 .lyrics-item {
+    background-color: var(--secondary);
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
-
-    
-}   
-
-/* For column hiding box */
-.column-controls {
-    margin: 1em 0;
-    padding: 1em;
-    background: var(--secondary);
-    border-radius: 4px;
-    border: 1px solid var(--accent)
-}
-.column-controls label {
-    margin-right: 1em;
-    white-space: nowrap;
-}
-.hidden-column {
-    display: none;
-}
-
-.option-dropdown {
-  position: relative;
-  font-family: Arial;
-}
-
-/* Custom Buttons */
-
-.custom-select select, label input {
-    cursor: pointer;
-    background-color: var(--secondary);
-    border: 1px solid var(--accent);
-}
-
-option {
-    background-color: var(--secondary);
-    color: var(--text);
-    border-radius: var(--main-br-radius);
-    border: 1px solid var(--accent);
 }

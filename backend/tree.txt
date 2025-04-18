@@ -1,0 +1,9 @@
+Discog 1
+    album A
+        track 1
+        track 2
+        track 3
+    album B
+        track 1
+        track 2
+        track 3

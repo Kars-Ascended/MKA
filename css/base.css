@@ -1,5 +1,4 @@
-/* Base == */
-
+/* Base Styles */
 :root {
     /* Global Values*/
     --main-br-radius: 7px;
@@ -13,20 +12,33 @@
     --white: #F2F4F3;
 }
 
+/* Global Reset */
 *, *::before, *::after {
     box-sizing: border-box !important;
     color: var(--white);
 }
 
+/* Base Elements */
 body {
     font-family: Arial;
-    margin: 0; padding-top: 0.5em;
+    margin: 0.5em;
+    padding-top: 0.5em;
     margin-top: 4em !important;
     min-height: calc(100vh - 4em);
     background-color: var(--main);
 }
 
-[button], button{
+/* Form Elements */
+input, select, .button, .main {
+    border-radius: 0.5em;
+    padding: 0.4em;
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    cursor: pointer;
+}
+
+/* Buttons */
+[button], button {
     background-color: var(--accent) !important;
     border: none;
     padding: 0.5em;
@@ -42,22 +54,24 @@ body {
 [button]:hover {
     transition: all 0.1s ease-in-out;
     scale: 1.05;
-    }
+}
 
-a:not([button]){
+/* Links */
+a:not([button]) {
     color: var(--accent-secondary)
 }
 
-img { border-radius: var(--main-br-radius-x2); }
-
-input, select, .button, .main{
-    border-radius: 0.5em;
-    padding: 0.4em;
+/* Images */
+img {
+    border-radius: var(--main-br-radius-x2);
 }
 
-/* CLASSES */
+/* Utility Classes */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
 
-.flex { display: flex; justify-content: space-between; }
-
-*[center] { text-align: center; }
-
+*[center] {
+    text-align: center;
+}

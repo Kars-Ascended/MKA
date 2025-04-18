@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../backend/meta-include.php'; ?>
-    <?php include '../backend/table_display.php'; ?>
+    <?php include '../backend/meta-include.php'; ?> <?php include '../backend/table_display.php'; ?>
     <title>Song Database</title>
 </head>
-<body class="main">
+<body>
 
-    <main-element>
-        <h1 center>Music Archive</h1>
+    <main-element class="welcome">
+        <h1 title>Music Archive</h1>
     </main-element>
 
     <div class="column-controls">
@@ -72,7 +71,7 @@
             
             <button type="submit">Filter</button>
         </form>
-    
+        <br>
         <!-- Column Visibility Controls -->
         <label><input type="checkbox" class="toggle-column" data-column="0" checked> Album</label>
         <label><input type="checkbox" class="toggle-column" data-column="1" checked> Track #</label>

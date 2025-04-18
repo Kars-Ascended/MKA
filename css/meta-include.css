@@ -1,21 +1,21 @@
+/* Navigation */
 .nav {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 0 !important;
     width: 100vw;
     height: 4em;
     z-index: 1000;
-    
     padding-inline: 0.5em;
     line-height: 4em;
-    
     background-color: var(--secondary);
     border-bottom: 1px solid var(--accent);
-    
-    [button] {
-        float: left;
-        line-height: 1em;
-        text-decoration: none;
-        margin: 0.5em; margin-top: 1em;
-    }
+}
+
+.nav [button] {
+    float: left;
+    line-height: 1em;
+    text-decoration: none;
+    margin: 0.5em;
+    margin-top: 1em;
 }

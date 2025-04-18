@@ -1,32 +1,26 @@
-/* Main CSS elements */
-
+/* Main Content */
 main-element {
     display: block;
-    margin: auto; margin-block: 2em; padding-inline: 0.75em; padding-block: 0.5em;
+    margin: auto;
+    margin-block: 2em;
+    padding-inline: 0.75em;
+    padding-block: 0.5em;
     width: 80vw;
-}
-
-main-element, .lyrics-item {
     background-color: var(--secondary);
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
-    
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Welcome Section */
 .welcome {
     width: 90vw !important;
-}
-  
-.custom-select select, label input {
-    cursor: pointer;
-    background-color: var(--secondary);
-    border: 1px solid var(--accent);
+    display: flex;
 }
 
-option {
-    background-color: var(--secondary);
-    color: var(--text);
-    border-radius: var(--main-br-radius);
-    border: 1px solid var(--accent);
+[title] {
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

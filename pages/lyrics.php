@@ -5,10 +5,10 @@
     <?php include '../backend/table_display.php'; ?>
     <title>Lyrics Database</title>
 </head>
-<body class="main">
+<body>
 
-    <main-element>
-        <h1 center>Lyrics Archive</h1>
+    <main-element class="welcome">
+        <h1 title>Lyrics Archive</h1>
     </main-element>
 
     <!-- Filter Form -->

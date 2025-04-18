@@ -5,12 +5,12 @@
     <title>Mr. Kitty Archive</title>
 </head>
 <body>
-    <main-element class="welcome">
+    <main-element class="welcome" style="height: 15em;">
             <div class="left">
                 <img src="../assets/icons/mk-logo.png" alt="Image">
             </div>
-            <div class="right">
-                <h1>Hey, welcome to the <u>M</u>r. <u>K</u>itty <u>A</u>rchive</h1>
+            <div class="right" style="margin: auto; font-size: 1.5em;">
+                <h1 title>Hey, welcome to the <u>M</u>r. <u>K</u>itty <u>A</u>rchive</h1>
             </div>
     </main-element>
 
