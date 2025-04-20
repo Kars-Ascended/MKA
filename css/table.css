@@ -19,30 +19,6 @@ tr:nth-child(odd) {
     background-color: #242424;
 }
 
-/* Table Controls */
-.column-controls {
-    margin: 1em 0;
-    padding: 1em;
-    background: var(--secondary);
-    border-radius: 4px;
-    border: 1px solid var(--accent);
-}
-
-.column-controls label {
-    margin-right: 1em;
-    white-space: nowrap;
-}
-
-.hidden-column {
-    display: none;
-}
-
-/* Form Layout */
-form {
-    display: flex;
-    gap: 1em;
-}
-
 /* Lyrics Table */
 .lyrics-grid {
     display: grid;
@@ -57,3 +33,25 @@ form {
     padding: 15px;
     border-radius: 5px;
 }
+
+.hidden-column {
+    display: none;
+}
+
+/* Form Elements */
+
+.parent {
+    display: flex;
+    gap: 1rem; /* optional spacing between items */
+  }
+  
+  .parent label {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  
+  .parent input {
+    flex: 1;
+    margin-left: 0.5rem; /* space between text and input */
+  }

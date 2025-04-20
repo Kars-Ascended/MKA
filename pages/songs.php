@@ -10,8 +10,9 @@
         <h1 title>Music Archive</h1>
     </main-element>
 
-    <div class="column-controls">
+    <main-element>
         <form method="get"> <!-- Search Filters -->
+            <div class="parent">
             <label>
                 Album:
                 <input type="text" name="album" value="<?php echo htmlspecialchars($_GET['album'] ?? ''); ?>">
@@ -21,7 +22,11 @@
                 Search Title:
                 <input type="text" name="title" value="<?php echo htmlspecialchars($_GET['title'] ?? ''); ?>">
             </label>
+            </div>
 
+            <br>
+
+            <div style="display: flex; gap: 1em;">
             <label>
                 <div class="custom-select">
                     Explicit:
@@ -68,7 +73,8 @@
                     </select>
                 </div>
             </label>
-            
+            </div>
+            <br>
             <button type="submit">Filter</button>
         </form>
         <br>
@@ -83,7 +89,8 @@
         <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
         <label><input type="checkbox" class="toggle-column" data-column="8" checked> Featured Artists</label>
         <label><input type="checkbox" class="toggle-column" data-column="9" checked> Discog Type</label>
-    </div>
+        <label><input type="checkbox" class="toggle-column" data-column="10" checked> Release Date</label>
+    </main-element>
 
     <!-- Results Table -->
     <table>
@@ -99,6 +106,7 @@
             <th>Loud / Breakcore?</th>
             <th>Featured Artists</th>
             <th>Discog Type</th>
+            <th>Release Date</th>
         </tr>
 
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
@@ -113,6 +121,7 @@
             <td><?php echo $row['volume'] ? 'Yes' : 'No'; ?></td>
             <td><?php echo ($row['featured_artists'] && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
             <td><?php echo htmlspecialchars($row['discog']); ?></td>
+            <td><?php echo htmlspecialchars($row['release_date']); ?></td>
         </tr>
         <?php endwhile; ?>
 

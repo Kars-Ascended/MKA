@@ -41,6 +41,11 @@ if (!empty($_GET['discog'])) {
     $params[':discog'] = $_GET['discog'];
 }
 
+if (!empty($_GET['release_date'])) {
+    $conditions[] = "release_date = :release_date";
+    $params[':release_date'] = $_GET['release_date'];
+}
+
 if (isset($_GET['has_features'])) {
     if ($_GET['has_features'] === '1') {
         $conditions[] = "featured_artists IS NOT NULL AND featured_artists != '' AND featured_artists != 'FALSE'";
