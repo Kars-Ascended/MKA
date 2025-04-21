@@ -82,14 +82,15 @@
         <label><input type="checkbox" class="toggle-column" data-column="0" checked> Album</label>
         <label><input type="checkbox" class="toggle-column" data-column="1" checked> Track #</label>
         <label><input type="checkbox" class="toggle-column" data-column="2" checked> Title</label>
-        <label><input type="checkbox" class="toggle-column" data-column="3" checked> Duration</label>
-        <label><input type="checkbox" class="toggle-column" data-column="4" checked> Spotify</label>
-        <label><input type="checkbox" class="toggle-column" data-column="5" checked> YouTube</label>
-        <label><input type="checkbox" class="toggle-column" data-column="6" checked> Explicit</label>
-        <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
-        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Featured Artists</label>
-        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Discog Type</label>
-        <label><input type="checkbox" class="toggle-column" data-column="10" checked> Release Date</label>
+        <label><input type="checkbox" class="toggle-column" data-column="3"> Song</label>
+        <label><input type="checkbox" class="toggle-column" data-column="4" checked> Duration</label>
+        <label><input type="checkbox" class="toggle-column" data-column="5" checked> Spotify</label>
+        <label><input type="checkbox" class="toggle-column" data-column="6" checked> YouTube</label>
+        <label><input type="checkbox" class="toggle-column" data-column="7" checked> Explicit</label>
+        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Breakcore</label>
+        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Featured Artists</label>
+        <label><input type="checkbox" class="toggle-column" data-column="10" checked> Discog Type</label>
+        <label><input type="checkbox" class="toggle-column" data-column="11" checked> Release Date</label>
     </main-element>
 
     <!-- Results Table -->
@@ -99,6 +100,7 @@
             <th>Album</th>
             <th>Track #</th>
             <th>Title</th>
+            <th>Song</th>
             <th>Duration</th>
             <th>Spotify</th>
             <th>YouTube</th>
@@ -114,6 +116,22 @@
             <td><?php echo htmlspecialchars($row['album']); ?></td>
             <td><?php echo htmlspecialchars($row['track_number']); ?></td>
             <td><?php echo htmlspecialchars($row['track_title']); ?></td>
+            <td>
+                <?php
+                    // Convert special characters to proper URL encoding
+                    $album = rawurlencode($row['album']);
+                    $song = rawurlencode($row['track_title']);
+                    $discog = rawurlencode($row['discog']);                    
+                    // Replace potentially problematic characters
+                    $album = str_replace(['%20', '%CE%94'], [' ', 'Δ'], $album);
+                    $song = str_replace(['%20', '%CE%94'], [' ', 'Δ'], $song);
+                    
+                    // Create the URL with proper encoding
+                    $mp3_url = "http://192.168.0.19/mka/" . $discog . "/" . $album . "/" . $song . ".mp3";
+                    
+                    echo "<audio controls><source src=\"" . htmlspecialchars($mp3_url) . "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>";
+                ?>
+            </td>
             <td><?php echo htmlspecialchars($row['duration']); ?></td>
             <td><?php echo !empty($row['spotify_link']) ? "<a href=\"" . htmlspecialchars($row['spotify_link']) . "\" target=\"_blank\">Spotify</a>" : ""; ?></td>
             <td><?php echo !empty($row['youtube_link']) ? "<a href=\"" . htmlspecialchars($row['youtube_link']) . "\" target=\"_blank\">YouTube</a>" : ""; ?></td>
@@ -127,10 +145,11 @@
 
     </table>
 
-</body>
-</html>
-
 <?php
 // Close the database connection
 $db->close();
 ?>
+
+<script src="../js/post_load.js"></script>
+</body>
+</html>

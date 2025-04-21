@@ -1,0 +1,7 @@
+.hidden-content, [discography] {
+    display: none;
+    cursor: default;
+    }
+h1, h2 {
+cursor: pointer;
+}

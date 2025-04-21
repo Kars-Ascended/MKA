@@ -35,7 +35,7 @@ tr:nth-child(odd) {
 }
 
 .hidden-column {
-    display: none;
+    display: none; /* Gives functionality to the checkboxes in songs.php */
 }
 
 /* Form Elements */

@@ -15,6 +15,7 @@
     </main-element>
 
     <main-element>
+        <audio controls src="http://192.168.0.19/mka/main/D E Δ T H/Haunts.mp3"></audio>
         <h2>FAQ</h2>
         <h3>- Where are the songs?</h3>
         <p>Currently i use a free host that has a file limit of ~2Gb, so as of now the songs cannot be hosted on here. if this does not change in the future i will find alternate hosting solutions to get the music on here.</p>
@@ -22,8 +23,15 @@
         <h3>- What else do you plan to archive?</h3>
         <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find. the real hard part is figuring out how to store them and also figuring out how to display them.</p>
 
-        <h3>- "I found a problem / something incorrect on the site"</h3>
+        <h3>- I found a problem / something incorrect on the site</h3>
         <p>Let me know in the discord or subreddit linked below.</p>
+
+        <h3>- Why does it take forever to load songs?</h3>
+        <p>Make sure 'Song' is unchecked while filtering/loading, because of the sheer amount of songs it causes some lag trying to find/load the element</p>
+
+        <br>
+
+        <h3>A few songs might be missing from the database, if you find them please let me know</h3>
     </main-element>
 
     <main-element>

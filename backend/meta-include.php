@@ -14,13 +14,14 @@
 
 <!-- JS Scripts -->
 <script src="/js/column_hide.js" defer></script>
+<script src="/js/audio_volume.js" defer></script>
 
 <!-- NAV -->
 <div class="nav">
     <a button href="home">Home</a>
     <a button href="songs.php">Songs Database</a>
     <a button href="lyrics.php" style="">Lyrics Database</a>
-    <a button href="#">Discography [COMING SOON]</a>
+    <a button href="discography.php">Discography [COMING SOON]</a>
     <a button href=#>Roadmap [COMING SOON]</a>
     <a button href="/db" style="float: right;">DB View</a>
 </div>
