@@ -118,6 +118,8 @@
             <td><?php echo htmlspecialchars($row['track_title']); ?></td>
             <td>
                 <?php
+                    // Check if data-column="3" checkbox is checked using JavaScript
+                    echo "<div class='audio-player' style='display: none;'>";
                     // Convert special characters to proper URL encoding
                     $album = rawurlencode($row['album']);
                     $song = rawurlencode($row['track_title']);
@@ -130,7 +132,16 @@
                     $mp3_url = "http://192.168.0.19/mka/" . $discog . "/" . $album . "/" . $song . ".mp3";
                     
                     echo "<audio controls><source src=\"" . htmlspecialchars($mp3_url) . "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>";
+                    echo "</div>";
                 ?>
+                <script>
+                    document.querySelector('.toggle-column[data-column="3"]').addEventListener('change', function() {
+                        const audioPlayers = document.querySelectorAll('.audio-player');
+                        audioPlayers.forEach(player => {
+                            player.style.display = this.checked ? 'block' : 'none';
+                        });
+                    });
+                </script>
             </td>
             <td><?php echo htmlspecialchars($row['duration']); ?></td>
             <td><?php echo !empty($row['spotify_link']) ? "<a href=\"" . htmlspecialchars($row['spotify_link']) . "\" target=\"_blank\">Spotify</a>" : ""; ?></td>
@@ -150,6 +161,5 @@
 $db->close();
 ?>
 
-<script src="../js/post_load.js"></script>
 </body>
 </html>
