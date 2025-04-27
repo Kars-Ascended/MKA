@@ -32,6 +32,7 @@
         <br>
 
         <h3>A few songs might be missing from the database, if you find them please let me know</h3>
+        <h3>If you have good knowledge on a few of the following: php,sql,html,css,excel and want to help out give me a message</h3>
     </main-element>
 
     <main-element>

@@ -8,6 +8,7 @@
 
     <main-element class="welcome">
         <h1 title>Music Archive</h1>
+        <p>currently some filters dont work, will fix eventually, sorry 🤭</p>
     </main-element>
 
     <main-element>
@@ -125,11 +126,11 @@
                     $song = rawurlencode($row['track_title']);
                     $discog = rawurlencode($row['discog']);                    
                     // Replace potentially problematic characters
-                    $album = str_replace(['%20', '%CE%94'], [' ', 'Δ'], $album);
-                    $song = str_replace(['%20', '%CE%94'], [' ', 'Δ'], $song);
+                    $album = str_replace(['%20', '%CE%94', ','], [' ', 'Δ', ''], $album);
+                    $song = str_replace(['%20', '%CE%94', ','], [' ', 'Δ', ''], $song);
                     
                     // Create the URL with proper encoding
-                    $mp3_url = "http://192.168.0.19/mka/" . $discog . "/" . $album . "/" . $song . ".mp3";
+                    $mp3_url = "http://192.168.0.19:9090/mka/" . $discog . "/" . $album . "/" . $song . ".mp3";
                     
                     echo "<audio controls><source src=\"" . htmlspecialchars($mp3_url) . "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>";
                     echo "</div>";

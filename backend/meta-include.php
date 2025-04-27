@@ -7,7 +7,6 @@
 
 <!-- CSS Stylesheets -->
 <link rel="stylesheet" href="../css/base.css">
-<link rel="stylesheet" href="../css/index-img.css">
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/meta-include.css">
 <link rel="stylesheet" href="../css/table.css">
