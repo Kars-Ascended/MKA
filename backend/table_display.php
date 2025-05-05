@@ -31,6 +31,10 @@ if (!empty($_GET['lyrics'])) {
     $params[':lyrics'] = '%' . $_GET['lyrics'] . '%';
 }
 
+if (isset($_GET['hide_instrumental']) && $_GET['hide_instrumental'] === '1') {
+    $conditions[] = "lyrics NOT LIKE '%[instrumental]%'";
+}
+
 if (!empty($_GET['featured_artists'])) {
     $conditions[] = "featured_artists LIKE :featured_artists";
     $params[':featured_artists'] = '%' . $_GET['featured_artists'] . '%';
