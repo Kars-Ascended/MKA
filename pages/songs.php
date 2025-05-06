@@ -93,7 +93,7 @@
         <label><input type="checkbox" class="toggle-column" data-column="0" checked> Album</label>
         <label><input type="checkbox" class="toggle-column" data-column="1" checked> Track #</label>
         <label><input type="checkbox" class="toggle-column" data-column="2" checked> Title</label>
-        <label><input type="checkbox" class="toggle-column" data-column="3"> Song</label>
+        <label><input type="checkbox" class="toggle-column" data-column="3" checked> Song</label>
         <label><input type="checkbox" class="toggle-column" data-column="4" checked> Duration</label>
         <label><input type="checkbox" class="toggle-column" data-column="5" checked> Spotify</label>
         <label><input type="checkbox" class="toggle-column" data-column="6" checked> YouTube</label>
@@ -129,30 +129,12 @@
             <td><?php echo htmlspecialchars($row['track_title']); ?></td>
             <td>
                 <?php
-                    // Check if data-column="3" checkbox is checked using JavaScript
-                    echo "<div class='audio-player' style='display: none;'>";
-                    // Convert special characters to proper URL encoding
-                    $album = rawurlencode($row['album']);
-                    $song = rawurlencode($row['track_title']);
-                    $discog = rawurlencode($row['discog']);                    
-                    // Replace potentially problematic characters
-                    $album = str_replace(['%20', '%CE%94', ','], [' ', 'Δ', ''], $album);
-                    $song = str_replace(['%20', '%CE%94', ','], [' ', 'Δ', ''], $song);
-                    
-                    // Create the URL with proper encoding
-                    $mp3_url = "http://192.168.0.19:9090/mka/" . $discog . "/" . $album . "/" . $song . ".mp3";
-                    
-                    echo "<audio controls><source src=\"" . htmlspecialchars($mp3_url) . "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>";
+                    echo "<div class='audio-player' data-album='" . htmlspecialchars($row['album'], ENT_QUOTES) . "' 
+                           data-song='" . htmlspecialchars($row['track_title'], ENT_QUOTES) . "' 
+                           data-discog='" . htmlspecialchars($row['discog'], ENT_QUOTES) . "'>";
+                    echo "<div class='audio-placeholder'>Click to load audio</div>";
                     echo "</div>";
                 ?>
-                <script>
-                    document.querySelector('.toggle-column[data-column="3"]').addEventListener('change', function() {
-                        const audioPlayers = document.querySelectorAll('.audio-player');
-                        audioPlayers.forEach(player => {
-                            player.style.display = this.checked ? 'block' : 'none';
-                        });
-                    });
-                </script>
             </td>
             <td><?php echo htmlspecialchars($row['duration']); ?></td>
             <td><?php echo !empty($row['spotify_link']) ? "<a href=\"" . htmlspecialchars($row['spotify_link']) . "\" target=\"_blank\">Spotify</a>" : ""; ?></td>
@@ -171,6 +153,8 @@
 // Close the database connection
 $db->close();
 ?>
+
+<script src="/js/lazy_load.js"></script>
 
 </body>
 </html>

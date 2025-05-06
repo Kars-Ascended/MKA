@@ -15,10 +15,12 @@
     </main-element>
 
     <main-element>
-        <audio controls src="http://192.168.0.19/mka/main/D E Δ T H/Haunts.mp3"></audio>
+        <audio controls>
+            <source src="https://cosmetics-key-nationally-blade.trycloudflare.com/main/D%20E%20A%20T%20H/Someday.mp3">
+        </audio>
         <h2>FAQ</h2>
         <h3>- Where are the songs?</h3>
-        <p>Currently i use a free host that has a file limit of ~2Gb, so as of now the songs cannot be hosted on here. if this does not change in the future i will find alternate hosting solutions to get the music on here.</p>
+        <p>Coming soon, dealing with server tunneling problems at the moment but it should be good soon</p>
 
         <h3>- What else do you plan to archive?</h3>
         <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find. the real hard part is figuring out how to store them and also figuring out how to display them.</p>
