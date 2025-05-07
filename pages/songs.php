@@ -8,7 +8,6 @@
 
     <main-element class="welcome">
         <h1 title>Music Archive</h1>
-        <p>currently some filters dont work, will fix eventually, sorry 🤭</p>
     </main-element>
 
     <main-element>
