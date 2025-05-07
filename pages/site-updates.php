@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <?php include '../backend/meta-include.php'; ?>
-    <title>Roadmap</title>
+    <title>Site Updates</title>
 </head>
 <body>
+    <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
+
     <main-element>
-        <h2>Template</h2>
+        <p>Coming soon</p>
     </main-element>
 </body>
 </html>

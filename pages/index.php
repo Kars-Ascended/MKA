@@ -15,26 +15,25 @@
     </main-element>
 
     <main-element>
-        <audio controls>
-            <source src="https://cosmetics-key-nationally-blade.trycloudflare.com/main/D%20E%20A%20T%20H/Someday.mp3">
-        </audio>
         <h2>FAQ</h2>
-        <h3>- Where are the songs?</h3>
-        <p>Coming soon, dealing with server tunneling problems at the moment but it should be good soon</p>
+        <h3>- Where are the actual songs?</h3>
+        <p>Currently i have some pre-2010 songs and the death album, im working on adding the rest soon</p>
 
         <h3>- What else do you plan to archive?</h3>
-        <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find. the real hard part is figuring out how to store them and also figuring out how to display them.</p>
+        <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find.</p>
 
         <h3>- I found a problem / something incorrect on the site</h3>
         <p>Let me know in the discord or subreddit linked below.</p>
 
         <h3>- Why does it take forever to load songs?</h3>
-        <p>Make sure 'Song' is unchecked while filtering/loading, because of the sheer amount of songs it causes some lag trying to find/load the element</p>
+        <p>Songs are hosted on an old laptop through a tunnel since my isp wont allow port forwarding and the website host wont allow anything bigger than 125mb on there. for now i recommend filtering as much as possible to help with the speeds, and ill find a better solution soon.</p>
 
+        <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
+        <p>I have a weird listing structure that i might change eventually, ill add a page explaining the structure soon</p>
+        
         <br>
 
         <h3>A few songs might be missing from the database, if you find them please let me know</h3>
-        <h3>If you have good knowledge on a few of the following: php,sql,html,css,excel and want to help out give me a message</h3>
     </main-element>
 
     <main-element>

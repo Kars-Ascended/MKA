@@ -20,6 +20,6 @@
     <a button href="songs.php">Songs Database</a>
     <a button href="lyrics.php">Lyrics Database</a>
     <a button href=#>Mr.Kitty Updates [Coming soon]</a>
-    <a button href=#>Site Updates [Coming soon]</a>
+    <a button href="site-updates.php">Site Updates</a>
     <a button href="/db" style="float: right;">DB View</a>
 </div>
