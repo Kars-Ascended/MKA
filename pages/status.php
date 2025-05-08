@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>IP Status Check</title>
+    <?php include '../backend/meta-include.php'; ?>
+    <title>Status</title>
 </head>
 <body>
-    <h2>IP Status Checker</h2>
-    
-    <?php
-    function isPingable($ip) {
-        if (PHP_OS == 'WINNT') {
-            // Windows
-            exec("ping -n 1 -w 1 " . $ip, $output, $result);
+    <main-element class="welcome"> <h1 title>Status</h1> </main-element>
+
+    <main-element>
+        <?php
+        $host = 'emacs-expressions-be-customers.trycloudflare.com'; // Example IP (Google DNS)
+        $output = null;
+        $status = -1;
+
+        // Execute ping command based on operating system
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            exec("ping -n 1 " . $host, $output, $status);
+            $pingable = $status === 0;
         } else {
-            // Linux/Unix/MacOS
-            exec("ping -c 1 -W 1 " . $ip, $output, $result);
+            exec("ping -c 1 " . $host, $output, $status);
+            $pingable = $status === 0;
         }
-        return $result === 0;
-    }
 
-    // Example IP address (you can make this dynamic with a form)
-    $ip = "https://creative-split-curve-ingredients.trycloudflare.com"; // Google DNS server as example
-    
-    if (isPingable($ip)) {
-        echo "<p style='color: green;'>IP Address $ip is online ✓</p>";
-    } else {
-        echo "<p style='color: red;'>IP Address $ip is offline ✗</p>";
-    }
-    ?>
+        echo "<h2>Archive Status</h2>";
+        echo "<p style='font-size: 1.2em;'>";
+        if ($pingable) {
+            echo "<span style='color: #2ecc71;'>●</span> ";  // Green dot
+            echo "<strong style='color: #2ecc71;'>Online</strong>";
+        } else {
+            echo "<span style='color: #e74c3c;'>●</span> ";  // Red dot
+            echo "<strong style='color: #e74c3c;'>Offline</strong>";
+        }
+        echo "</p>";
+        ?>
+    </main-element>
 
+    <main-element>
+        <h3>The actual songs are stored on an old laptop and are forwarded through a tunnel. if the status is offline unfortunatly no songs will load.</h3>
+    </main-element>
 </body>
-</html></head>
+</html>
