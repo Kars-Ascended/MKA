@@ -12,7 +12,7 @@
 
 <!-- JS Scripts -->
 <script src="/js/column_hide.js" defer></script>
-<script src="/js/audio_volume.js" defer></script>
+<script src="/js/lazy_load.js" defer></script>
 
 <!-- NAV -->
 <div class="nav">

@@ -55,3 +55,13 @@ tr:nth-child(odd) {
     flex: 1;
     margin-left: 0.5rem; /* space between text and input */
   }
+
+td img {
+    max-width: 3em;
+    padding:0;
+    margin:0;
+}
+
+* {
+    text-decoration: none;
+}

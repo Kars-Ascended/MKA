@@ -92,13 +92,12 @@
         <label><input type="checkbox" class="toggle-column" data-column="2" checked> Title</label>
         <label><input type="checkbox" class="toggle-column" data-column="3" checked> Song</label>
         <label><input type="checkbox" class="toggle-column" data-column="4" checked> Duration</label>
-        <label><input type="checkbox" class="toggle-column" data-column="5" checked> Spotify</label>
-        <label><input type="checkbox" class="toggle-column" data-column="6" checked> YouTube</label>
-        <label><input type="checkbox" class="toggle-column" data-column="7" checked> Explicit</label>
-        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Breakcore</label>
-        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Featured Artists</label>
-        <label><input type="checkbox" class="toggle-column" data-column="10" checked> Discog Type</label>
-        <label><input type="checkbox" class="toggle-column" data-column="11" checked> Release Date</label>
+        <label><input type="checkbox" class="toggle-column" data-column="5" checked> Links</label>
+        <label><input type="checkbox" class="toggle-column" data-column="6" checked> Explicit</label>
+        <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
+        <label><input type="checkbox" class="toggle-column" data-column="8" checked> Featured Artists</label>
+        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Discog Type</label>
+        <label><input type="checkbox" class="toggle-column" data-column="10" checked> Release Date</label>
     </main-element>
 
     <!-- Results Table -->
@@ -110,8 +109,7 @@
             <th>Title</th>
             <th>Song</th>
             <th>Duration</th>
-            <th>Spotify</th>
-            <th>YouTube</th>
+            <th>Links</th> <!-- Combined column -->
             <th>Explicit?</th>
             <th>Loud / Breakcore?</th>
             <th>Featured Artists</th>
@@ -134,8 +132,18 @@
                 ?>
             </td>
             <td><?php echo htmlspecialchars($row['duration']); ?></td>
-            <td><?php echo !empty($row['spotify_link']) ? "<a href=\"" . htmlspecialchars($row['spotify_link']) . "\" target=\"_blank\">Spotify</a>" : ""; ?></td>
-            <td><?php echo !empty($row['youtube_link']) ? "<a href=\"" . htmlspecialchars($row['youtube_link']) . "\" target=\"_blank\">YouTube</a>" : ""; ?></td>
+            <td class="links-cell">
+                <?php if (!empty($row['spotify_link'])): ?>
+                    <a href="<?php echo htmlspecialchars($row['spotify_link']); ?>" target="_blank">
+                        <img src="/assets/spotify.png" alt="Spotify" title="Listen on Spotify" class="platform-icon">
+                    </a>
+                <?php endif; ?>
+                <?php if (!empty($row['youtube_link'])): ?>
+                    <a href="<?php echo htmlspecialchars($row['youtube_link']); ?>" target="_blank">
+                        <img src="/assets/youtube.png" alt="YouTube" title="Watch on YouTube" class="platform-icon">
+                    </a>
+                <?php endif; ?>
+            </td>
             <td><?php echo $row['explicit'] ? 'Yes' : 'No'; ?></td>
             <td><?php echo $row['volume'] ? 'Yes' : 'No'; ?></td>
             <td><?php echo ($row['featured_artists'] && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
@@ -150,8 +158,6 @@
 // Close the database connection
 $db->close();
 ?>
-
-<script src="/js/lazy_load.js"></script>
 
 </body>
 </html>
