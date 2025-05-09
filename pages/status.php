@@ -9,18 +9,17 @@
 
     <main-element>
         <?php
-        $host = 'emacs-expressions-be-customers.trycloudflare.com'; // Example IP (Google DNS)
-        $output = null;
-        $status = -1;
-
-        // Execute ping command based on operating system
-        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            exec("ping -n 1 " . $host, $output, $status);
-            $pingable = $status === 0;
-        } else {
-            exec("ping -c 1 " . $host, $output, $status);
-            $pingable = $status === 0;
-        }
+        $host = 'https://emacs-expressions-be-customers.trycloudflare.com';
+        
+        $ch = curl_init($host);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+        curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        
+        $pingable = ($httpCode >= 200 && $httpCode < 300);
 
         echo "<h2>Archive Status</h2>";
         echo "<p style='font-size: 1.2em;'>";
