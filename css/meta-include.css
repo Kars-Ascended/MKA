@@ -1,21 +1,44 @@
 /* Navigation */
-.nav {
+.nav, .nav-mobile {
     position: fixed;
     top: 0;
-    left: 0 !important;
+    left: 0;
     width: 100vw;
     height: 4em;
     z-index: 1000;
     padding-inline: 0.5em;
-    line-height: 4em;
     background-color: var(--secondary);
     border-bottom: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav [button] {
-    float: left;
     line-height: 1em;
     text-decoration: none;
     margin: 0.5em;
-    margin-top: 1em;
+    margin-top: 0.5em;
+}
+
+.nav-mobile {
+    z-index: 0;
+}
+
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        height: auto;
+        padding: 1em 0.5em;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.5em;
+    }
+
+    .nav [button] {
+        margin: 0.5em 0;
+        float: none;
+    }
 }

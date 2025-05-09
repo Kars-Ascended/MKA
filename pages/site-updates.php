@@ -8,6 +8,14 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>08/05/25</h2>
+        <p>changes:</p>
+        <ul>
+            <li>Linked the genius page of lyrics in the title of the lyric (idek if that makes sense) basically click song title = goto genius page</li>
+        </ul>
+        </main-element>
+
+    <main-element>
     <h2>08/05/25</h2>
     <p>hi everyone, changes are as follows:</p>
     <ul>

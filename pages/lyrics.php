@@ -94,7 +94,10 @@
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
             <div class="lyrics-item">
                 <h3><?php echo htmlspecialchars($row['album']); ?> - 
-                    <?php echo htmlspecialchars($row['track_title']); ?></h3>
+                    <a href="https://genius.com/Mrkitty-<?php 
+                        $clean_title = preg_replace('/[^a-zA-Z0-9\s-]/', '', $row['track_title']);
+                        echo str_replace(' ', '-', strtolower(trim($clean_title))); 
+                    ?>-lyrics" target="_blank"><?php echo htmlspecialchars($row['track_title']); ?></a></h3>
                 <div>
                     <?php 
                         $lyrics = str_replace('\n', "\n", $row['lyrics']); 

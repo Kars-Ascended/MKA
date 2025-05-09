@@ -36,7 +36,7 @@
     </main-element>
 
     <main-element>
-        <h3>The actual songs are stored on an old laptop and are forwarded through a tunnel. if the status is offline unfortunatly no songs will load.</h3>
+        <h3>The actual songs are stored on an old laptop and are forwarded through a tunnel. if the status is offline unfortunatly no songs nor images will load.</h3>
     </main-element>
 </body>
 </html>
