@@ -22,7 +22,8 @@
 }
 
 .nav-mobile {
-    z-index: 0;
+    /* z-index: 0; show when done */ 
+    display: none;
 }
 
 
@@ -40,5 +41,9 @@
     .nav [button] {
         margin: 0.5em 0;
         float: none;
+    }
+
+    .nav-mobile {
+        display:block;
     }
 }
