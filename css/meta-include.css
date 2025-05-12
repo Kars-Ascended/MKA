@@ -31,19 +31,23 @@
 @media only screen and (max-width: 768px) {
     .nav {
         display: none;
-        height: auto;
-        padding: 1em 0.5em;
-        flex-direction: column;
-        align-items: flex-start;
-        line-height: 1.5em;
     }
 
-    .nav [button] {
-        margin: 0.5em 0;
+    .nav-mobile [button] {
+        margin: 0.5em 0.2em;
         float: none;
     }
 
     .nav-mobile {
-        display:block;
+        display: flex;
+        height: 3em;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    body {
+        margin-top: 1em !important;
     }
 }

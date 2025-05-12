@@ -3,6 +3,14 @@
 <head>
     <?php include '../backend/meta-include.php'; ?>
     <title>Mr. Kitty Archive</title>
+    <style>
+        @media only screen and (max-width: 768px) {
+            main-element.welcome .left{
+            display: none !important;
+            }
+        }
+        
+    </style>
 </head>
 <body>
     <main-element class="welcome" style="height: 15em;">
@@ -34,6 +42,12 @@
         <br>
 
         <h3>A few songs might be missing from the database, if you find them please let me know</h3>
+    </main-element>
+
+    <main-element>
+        <h2>Know Issues</h2>
+        <p>- Mobile formating is... bad</p>
+        <p>- Mobile lyrics wrap break above 2</p>
     </main-element>
 
     <main-element>

@@ -65,3 +65,19 @@ td img {
 table * {
     text-decoration: none;
 }
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    .lyrics-grid {
+        padding:0;
+        gap: 0;
+    }
+
+    .lyrics-item {
+        margin:0;
+    }
+}

@@ -115,6 +115,18 @@ main-element {
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    
+}
+
+@media only screen and (max-width: 768px) {
+    main-element.welcome {
+        width: 100vw !important;
+        border-inline: 0 !important;
+    }
+
+    main-element {
+        width: 95vw !important;
+    }
 }
 
 /* Welcome Section */

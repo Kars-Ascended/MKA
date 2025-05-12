@@ -27,5 +27,11 @@
 </div>
 
 <div class="nav-mobile">
-    <p>NAV BROKEN ON MOBILE RN, SORRY!</p>
+    <a button href="/home">Home</a>
+    <a button href="/songs.php">Songs Database</a>
+    <a button href="/lyrics.php">Lyrics Database</a>
+    <a button href="/site-updates.php">Site Updates</a>
+    <a button href="/status.php">Status</a>
+    <a button href="#">Mr.Kitty Content [soon]</a>
+    <a button href="#">Daily song [soon]</a>
 </div>
