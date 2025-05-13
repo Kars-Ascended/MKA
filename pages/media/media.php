@@ -70,8 +70,8 @@
     <button id="toggleInfo" class="toggle-btn">Show Info</button>
     <div class="gallery">
         <?php
-        $tags_file = "../../backend/tags.json";
-        $upload_dir = "../../assets/media/uploads/";
+        $tags_file = "https://emacs-expressions-be-customers.trycloudflare.com/media/tags.json";
+        $upload_dir = "https://emacs-expressions-be-customers.trycloudflare.com/media/uploads/";
         
         if (file_exists($tags_file)) {
             $tags_data = json_decode(file_get_contents($tags_file), true);

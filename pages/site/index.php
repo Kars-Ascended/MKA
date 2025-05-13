@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../backend/meta-include.php'; ?>
-    <title>Status</title>
+    <?php include '../../backend/meta-include.php'; ?>
+    <?php include '../../backend/site-nav.php'; ?>
+    <title>Information</title>
 </head>
 <body>
-    <main-element class="welcome"> <h1 title>Status</h1> </main-element>
+    <main-element class="welcome"> <h1 title>Information</h1> </main-element>
 
     <main-element>
         <?php
@@ -32,10 +33,14 @@
         }
         echo "</p>";
         ?>
+
+        
+        <h3>The actual songs are stored on an old laptop and are forwarded through a tunnel. if the status is offline unfortunatly no songs nor images will load.</h3>
     </main-element>
 
     <main-element>
-        <h3>The actual songs are stored on an old laptop and are forwarded through a tunnel. if the status is offline unfortunatly no songs nor images will load.</h3>
+        <h2>Roadmap</h2>
+        <p>Soon.</p>
     </main-element>
 </body>
 </html>

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../backend/meta-include.php'; ?>
-    <title>Site Updates</title>
+    <?php include '../../backend/meta-include.php'; ?>
+    <?php include '../../backend/site-nav.php'; ?>
+    <title>Updates</title>
 </head>
 <body>
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
+
+    <main-element>
+        <h2>13/05/25</h2>
+        <p>Changes:</p>
+        <ul>
+            <li>Page reorganisation</li>
+            <li>Added roadmap <a href="/site/index.php">here</a>, currently unfinished</li>
+        </ul>
+    </main-element>
 
     <main-element>
         <h2>12/05/25</h2>

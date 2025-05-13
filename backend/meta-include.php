@@ -19,8 +19,7 @@
     <a button href="/home">Home</a>
     <a button href="/songs.php">Songs Database</a>
     <a button href="/lyrics.php">Lyrics Database</a>
-    <a button href="/site-updates.php">Site Updates</a>
-    <a button href="/status.php">Status</a>
+    <a button href="/site/index.php">Site Information</a>
     <a button href="#">Mr.Kitty Content [soon]</a>
     <a button href="#">Daily song [soon]</a>
     <a button href="/db" style="margin-left: auto;">DB View</a>
