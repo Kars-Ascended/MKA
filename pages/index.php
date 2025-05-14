@@ -48,6 +48,7 @@
         <h2>Know Issues</h2>
         <p>- Mobile formating is... bad</p>
         <p>- Mobile lyrics wrap break above 2</p>
+        <p>- Some songs just... dont load?</p>
     </main-element>
 
     <main-element>

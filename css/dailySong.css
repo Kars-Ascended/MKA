@@ -1,0 +1,63 @@
+#daily-song {
+    position: relative;
+    z-index: 1;
+    height: 25em;
+    * {
+        text-align: center;
+        vertical-align: middle;
+    }
+}   
+
+#album-cover {
+        width: 20em;
+        position: absolute;
+        left: 0em;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+#song-title {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    * {
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+#spotify-embed {
+        position: absolute;
+        right: 0em;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+img {
+    height:20em;
+}
+
+@media screen and (max-width: 768px) {
+    #daily-song {
+        height: 25em;
+    }
+    #album-cover {
+        display: none;
+    }
+    #song-title {
+        top:5em;
+        width: 80%;
+    }
+    img {
+        height: 10em;
+    }
+    #spotify-embed {
+        position: absolute;
+        right: 50%;
+        top: 70%;
+        transform: translate(50%, -50%);
+    }
+}

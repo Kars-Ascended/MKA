@@ -1,5 +1,5 @@
 /* Navigation */
-.nav, .nav-mobile {
+.nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,24 +21,33 @@
     margin-top: 0.5em;
 }
 
-.nav-mobile {
-    /* z-index: 0; show when done */ 
-    display: none;
+.settings {
+    background-color: var(--secondary);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vw;
+    z-index: 10000;
+    display: none; /* Hide by default */
+    padding: 20px;
+    border: 1px solid var(--accent);
 }
 
+.settings.active {
+    display: block;
+}
 
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
-    .nav {
-        display: none;
-    }
 
-    .nav-mobile [button] {
+    .nav [button] {
         margin: 0.5em 0.2em;
         float: none;
     }
 
-    .nav-mobile {
+    .nav {
         display: flex;
         height: 3em;
         overflow-x: auto;
@@ -47,7 +56,8 @@
         white-space: nowrap;
     }
 
-    body {
-        margin-top: 1em !important;
+    .settings {
+        width: 90vw;
+        height: 80vh;
     }
 }

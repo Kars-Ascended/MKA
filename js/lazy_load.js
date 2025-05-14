@@ -1,5 +1,4 @@
-
-    // Create intersection observer
+// Create intersection observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -25,6 +24,11 @@
     const audio = document.createElement('audio');
     audio.controls = true;
     audio.innerHTML = `<source src="${mp3_url}" type="audio/mpeg">`;
+    
+    // Apply the current volume setting to the new audio element
+    if (typeof currentVolume !== 'undefined') {
+        audio.volume = currentVolume;
+    }
     
     playerDiv.querySelector('.audio-placeholder').remove();
     playerDiv.appendChild(audio);
@@ -56,19 +60,3 @@ function setAllAudioVolume() {
         audio.volume = volumeLevel;
     });
 }
-
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', setAllAudioVolume);
-
-// Also set volume for any new audio elements that might be added dynamically
-const volumeObserver = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-        mutation.addedNodes.forEach(node => {
-            if (node.nodeName === 'AUDIO') {
-                node.volume = 0.05;
-            }
-        });
-    });
-});
-
-volumeObserver.observe(document.body, { childList: true, subtree: true });
