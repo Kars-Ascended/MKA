@@ -9,6 +9,15 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>14/05/25</h2>
+        <p>Changes:</p>
+        <ul>
+            <li>Daily song page</li>
+            <li>settings page for audio, more coming soon</li>
+        </ul>
+    </main-element>
+
+    <main-element>
         <h2>13/05/25</h2>
         <p>Changes:</p>
         <ul>
