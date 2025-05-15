@@ -25,7 +25,7 @@
     <main-element>
         <h2>FAQ</h2>
         <h3>- Where are the actual songs?</h3>
-        <p>Currently i have some pre-2010 songs and the death album, im working on adding the rest soon</p>
+        <p>Being added, most are actually there but unable to load. ill fix it once ive finished all the other features.</p>
 
         <h3>- What else do you plan to archive?</h3>
         <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find.</p>
@@ -37,7 +37,7 @@
         <p>Songs are hosted on an old laptop through a tunnel since my isp wont allow port forwarding and the website host wont allow anything bigger than 125mb on there. for now i recommend filtering as much as possible to help with the speeds, and ill find a better solution soon.</p>
 
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
-        <p>I have a weird listing structure that i might change eventually, ill add a page explaining the structure soon</p>
+        <p>I have a weird listing structure that i might change eventually, ill add a page explaining the structure soon.</p>
         
         <br>
 
@@ -46,9 +46,10 @@
 
     <main-element>
         <h2>Know Issues</h2>
-        <p>- Mobile formating is... bad</p>
+        <p>- Mobile formating is... eh</p>
         <p>- Mobile lyrics wrap break above 2</p>
         <p>- Some songs just... dont load?</p>
+        <p>- CSS looks weird at ratios not ~9:16 or ~16:9, so no squares like 4:3</p>
     </main-element>
 
     <main-element>

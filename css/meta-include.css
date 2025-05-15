@@ -24,19 +24,25 @@
 .settings {
     background-color: var(--secondary);
     position: fixed;
-    left: 50%;
+    left: -100%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     height: 50vh;
     width: 50vw;
     z-index: 10000;
-    display: none; /* Hide by default */
-    padding: 20px;
     border: 1px solid var(--accent);
+    border-radius: var(--main-br-radius);
+    padding: 1em;
 }
 
-.settings.active {
-    display: block;
+.settings div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.settings label {
+    margin-right: 1em;
 }
 
 /* Mobile styles */
@@ -60,4 +66,30 @@
         width: 90vw;
         height: 80vh;
     }
+}
+
+@keyframes slide-in {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 25%;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        left: 25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.settings.active {
+    animation: slide-in 0.25s forwards;
+}
+
+.settings.inactive {
+    animation: slide-out 0.25s forwards;
 }

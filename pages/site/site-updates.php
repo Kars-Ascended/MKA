@@ -9,6 +9,16 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>15/05/25</h2>
+        <p>Hi guys, been working on small stuff recently as you can see, ill work on the big stuff in a bit i just really want to make the site more user friendly first and take a break from the big things</p>
+        <p>Changes:</p>
+        <ul>
+            <li>Backend cleanup</li>
+            <li>Settings rework + themes! (click that button in the top right)</li>
+        </ul>
+    </main-element>
+
+    <main-element>
         <h2>14/05/25</h2>
         <p>Changes:</p>
         <ul>

@@ -14,54 +14,56 @@ $count = $db->querySingle("SELECT COUNT(*) FROM tracks");
 
 // Get a random track using today's seed
 $randomIndex = mt_rand(1, $count);
-$query = "SELECT track_title as song, track_title, album, discog, spotify_link FROM tracks LIMIT 1 OFFSET " . ($randomIndex - 1);
+$query = "SELECT track_title as song, track_title, album, discog, spotify_link, youtube_link FROM tracks LIMIT 1 OFFSET " . ($randomIndex - 1);
 $result = $db->query($query);
-$track = $result->fetchArray(SQLITE3_ASSOC);
+$track = $result->fetchArray(SQLITE3_ASSOC); ?>
 
-if ($track) {
-    echo '<main-element style="position: relative;">';
+<?php if ($track): ?>
+    <main-element style="position: relative;">
 
-        // Display the background image
-        echo '<div style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-position: center;
-            background-image: url(\'/assets/covers/' . htmlspecialchars($track['discog']) . '/' . htmlspecialchars($track['album']) . '.png\');
-            filter: brightness(0.5);
-            z-index: 0;
-        "></div>';
-    
-        // Elements
-        echo '<div id="daily-song">';
-            echo '<img src="/assets/covers/' . htmlspecialchars($track['discog']) . '/' . htmlspecialchars($track['album']) . '.png" 
-                    alt="Album Cover" id="album-cover">';
-            echo '<div id="song-title">';
-                echo '<h1>' . htmlspecialchars($track['track_title']) . ' - ' .htmlspecialchars($track['album']) . '</h1>';
-                // Replace the audio tag with a div that lazy_load.js will handle
-                echo '<div class="audio-player" 
-                        data-discog="' . htmlspecialchars($track['discog']) . '"
-                        data-album="' . htmlspecialchars($track['album']) . '"
-                        data-song="' . htmlspecialchars($track['track_title']) . '">
-                        <div class="audio-placeholder">Loading audio...</div>
-                    </div>';
-            echo '</div>';
-            echo '<div id="spotify-embed">';
-                echo '<iframe src="https://open.spotify.com/embed/track/' . basename($track['spotify_link']) . '" 
-                        width="300" 
-                        height="80" 
-                        frameborder="0" 
-                        allowtransparency="true" 
-                        allow="encrypted-media">
-                </iframe>';
-            echo '</div>';
-        echo '</div>';
-    echo '</main-element>';
-} else {
-    echo '<p class="error">No track found</p>';
-}
+        <!-- Background Image -->
+        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album']) ?>.png');"></div>
 
+        <!-- Front -->
+        <div id="daily-song">
+
+            <img src="/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album']) ?>.png" 
+                 alt="Album Cover" id="album-cover">
+
+            <div id="song-title">
+                <h1><?= htmlspecialchars($track['track_title']) ?> - <?= htmlspecialchars($track['album']) ?></h1>
+
+                <!-- Lazy-load audio player placeholder -->
+                <div class="audio-player"
+                     data-discog="<?= htmlspecialchars($track['discog']) ?>"
+                     data-album="<?= htmlspecialchars($track['album']) ?>"
+                     data-song="<?= htmlspecialchars($track['track_title']) ?>">
+                    <div class="audio-placeholder">Loading audio...</div>
+                </div>
+            </div>
+
+            <!-- Embeds -->
+            <div class="embeds">
+                <div id="spotify-embed">
+                    <iframe src="https://open.spotify.com/embed/track/<?= basename($track['spotify_link']) ?>" 
+                            width="300" 
+                            height="80" 
+                            frameborder="0" 
+                            allowtransparency="true" 
+                            allow="encrypted-media">
+                    </iframe>
+                </div>
+                <div id="youtube-embed">
+                        <iframe src="https://www.youtube.com/embed/<?= htmlspecialchars($track['youtube_link']) ?>">
+                        </iframe>
+                </div>
+            </div>
+        </div>
+    </main-element>
+<?php else: ?>
+    <p class="error">No track found</p>
+<?php endif; ?>
+
+<?php
 $db->close();
 ?>
