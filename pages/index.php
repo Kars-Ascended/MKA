@@ -39,6 +39,8 @@
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
         <p>I have a weird listing structure that i might change eventually, ill add a page explaining the structure soon.</p>
         
+        <h3>- [x] element is rendering weird</h3>
+        <p>I update the site css almost daily adding new things, refresh the cache [ctrl + f5] and it should work!</p>
         <br>
 
         <h3>A few songs might be missing from the database, if you find them please let me know</h3>
