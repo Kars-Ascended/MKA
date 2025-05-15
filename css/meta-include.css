@@ -33,6 +33,15 @@
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
     padding: 1em;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 1);
+
+    img {
+        position: absolute;
+        bottom:0;
+        right: 0;
+        width: 25em;
+        z-index: -10;
+    }
 }
 
 .settings div{
@@ -43,29 +52,6 @@
 
 .settings label {
     margin-right: 1em;
-}
-
-/* Mobile styles */
-@media only screen and (max-width: 768px) {
-
-    .nav [button] {
-        margin: 0.5em 0.2em;
-        float: none;
-    }
-
-    .nav {
-        display: flex;
-        height: 3em;
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-    }
-
-    .settings {
-        width: 90vw;
-        height: 80vh;
-    }
 }
 
 @keyframes slide-in {
@@ -92,4 +78,54 @@
 
 .settings.inactive {
     animation: slide-out 0.25s forwards;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+
+    .nav [button] {
+        margin: 0.5em 0.2em;
+        float: none;
+    }
+
+    .nav {
+        display: flex;
+        height: 3em;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .settings img{
+        width: 7em;
+    }
+
+    .settings {
+        width: 80vw;
+        height: 50vh;
+        left: -100%;
+        transform: translateX(-70%);
+        transform: translateY(-50%);
+    }
+
+    @keyframes slide-in {
+        0% {
+            left: -150%;
+        }
+        100% {
+            left: 10%;
+
+        }
+    }
+
+    @keyframes slide-out {
+        0% {
+            left: 10%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+
 }

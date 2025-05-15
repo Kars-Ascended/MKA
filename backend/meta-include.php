@@ -22,7 +22,7 @@
     <a button href="/songs.php">Songs Database</a>
     <a button href="/lyrics.php">Lyrics Database</a>
     <a button href="/site/index.php">Site Information</a>
-    <a button href="#">Mr.Kitty Content [soon]</a>
+    <a button href="/media/media.php">Mr.Kitty Content [soon]</a>
     <a button href="/dailySong.php">Daily song</a>
     
     <a button id="settings-button" style="margin-left: auto;">Settings</a>
@@ -45,5 +45,8 @@
             <option value="light">Kurple Light [Beta]</option>
         </select>
     </div>
+    <h3>Table themes coming soon maybe ^^</h3>
+
+    <img src="/assets/settings.png" alt="Forrest">
 </div>
 

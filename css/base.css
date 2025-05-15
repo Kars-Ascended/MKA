@@ -3,6 +3,7 @@
     /* Global Values*/
     --main-br-radius: 7px;
     --main-br-radius-x2: 14px;
+    --box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
 
     /* Colours */
     --main: #202030;
@@ -10,6 +11,8 @@
     --accent: #783cb1;
     --accent-secondary: #b338ec;
     --white: #F2F4F3;
+
+
 }
 
 /* Global Reset */
@@ -114,8 +117,7 @@ main-element {
     background-color: var(--secondary);
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
-    
+    box-shadow: var(--box-shadow);
 }
 
 @media only screen and (max-width: 768px) {
