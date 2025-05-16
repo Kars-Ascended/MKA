@@ -5,7 +5,7 @@ header('Content-Type: text/html');
 $db = new SQLite3(__DIR__ . '/../db/mka.db');
 
 // Get today's date and use it as a seed
-$today = date('a');
+$today = date('yy-mm-dd');
 $seed = crc32($today);
 mt_srand($seed);
 

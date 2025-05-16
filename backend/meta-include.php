@@ -21,14 +21,13 @@
     <a button href="/home">Home</a>
     <a button href="/songs.php">Songs Database</a>
     <a button href="/lyrics.php">Lyrics Database</a>
+    <a button href="/discography.php">Discography [soon]</a>
     <a button href="/site/index.php">Site Information</a>
     <a button href="/media/media.php">Mr.Kitty Content [soon]</a>
     <a button href="/dailySong.php">Daily song</a>
     
     <a button id="settings-button" style="margin-left: auto;">Settings</a>
 </div>
-
-
 
 <div class="settings">
     <h1 title>Settings</h1 title>
@@ -52,6 +51,7 @@
     <hr>
     <h3>Fun</h3>
     
+    <!-- Cursor Control 
     <div class="cursor-control">
         <label for="cursorSelect">Cursor Style: </label>
         <select id="cursorSelect">
@@ -62,6 +62,7 @@
             <option value="star">Star</option>
         </select>
     </div>
+    -->
 
     <img src="/assets/settings.png" alt="Forrest">
 </div>

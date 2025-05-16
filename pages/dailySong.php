@@ -11,5 +11,10 @@
     </main-element>
 
     <?php include '../backend/dailySong.php'; ?>
+
+    <main-element notice>
+        <h2>Notice</h2>
+        <p>Currently not all elements of songs are avalible so the daily song may not load correctly, sorry</p>
+    </main-element>
 </body>
 </html>

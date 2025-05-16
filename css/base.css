@@ -24,10 +24,9 @@
 /* Base Elements */
 body {
     font-family: Arial;
-    margin: 0.5em;
     padding-top: 0.5em;
     margin-top: 4em !important;
-    min-height: calc(100vh - 4em);
+    min-height: calc(100vh - 4.5em);
     background-color: var(--main);
 }
 
@@ -39,7 +38,7 @@ body {
 }
 
 /* Form Elements */
-input, select, .button, .main, [discography]{
+input, select, .button, .main {
     border-radius: 0.5em;
     padding: 0.4em;
     background-color: var(--secondary);
@@ -142,4 +141,14 @@ main-element {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+main-element[notice] {
+    position: absolute;
+    bottom:0; left: 0;
+    width: 40%;
+    height: 25%;
+    background-color: var(--secondary);
+    margin:0;
+    z-index: 10000;
 }
