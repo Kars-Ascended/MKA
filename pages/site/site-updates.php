@@ -9,6 +9,14 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>16/05/25</h2>
+        <p>Changes:</p>
+        <ul>
+            <li>Server down for maintanance, sorry.</li>
+        </ul>
+    </main-element>
+
+    <main-element>
         <h2>15/05/25</h2>
         <p>Changes:</p>
         <ul>

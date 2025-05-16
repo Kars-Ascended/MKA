@@ -19,7 +19,7 @@
     const album = encodeURIComponent(playerDiv.dataset.album);
     const song = encodeURIComponent(playerDiv.dataset.song);
     const discog = encodeURIComponent(playerDiv.dataset.discog);
-    const mp3_url = `https://emacs-expressions-be-customers.trycloudflare.com/discogs/${discog}/${album}/${song}.mp3`;
+    const mp3_url = `https://individually-upon-offering-template.trycloudflare.com/discogs/${discog}/${album}/${song}.mp3`;
 
     const audio = document.createElement('audio');
     audio.controls = true;

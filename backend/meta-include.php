@@ -31,11 +31,13 @@
 
 
 <div class="settings">
-        <h1 title>Settings</h1 title>
+    <h1 title>Settings</h1 title>
+    <h3>Main</h3>
     <div class="volume-control">
         <label for="volumeSlider">Volume: </label>
         <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
+
     <div class="theme-control">
         <label for="themeSelect">Theme: </label>
         <select id="themeSelect">
@@ -45,7 +47,21 @@
             <option value="light">Kurple Light [Beta]</option>
         </select>
     </div>
-    <h3>Table themes coming soon maybe ^^</h3>
+    <p>Table themes coming soon maybe ^^</p>
+
+    <hr>
+    <h3>Fun</h3>
+    
+    <div class="cursor-control">
+        <label for="cursorSelect">Cursor Style: </label>
+        <select id="cursorSelect">
+            <option value="default">Default</option>
+            <option value="pointer">Hand</option>
+            <option value="crosshair">Crosshair</option>
+            <option value="heart">Heart</option>
+            <option value="star">Star</option>
+        </select>
+    </div>
 
     <img src="/assets/settings.png" alt="Forrest">
 </div>

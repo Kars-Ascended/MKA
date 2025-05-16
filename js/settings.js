@@ -142,6 +142,28 @@ function applyTheme(themeName) {
     root.style.setProperty('--white', theme.white);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const cursorSelect = document.getElementById('cursorSelect');
+    
+    // Load saved cursor preference
+    const savedCursor = localStorage.getItem('cursor');
+    if (savedCursor) {
+        document.body.style.cursor = savedCursor;
+        cursorSelect.value = savedCursor;
+    }
+
+    // Handle cursor changes
+    cursorSelect.addEventListener('change', function() {
+        const selectedCursor = this.value;
+        if (selectedCursor === 'heart' || selectedCursor === 'star') {
+            document.body.style.cursor = `url('/assets/cursors/${selectedCursor}.cur'), auto`;
+        } else {
+            document.body.style.cursor = selectedCursor;
+        }
+        localStorage.setItem('cursor', selectedCursor);
+    });
+});
+
 // Initialize both volume control, settings panel, and theme control
 document.addEventListener('DOMContentLoaded', function() {
     initVolumeControl();
