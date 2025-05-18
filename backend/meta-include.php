@@ -48,22 +48,6 @@
     </div>
     <p>Table themes coming soon maybe ^^</p>
 
-    <hr>
-    <h3>Fun</h3>
-    
-    <!-- Cursor Control 
-    <div class="cursor-control">
-        <label for="cursorSelect">Cursor Style: </label>
-        <select id="cursorSelect">
-            <option value="default">Default</option>
-            <option value="pointer">Hand</option>
-            <option value="crosshair">Crosshair</option>
-            <option value="heart">Heart</option>
-            <option value="star">Star</option>
-        </select>
-    </div>
-    -->
-
     <img src="/assets/settings.png" alt="Forrest">
 </div>
 

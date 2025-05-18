@@ -140,7 +140,7 @@ button[type="submit"]:hover {
     .timeline {
         flex-direction: column;
         align-items: center;
-        flex-wrap: 2;
+        
     }
 
     .timeline-item {

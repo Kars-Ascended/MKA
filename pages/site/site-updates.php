@@ -9,6 +9,12 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>17/05/25</h2>
+        <p>Sorry but the server will be down for a while. I plan to return it once i work out user uploads, downloads, viewing, and othe media related things</p>
+        <p>I have no time plan for this yet, expect anywhere from 1 week to 2 months. other site features will be maintained and worked on in the meantime!</p>
+    </main-element>
+
+    <main-element>
         <h2>16/05/25</h2>
         <p>Changes:</p>
         <ul>
