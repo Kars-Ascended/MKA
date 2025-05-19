@@ -9,6 +9,13 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>19/05/25</h2>
+        <p>Hi everyone, i have decided to rework my entire database backend. this way i can support all songs and media while allowing users to view it better (hiding duplicates, showing "also released under", etc...). this will come before the server probably so expect that to be pushed back.</p>
+        <p>I have nobody but myself to blame for this, i wrote sloppy code when i started so now you have to pay the price. there will be minor site changes while this happens but no major updates.</p>
+    </main-element>
+
+
+    <main-element>
         <h2>17/05/25</h2>
         <p>Sorry but the server will be down for a while. I plan to return it once i work out user uploads, downloads, viewing, and othe media related things</p>
         <p>I have no time plan for this yet, expect anywhere from 1 week to 2 months. other site features will be maintained and worked on in the meantime!</p>
