@@ -93,16 +93,18 @@
     <div class="lyrics-grid">
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
             <div class="lyrics-item">
-                <h3><?php echo htmlspecialchars($row['album']); ?> - 
+                <h3><?php echo htmlspecialchars($row['title'] ?? ''); ?> - 
                     <a href="https://genius.com/Mrkitty-<?php 
-                        $clean_title = preg_replace('/[^a-zA-Z0-9\s-]/', '', $row['track_title']);
+                        $clean_title = preg_replace('/[^a-zA-Z0-9\s-]/', '', $row['TRACK_TITLE']);
                         echo str_replace(' ', '-', strtolower(trim($clean_title))); 
-                    ?>-lyrics" target="_blank"><?php echo htmlspecialchars($row['track_title']); ?></a></h3>
+                    ?>-lyrics" target="_blank"><?php echo htmlspecialchars($row['TRACK_TITLE'] ?? ''); ?></a></h3>
                 <div>
                     <?php 
-                        $lyrics = str_replace('\n', "\n", $row['lyrics']); 
-                        $lyrics = trim($lyrics, '"'); // Remove quotes from start and end
-                        echo nl2br(htmlspecialchars($lyrics)); 
+                        if (!is_null($row['Lyrics'])) {
+                            $lyrics = str_replace('\n', "\n", $row['Lyrics']); 
+                            $lyrics = trim($lyrics, '"'); // Remove quotes from start and end
+                            echo nl2br(htmlspecialchars($lyrics)); 
+                        }
                     ?>
                 </div>
             </div>

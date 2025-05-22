@@ -102,14 +102,13 @@
 
     <!-- Results Table -->
     <table>
-        
-        <tr> <!-- Table Header -->
+        <tr>
             <th>Album</th>
             <th>Track #</th>
             <th>Title</th>
             <th>Song</th>
             <th>Duration</th>
-            <th>Links</th> <!-- Combined column -->
+            <th>Links</th>
             <th>Explicit?</th>
             <th>Loud / Breakcore?</th>
             <th>Featured Artists</th>
@@ -119,19 +118,20 @@
 
         <?php while ($row = $results->fetchArray(SQLITE3_ASSOC)): ?>
         <tr>
-            <td><?php echo htmlspecialchars($row['album']); ?></td>
-            <td><?php echo htmlspecialchars($row['track_number']); ?></td>
-            <td><?php echo htmlspecialchars($row['track_title']); ?></td>
+            <td><?php echo !is_null($row['album_title']) ? htmlspecialchars($row['album_title']) : ''; ?></td>
+            <td><?php echo !is_null($row['track_number']) ? htmlspecialchars($row['track_number']) : ''; ?></td>
+            <td><?php echo !is_null($row['TRACK_TITLE']) ? htmlspecialchars($row['TRACK_TITLE']) : ''; ?></td>
             <td>
-                <?php
-                    echo "<div class='audio-player' data-album='" . htmlspecialchars($row['album'], ENT_QUOTES) . "' 
-                           data-song='" . htmlspecialchars($row['track_title'], ENT_QUOTES) . "' 
-                           data-discog='" . htmlspecialchars($row['discog'], ENT_QUOTES) . "'>";
-                    echo "<div class='audio-placeholder'>Click to load audio</div>";
-                    echo "</div>";
-                ?>
+                <?php if (!is_null($row['TRACK_TITLE']) && !is_null($row['album_title'])): ?>
+                    <div class='audio-player' 
+                         data-album='<?php echo htmlspecialchars($row['album_title'] ?? '', ENT_QUOTES); ?>' 
+                         data-song='<?php echo htmlspecialchars($row['TRACK_TITLE'] ?? '', ENT_QUOTES); ?>' 
+                         data-discog='<?php echo htmlspecialchars($row['discog'] ?? '', ENT_QUOTES); ?>'>
+                        <div class='audio-placeholder'>Click to load audio</div>
+                    </div>
+                <?php endif; ?>
             </td>
-            <td><?php echo htmlspecialchars($row['duration']); ?></td>
+            <td><?php echo !is_null($row['DURATION']) ? htmlspecialchars($row['DURATION']) : ''; ?></td>
             <td class="links-cell">
                 <?php if (!empty($row['spotify_link'])): ?>
                     <a href="<?php echo htmlspecialchars($row['spotify_link']); ?>" target="_blank">
@@ -144,14 +144,13 @@
                     </a>
                 <?php endif; ?>
             </td>
-            <td><?php echo $row['explicit'] ? 'Yes' : 'No'; ?></td>
-            <td><?php echo $row['volume'] ? 'Yes' : 'No'; ?></td>
-            <td><?php echo ($row['featured_artists'] && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
-            <td><?php echo htmlspecialchars($row['discog']); ?></td>
-            <td><?php echo htmlspecialchars($row['release_date']); ?></td>
+            <td><?php echo isset($row['explicit']) ? ($row['explicit'] ? 'Yes' : 'No') : ''; ?></td>
+            <td><?php echo isset($row['volume']) ? ($row['volume'] ? 'Yes' : 'No') : ''; ?></td>
+            <td><?php echo (!empty($row['featured_artists']) && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
+            <td><?php echo !is_null($row['discog']) ? htmlspecialchars($row['discog']) : ''; ?></td>
+            <td><?php echo !is_null($row['release_date']) ? htmlspecialchars($row['release_date']) : ''; ?></td>
         </tr>
         <?php endwhile; ?>
-
     </table>
 
 <?php

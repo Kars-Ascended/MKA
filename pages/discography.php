@@ -15,9 +15,9 @@
             <div class="filter-container">
                 <div class="filter-group">
                     <h3>Discography Type:</h3>
-                    <label><input type="checkbox" name="discog[]" value="main" <?php echo (isset($_GET['discog']) && in_array('main', $_GET['discog'])) ? 'checked' : ''; ?>> Main Albums</label>
-                    <label><input type="checkbox" name="discog[]" value="pre-2010" <?php echo (isset($_GET['discog']) && in_array('pre-2010', $_GET['discog'])) ? 'checked' : ''; ?>> Pre-2010</label>
-                    <label><input type="checkbox" name="discog[]" value="other" <?php echo (isset($_GET['discog']) && in_array('other', $_GET['discog'])) ? 'checked' : ''; ?>> Other</label>
+                    <label><input type="checkbox" name="type[]" value="Album" <?php echo (isset($_GET['type']) && in_array('Album', $_GET['type'])) ? 'checked' : ''; ?>> Albums</label>
+                    <label><input type="checkbox" name="type[]" value="EP" <?php echo (isset($_GET['type']) && in_array('EP', $_GET['type'])) ? 'checked' : ''; ?>> EPs</label>
+                    <label><input type="checkbox" name="type[]" value="Single" <?php echo (isset($_GET['type']) && in_array('Single', $_GET['type'])) ? 'checked' : ''; ?>> Singles</label>
                 </div>
                 
                 <div class="filter-group">
@@ -34,57 +34,67 @@
     <main-element discography>
         <div class="timeline-container">
             <?php
-            // Connect to the database
             $db = new SQLite3(__DIR__ . '/../db/mka.db');
             
             // Build the query with filters
-            $query = "SELECT DISTINCT a.album, a.release_date, a.discog 
-                 FROM (
-                 SELECT album, release_date, discog,
-                    MAX(CASE WHEN explicit = 1 THEN 1 ELSE 0 END) as has_explicit,
-                    MAX(CASE WHEN featured_artists IS NOT NULL AND featured_artists != '' THEN 1 ELSE 0 END) as has_features,
-                    MAX(CASE WHEN volume = 1 THEN 1 ELSE 0 END) as has_breakcore
-                 FROM tracks
-                 GROUP BY album, release_date, discog
-                 ) a
-                 WHERE 1=1";
+            $query = "SELECT DISTINCT r.release_ID, r.title, r.type, r.release_date,
+                        MAX(s.explicit) as has_explicit,
+                        MAX(CASE WHEN s.featured_artists IS NOT NULL AND s.featured_artists != '' 
+                            AND s.featured_artists != 'FALSE' THEN 1 ELSE 0 END) as has_features,
+                        MAX(s.volume) as has_breakcore
+                     FROM releases r
+                     LEFT JOIN connections c ON r.release_ID = c.release_ID
+                     LEFT JOIN songs s ON c.song_ID = s.song_ID
+                     WHERE r.title IS NOT NULL AND r.title != ''
+                     GROUP BY r.release_ID";
 
             // Apply filters
-            if (!empty($_GET['discog'])) {
-            $discogs = array_map(function($d) use ($db) { 
-                return "'" . SQLite3::escapeString($d) . "'";
-            }, $_GET['discog']);
-            $query .= " AND a.discog IN (" . implode(",", $discogs) . ")";
+            $conditions = [];
+            $params = [];
+
+            if (!empty($_GET['type'])) {
+                $types = array_map(function($t) use ($db) { 
+                    return "'" . SQLite3::escapeString($t) . "'";
+                }, $_GET['type']);
+                $conditions[] = "r.type IN (" . implode(",", $types) . ")";
             }
             
             if (isset($_GET['has_explicit'])) {
-            $query .= " AND a.has_explicit = 1";
+                $conditions[] = "MAX(s.explicit) = 1";
             }
             
             if (isset($_GET['has_features'])) {
-            $query .= " AND a.has_features = 1";
+                $conditions[] = "MAX(CASE WHEN s.featured_artists IS NOT NULL AND s.featured_artists != '' 
+                                AND s.featured_artists != 'FALSE' THEN 1 ELSE 0 END) = 1";
             }
             
             if (isset($_GET['has_breakcore'])) {
-            $query .= " AND a.has_breakcore = 1";
+                $conditions[] = "MAX(s.volume) = 1";
+            }
+
+            if (!empty($conditions)) {
+                $query .= " HAVING " . implode(" AND ", $conditions);
             }
             
-            $query .= " ORDER BY a.release_date ASC";
+            $query .= " ORDER BY r.release_date ASC";
             
             $results = $db->query($query);
             
             echo '<div class="timeline">';
             while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-            $albumEncoded = urlencode($row['album']);
-            echo '<a href="/pages/songs.php?album=' . $albumEncoded . '" class="timeline-item" 
-                data-album="' . htmlspecialchars($row['album']) . '" 
-                data-discog="' . htmlspecialchars($row['discog']) . '">';
-            echo '<div class="timeline-content">';
-            echo '<div class="timeline-date">' . date('Y', strtotime($row['release_date'])) . '</div>';
-            echo '<h3>' . htmlspecialchars($row['album']) . '</h3>';
-            echo '<div class="release-date">' . date('F j, Y', strtotime($row['release_date'])) . '</div>';
-            echo '</div>';
-            echo '</a>';
+                if (!empty($row['title'])) {
+                    $titleEncoded = urlencode($row['title']);
+                    echo '<a href="/pages/songs.php?album=' . $titleEncoded . '" class="timeline-item" 
+                        data-album="' . htmlspecialchars($row['title']) . '" 
+                        data-type="' . htmlspecialchars($row['type']) . '">';
+                    echo '<div class="timeline-content">';
+                    echo '<div class="timeline-date">' . date('Y', strtotime($row['release_date'])) . '</div>';
+                    echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+                    echo '<div class="release-date">' . date('F j, Y', strtotime($row['release_date'])) . '</div>';
+                    echo '<div class="release-type">' . htmlspecialchars($row['type']) . '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                }
             }
             echo '</div>';
             
@@ -95,8 +105,8 @@
     <script>
         document.querySelectorAll('.timeline-item').forEach(item => {
             const album = item.dataset.album;
-            const discog = item.dataset.discog;
-            const imagePath = `../assets/covers/${discog}/${album}.png`;
+            const type = item.dataset.type;
+            const imagePath = `../assets/covers/${type}/${album}.png`;
             console.log('Loading image:', imagePath);
             item.style.backgroundImage = `url('${imagePath}')`;
         });

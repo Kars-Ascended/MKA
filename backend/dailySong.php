@@ -9,12 +9,18 @@ $today = date('yy-mm-dd');
 $seed = crc32($today);
 mt_srand($seed);
 
-// Get total number of tracks
-$count = $db->querySingle("SELECT COUNT(*) FROM tracks");
+// Get total number of songs
+$count = $db->querySingle("SELECT COUNT(*) FROM songs");
 
-// Get a random track using today's seed
+// Get a random song using today's seed
 $randomIndex = mt_rand(1, $count);
-$query = "SELECT track_title as song, track_title, album, discog, spotify_link, youtube_link FROM tracks LIMIT 1 OFFSET " . ($randomIndex - 1);
+$query = "SELECT s.TRACK_TITLE, s.spotify_link, s.youtube_link, s.discog,
+                 r.title as album_title, r.type as release_type
+          FROM songs s
+          LEFT JOIN connections c ON s.song_ID = c.song_ID
+          LEFT JOIN releases r ON c.release_ID = r.release_ID
+          LIMIT 1 OFFSET " . ($randomIndex - 1);
+
 $result = $db->query($query);
 $track = $result->fetchArray(SQLITE3_ASSOC); ?>
 
@@ -22,28 +28,29 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
     <main-element style="position: relative;">
 
         <!-- Background Image -->
-        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album']) ?>.png');"></div>
+        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
 
         <!-- Front -->
         <div id="daily-song">
 
-            <img src="/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album']) ?>.png" 
+            <img src="/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
                  alt="Album Cover" id="album-cover">
 
             <div id="song-title">
-                <h1><?= htmlspecialchars($track['track_title']) ?> - <?= htmlspecialchars($track['album']) ?></h1>
+                <h1><?= htmlspecialchars($track['TRACK_TITLE']) ?> - <?= htmlspecialchars($track['album_title']) ?></h1>
 
                 <!-- Lazy-load audio player placeholder -->
                 <div class="audio-player"
                      data-discog="<?= htmlspecialchars($track['discog']) ?>"
-                     data-album="<?= htmlspecialchars($track['album']) ?>"
-                     data-song="<?= htmlspecialchars($track['track_title']) ?>">
+                     data-album="<?= htmlspecialchars($track['album_title']) ?>"
+                     data-song="<?= htmlspecialchars($track['TRACK_TITLE']) ?>">
                     <div class="audio-placeholder">Loading audio...</div>
                 </div>
             </div>
 
             <!-- Embeds -->
             <div class="embeds">
+                <?php if (!empty($track['spotify_link'])): ?>
                 <div id="spotify-embed">
                     <iframe src="https://open.spotify.com/embed/track/<?= basename($track['spotify_link']) ?>" 
                             width="300" 
@@ -53,10 +60,14 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
                             allow="encrypted-media">
                     </iframe>
                 </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($track['youtube_link'])): ?>
                 <div id="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/<?= htmlspecialchars($track['youtube_link']) ?>">
-                        </iframe>
+                    <iframe src="https://www.youtube.com/embed/<?= htmlspecialchars($track['youtube_link']) ?>">
+                    </iframe>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </main-element>

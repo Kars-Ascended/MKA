@@ -1,5 +1,2 @@
-songs/*
-/assets/gallery/
-
 db/*.php
-backend/*.csv
+*.csv
