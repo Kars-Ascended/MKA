@@ -40,7 +40,7 @@
 
     <main-element>
         <h2>Roadmap</h2>
-        <p>Soon.</p>
+        <img src="../assets/roadmap.png" alt="Roadmap" style="width: 100%; height: auto;">
     </main-element>
 </body>
 </html>

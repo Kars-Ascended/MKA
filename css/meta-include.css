@@ -14,11 +14,23 @@
     flex-wrap: wrap;
 }
 
-.nav [button] {
+.nav [button], .nav .parent [button]{
     line-height: 1em;
     text-decoration: none;
     margin: 0.5em;
     margin-top: 0.5em;
+}
+
+.nav .parent {
+    margin: 0;
+    padding: 0;
+    margin-inline: 0.5em;
+    display: flex;
+    gap: 0;
+
+    background-color: var(--main);
+    border-radius: var(--main-br-radius);
+    height: 3em;
 }
 
 .settings {
@@ -87,22 +99,8 @@
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
 
-    .nav [button] {
-        margin: 0.5em 0.2em;
-        float: none;
-    }
-
-    .nav {
-        display: flex;
-        height: 3em;
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-    }
-
-    .settings img{
-        width: 7em;
+    .nav .parent {
+        display: none;
     }
 
     .settings {
@@ -111,6 +109,9 @@
         left: -100%;
         transform: translateX(-70%);
         transform: translateY(-50%);
+        img {
+        width: 7em;
+        }
     }
 
     @keyframes slide-in {
@@ -132,4 +133,10 @@
         }
     }
 
+    #mobile-menu-btn {
+        display: block !important;
+    }
+    .nav {
+        transition: height 0.2s;
+    }
 }

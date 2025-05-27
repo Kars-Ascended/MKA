@@ -170,3 +170,33 @@ document.addEventListener('DOMContentLoaded', function() {
     initSettingsPanel();
     initThemeControl();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Support multiple navs with their own menu buttons
+    document.querySelectorAll('.nav').forEach(function(nav) {
+        const menuBtn = nav.querySelector('#mobile-menu-btn');
+        if (!menuBtn) return;
+
+        // Find all .parent and direct child <a> elements (for media-nav)
+        const parentElements = nav.querySelectorAll('.parent');
+        const directLinks = Array.from(nav.children).filter(
+            el => el.tagName === 'A' && !el.classList.contains('parent')
+        );
+
+        let expanded = false;
+
+        menuBtn.addEventListener('click', function() {
+            if (!expanded) {
+                nav.style.height = '70vh';
+                parentElements.forEach(el => el.style.display = 'block');
+                directLinks.forEach(el => el.style.display = 'block');
+                expanded = true;
+            } else {
+                nav.style.height = '';
+                parentElements.forEach(el => el.style.display = '');
+                directLinks.forEach(el => el.style.display = '');
+                expanded = false;
+            }
+        });
+    });
+});

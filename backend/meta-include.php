@@ -18,15 +18,21 @@
 
 <!-- NAV -->
 <div class="nav">
-    <a button href="/home">Home</a>
-    <a button href="/songs.php">Songs Database</a>
-    <a button href="/lyrics.php">Lyrics Database</a>
-    <a button href="/discography.php">Discography [soon]</a>
+    <button id="mobile-menu-btn" style="display:none;">Navbar</button>
+    <div class="parent">
+        <a button href="/home">Home</a>
+        <a button href="/songs.php">Songs Database</a>
+        <a button href="/lyrics.php">Lyrics Database</a>
+        <a button href="/discography.php">Discography [soon]</a>
+        <a button href="/dailySong.php">Daily song</a>
+    </div>
+    <div class="parent">
     <a button href="/site/index.php">Site Information</a>
-    <a button href="/media/media.php">Mr.Kitty Content [soon]</a>
-    <a button href="/dailySong.php">Daily song</a>
-    
-    <a button id="settings-button" style="margin-left: auto;">Settings</a>
+    <a button href="" style="filter: brightness(0.2);">Mr.Kitty Content [soon]</a>
+    </div>
+    <div class="parent" style="margin-left: auto;"> 
+        <a button id="settings-button">Settings</a>
+    </div>
 </div>
 
 <div class="settings">
