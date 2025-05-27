@@ -2,6 +2,8 @@
     <button id="mobile-menu-btn" style="display:none;">Navbar</button>
     <div class="parent">
         <a button href="/home">/root</a>
+    </div>
+    <div class="parent">
         <a button href="/site/index.php">Information</a>
         <a button href="/site/site-updates.php">Site Updates</a>
     </div>

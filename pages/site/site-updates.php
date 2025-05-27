@@ -9,6 +9,15 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>28/05/25</h2>
+        <p>Changes:</p>
+        <ul>
+            <li>Slight Navbar changes (sorry mobile users, ill make it better for you later)</li>
+            <li>Added a new game called <a href="/lyricle.php">Lyricle</a></li>
+        </ul>
+    </main-element>
+
+    <main-element>
         <h2>19/05/25</h2>
         <p>Hi everyone, i have decided to rework my entire database backend. this way i can support all songs and media while allowing users to view it better (hiding duplicates, showing "also released under", etc...). this will come before the server probably so expect that to be pushed back.</p>
         <p>I have nobody but myself to blame for this, i wrote sloppy code when i started so now you have to pay the price. there will be minor site changes while this happens but no major updates.</p>

@@ -1,0 +1,11 @@
+.lyricle-box {
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    text-align: center;
+    margin: 2px;
+    padding:0;
+    border: 2px solid #888;
+    border-radius: 4px;
+    text-transform: uppercase;
+}

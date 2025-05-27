@@ -24,7 +24,10 @@
         <a button href="/songs.php">Songs Database</a>
         <a button href="/lyrics.php">Lyrics Database</a>
         <a button href="/discography.php">Discography [soon]</a>
+    </div>
+    <div class="parent">
         <a button href="/dailySong.php">Daily song</a>
+        <a button href="/lyricle.php">Lyricle</a>
     </div>
     <div class="parent">
     <a button href="/site/index.php">Site Information</a>
