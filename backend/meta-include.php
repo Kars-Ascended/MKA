@@ -1,7 +1,12 @@
 <!-- Site-wide html tags -->
 <meta charset="UTF-8">  <!-- Ensures correct text encoding -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Makes it mobile-friendly -->
-<meta name="description" content="Biggest online archive and database of Mr.Kitty's songs, lyrics, posts, and more."> <!-- SEO -->
+
+<!-- SEO -->
+<meta name="description" content="Mr.Kitty Archive -- Biggest online archive and database of Mr.Kitty's songs, lyrics, posts, and more.">
+<meta property="og:description" content="Mr.Kitty Archive -- Biggest online archive and database of Mr.Kitty's songs, lyrics, posts, and more."> 
+<meta property="og:title" content="Mr.Kitty Archive">
+<meta property="og:image" content="https://mr-kitty-archive.xyz/assets/icons/mk-logo.png">
 
 <!-- Page metadata -->
 <link rel="icon" href="assets\icons\favicon.ico" type="image/x-icon">
