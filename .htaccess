@@ -8,7 +8,6 @@ RewriteRule ^home$ /pages/index.php [L]
 RewriteRule ^songs$ /pages/songs.php [L]
 RewriteRule ^lyrics$ /pages/lyrics.php [L]
 RewriteRule ^discography$ /pages/discography.php [L]
-RewriteRule ^roadmap$ /pages/roadmap.php [L]
 
 # Hide 'pages' from all other URLs
 RewriteCond %{REQUEST_FILENAME} !-f

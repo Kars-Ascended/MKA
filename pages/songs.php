@@ -11,6 +11,7 @@
     </main-element>
 
     <main-element>
+        <h3>-- Currently the databse is under a re-write, as such most information probably wont load. you can read more <a href="/pages/site/site-updates.php">here</a>. --</h3>
         <form method="get"> <!-- Search Filters -->
             <div class="parent">
             <label>

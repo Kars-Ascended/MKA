@@ -9,7 +9,7 @@
 <meta property="og:image" content="https://mr-kitty-archive.xyz/assets/icons/mk-logo.png">
 
 <!-- Page metadata -->
-<link rel="icon" href="assets\icons\favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
 <link rel="stylesheet" href="/css/base.css">
@@ -26,9 +26,9 @@
     <button id="mobile-menu-btn" style="display:none;">Navbar</button>
     <div class="parent">
         <a button href="/home">Home</a>
-        <a button href="/songs.php">Songs Database</a>
-        <a button href="/lyrics.php">Lyrics Database</a>
-        <a button href="/discography.php">Discography [soon]</a>
+        <a button href="/songs">Songs Database</a>
+        <a button href="/lyrics">Lyrics Database</a>
+        <a button href="/discography">Discography [soon]</a>
     </div>
     <div class="parent">
         <a button href="/dailySong.php">Daily song</a>
