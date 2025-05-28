@@ -14,10 +14,12 @@
         <div id="lyricle-game">
             <p id="lyric-hint"></p>
             <div id="guess-history"></div>
-            <div id="input-row"></div>
+            <div id="input-row" class="guess-row"></div>
             <button onclick="submitGuess()">Guess</button>
             <button onclick="revealAnswer()" id="reveal-btn">Reveal Answer</button>
+            <button onclick="showHint()" id="hint-btn">Hint</button>
             <p id="feedback"></p>
+            <p id="hint-info"></p>
         </div>
     </main-element>
     <script src="/js/lyricle.js"></script>

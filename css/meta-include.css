@@ -135,6 +135,7 @@
 
     #mobile-menu-btn {
         display: block !important;
+        width: 100%
     }
     .nav {
         transition: height 0.2s;

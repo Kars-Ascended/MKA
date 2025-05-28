@@ -7,12 +7,25 @@ const lyrics = [
 ];
 
 let lyric = "";
+let album = "";
+let trackTitle = "";
 
+// Fetch lyric, album, and track title for hints
 async function fetchLyric() {
     const res = await fetch('/backend/random-lyric.php');
-    lyric = (await res.text()).trim().toLowerCase();
+    const data = await res.json ? await res.json() : await res.text();
+    if (typeof data === "string") {
+        lyric = data.trim().toLowerCase();
+        album = "";
+        trackTitle = "";
+    } else {
+        lyric = (data.lyric || "").trim().toLowerCase();
+        album = data.album || "";
+        trackTitle = data.track_title || "";
+    }
     document.getElementById('lyric-hint').textContent = `Guess the lyric! (${lyric.length} letters)`;
-    document.getElementById('guess-history').innerHTML = ""; // Clear history on new lyric
+    document.getElementById('guess-history').innerHTML = "";
+    document.getElementById('hint-info').textContent = "";
     createInputBoxes();
 }
 
@@ -65,13 +78,31 @@ function revealAnswer() {
     feedback.textContent = `The answer was: "${lyric}"`;
 }
 
+// Hint: Reveal first letter of each word in track title
+function showHint() {
+    if (!trackTitle) {
+        document.getElementById('hint-info').textContent = "No track title info available.";
+        return;
+    }
+    const firstLetters = trackTitle.split(/\s+/).map(w => w[0] ? w[0].toUpperCase() : '').join(' ');
+    document.getElementById('hint-info').textContent = `Track title initials: ${firstLetters}`;
+}
+
 function submitGuess() {
     if (!lyric) return;
     const inputs = document.querySelectorAll('#input-row .lyricle-box');
     const guess = Array.from(inputs).map(input => input.value.toLowerCase()).join('');
     const feedback = document.getElementById('feedback');
 
-    if (guess.length !== lyric.length) {
+    // Allow submitting if all non-space positions are filled
+    let allFilled = true;
+    for (let i = 0; i < lyric.length; i++) {
+        if (lyric[i] !== " " && !inputs[i].value) {
+            allFilled = false;
+            break;
+        }
+    }
+    if (!allFilled) {
         feedback.textContent = "Fill all boxes!";
         return;
     }
@@ -105,14 +136,16 @@ function submitGuess() {
     // Display guess in history
     const guessHistory = document.getElementById('guess-history');
     const guessRow = document.createElement('div');
-    guessRow.style.display = 'flex';
-    guessRow.style.marginBottom = '4px';
+    guessRow.className = 'guess-row';
     for (let i = 0; i < guessArr.length; i++) {
-        const box = document.createElement('div');
-        box.textContent = guessArr[i] || ' ';
+        const box = document.createElement('input');
+        box.type = 'text';
+        box.maxLength = 1;
         box.className = 'lyricle-box';
+        box.value = guessArr[i] || ' ';
         box.style.backgroundColor = boxColors[i];
-        box.style.pointerEvents = 'none';
+        box.readOnly = true;
+        box.tabIndex = -1;
         guessRow.appendChild(box);
     }
     guessHistory.appendChild(guessRow);
