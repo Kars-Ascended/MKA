@@ -142,61 +142,102 @@ function applyTheme(themeName) {
     root.style.setProperty('--white', theme.white);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const cursorSelect = document.getElementById('cursorSelect');
-    
-    // Load saved cursor preference
-    const savedCursor = localStorage.getItem('cursor');
-    if (savedCursor) {
-        document.body.style.cursor = savedCursor;
-        cursorSelect.value = savedCursor;
+// Table options checkboxes (alternating rows, dark mode, borders)
+function initTableOptionsControl() {
+    const altRows = document.getElementById('tableAltRows');
+    const tableTheme = document.getElementById('tableThemeSelect');
+    const borderStyle = document.getElementById('tableBorderStyle');
+
+    // Load saved preferences (dark as default)
+    altRows.checked = localStorage.getItem('tableAltRows') !== 'false';
+    tableTheme.value = localStorage.getItem('tableTheme') || 'dark';
+    borderStyle.value = localStorage.getItem('tableBorderStyle') || 'all';
+
+    function applyTableOptions() {
+        document.querySelectorAll('table').forEach(table => {
+            // Alternating row color
+            table.classList.toggle('table-alt-rows', altRows.checked);
+
+            // Remove all theme classes first
+            table.classList.remove('table-theme-dark', 'table-theme-light', 'table-theme-kurple');
+            table.classList.add('table-theme-' + tableTheme.value);
+
+            // Remove all border classes first
+            table.classList.remove(
+                'table-border-none',
+                'table-border-row',
+                'table-border-column',
+                'table-border-all'
+            );
+            // Add selected border class
+            table.classList.add('table-border-' + borderStyle.value);
+
+            // Always add a surrounding border
+            table.classList.add('table-has-outer-border');
+        });
     }
 
-    // Handle cursor changes
-    cursorSelect.addEventListener('change', function() {
-        const selectedCursor = this.value;
-        if (selectedCursor === 'heart' || selectedCursor === 'star') {
-            document.body.style.cursor = `url('/assets/cursors/${selectedCursor}.cur'), auto`;
-        } else {
-            document.body.style.cursor = selectedCursor;
-        }
-        localStorage.setItem('cursor', selectedCursor);
+    altRows.addEventListener('change', function() {
+        localStorage.setItem('tableAltRows', altRows.checked);
+        applyTableOptions();
     });
-});
+    tableTheme.addEventListener('change', function() {
+        localStorage.setItem('tableTheme', tableTheme.value);
+        applyTableOptions();
+    });
+    borderStyle.addEventListener('change', function() {
+        localStorage.setItem('tableBorderStyle', borderStyle.value);
+        applyTableOptions();
+    });
 
-// Initialize both volume control, settings panel, and theme control
+    // Apply on load
+    applyTableOptions();
+}
+
+// Initialize controls on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     initVolumeControl();
     initSettingsPanel();
     initThemeControl();
-});
+    initTableOptionsControl();
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Support multiple navs with their own menu buttons
-    document.querySelectorAll('.nav').forEach(function(nav) {
+    // Cursor select (if present)
+    const cursorSelect = document.getElementById('cursorSelect');
+    if (cursorSelect) {
+        const savedCursor = localStorage.getItem('cursor');
+        if (savedCursor) {
+            document.body.style.cursor = savedCursor;
+            cursorSelect.value = savedCursor;
+        }
+        cursorSelect.addEventListener('change', function() {
+            const selectedCursor = this.value;
+            if (selectedCursor === 'heart' || selectedCursor === 'star') {
+                document.body.style.cursor = `url('/assets/cursors/${selectedCursor}.cur'), auto`;
+            } else {
+                document.body.style.cursor = selectedCursor;
+            }
+            localStorage.setItem('cursor', selectedCursor);
+        });
+    }
+
+    // Mobile nav menu (support multiple navs)
+    document.querySelectorAll('.nav').forEach(nav => {
         const menuBtn = nav.querySelector('#mobile-menu-btn');
-        if (!menuBtn) return;
-
-        // Find all .parent and direct child <a> elements (for media-nav)
         const parentElements = nav.querySelectorAll('.parent');
-        const directLinks = Array.from(nav.children).filter(
-            el => el.tagName === 'A' && !el.classList.contains('parent')
-        );
-
         let expanded = false;
 
-        menuBtn.addEventListener('click', function() {
-            if (!expanded) {
-                nav.style.height = '70vh';
-                parentElements.forEach(el => el.style.display = 'block');
-                directLinks.forEach(el => el.style.display = 'block');
-                expanded = true;
-            } else {
-                nav.style.height = '';
-                parentElements.forEach(el => el.style.display = '');
-                directLinks.forEach(el => el.style.display = '');
-                expanded = false;
-            }
-        });
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', function() {
+                if (!expanded) {
+                    nav.style.height = '70vh';
+                    parentElements.forEach(el => el.style.display = 'block');
+                    expanded = true;
+                } else {
+                    nav.style.height = '';
+                    parentElements.forEach(el => el.style.display = '');
+                    expanded = false;
+                }
+            });
+        }
     });
 });

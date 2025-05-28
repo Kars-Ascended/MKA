@@ -47,12 +47,16 @@
     padding: 1em;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 1);
 
+    *:not(img) {
+        z-index: 1;
+    }
+
     img {
         position: absolute;
         bottom:0;
         right: 0;
         width: 25em;
-        z-index: 1;
+        z-index: 0;
     }
 
     hr {
@@ -100,7 +104,9 @@
 @media only screen and (max-width: 768px) {
 
     .nav .parent {
+        height: 20%;
         display: none;
+        line-height: 3em;
     }
 
     .settings {
@@ -110,7 +116,7 @@
         transform: translateX(-70%);
         transform: translateY(-50%);
         img {
-        width: 7em;
+            display: none;
         }
     }
 

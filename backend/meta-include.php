@@ -12,9 +12,9 @@
 <link rel="icon" href="assets\icons\favicon.ico" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
-<link rel="stylesheet" href="../css/base.css">
-<link rel="stylesheet" href="../css/meta-include.css">
-<link rel="stylesheet" href="../css/table.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/meta-include.css">
+<link rel="stylesheet" href="/css/table.css">
 
 <!-- JS Scripts -->
 <script src="/js/column_hide.js" defer></script>
@@ -61,6 +61,25 @@
         </select>
     </div>
     <p>Table themes coming soon maybe ^^</p>
+    
+    <div class="table-options">
+        <label><input type="checkbox" id="tableAltRows" checked> Alternating Row Color</label>
+        <label>Borders:
+            <select id="tableBorderStyle">
+                <option value="none">None</option>
+                <option value="row">Row</option>
+                <option value="column">Column</option>
+                <option value="all">All</option>
+            </select>
+        </label>
+        <label>Table Theme:
+            <select id="tableThemeSelect">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="kurple">Kurple</option>
+            </select>
+        </label>
+    </div>
 
     <img src="/assets/settings.png" alt="Forrest">
 </div>

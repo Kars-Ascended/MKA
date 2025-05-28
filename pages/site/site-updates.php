@@ -14,6 +14,7 @@
         <ul>
             <li>Slight Navbar changes (sorry mobile users, ill make it better for you later)</li>
             <li>Added a new game called <a href="/lyricle.php">Lyricle</a></li>
+            <li>New table themes! check them out in settings</li>
         </ul>
     </main-element>
 

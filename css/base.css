@@ -21,6 +21,10 @@
     color: var(--white);
 }
 
+table *, table *::before, table *::after {
+    color: inherit;
+}
+
 /* Base Elements */
 body {
     font-family: Arial;
