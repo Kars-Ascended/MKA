@@ -36,7 +36,7 @@
     </div>
     <div class="parent">
     <a button href="/site/index.php">Site Information</a>
-    <a button href="" style="filter: brightness(0.2);">Mr.Kitty Content [soon]</a>
+    <a button href="" style="filter: brightness(0.6);">Mr.Kitty Content [soon]</a>
     </div>
     <div class="parent" style="margin-left: auto;"> 
         <a button id="settings-button">Settings</a>
@@ -45,12 +45,11 @@
 
 <div class="settings">
     <h1 title>Settings</h1 title>
-    <h3>Main</h3>
+    <h3>- Main</h3>
     <div class="volume-control">
         <label for="volumeSlider">Volume: </label>
         <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
-
     <div class="theme-control">
         <label for="themeSelect">Theme: </label>
         <select id="themeSelect">
@@ -60,8 +59,8 @@
             <option value="light">Kurple Light [Beta]</option>
         </select>
     </div>
-    <p>Table themes coming soon maybe ^^</p>
     
+    <h3>- Table Settings</h3>
     <div class="table-options">
         <label><input type="checkbox" id="tableAltRows" checked> Alternating Row Color</label>
         <label>Borders:
