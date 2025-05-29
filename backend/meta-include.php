@@ -39,6 +39,7 @@
     <a button href="" style="filter: brightness(0.6);">Mr.Kitty Content [soon]</a>
     </div>
     <div class="parent" style="margin-left: auto;"> 
+        <a button href="/credits.php">Credits</a>
         <a button id="settings-button">Settings</a>
     </div>
 </div>
