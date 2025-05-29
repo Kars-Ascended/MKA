@@ -13,9 +13,11 @@
         <p>Hi all, making good progress on the rewrite, pushing the current state now.</p>
         <p>Changes:</p>
         <ul>
+            <li>Songs are now playable again! (the ones we have right now anyway)</li>
             <li>Major Database additions!</li>
             <li>New "hide non main" filter, this hides any duplicates like 6x6 single as it is now released under an album.</li>
         </ul>
+    </main-element>
 
     <main-element>
         <h2>28/05/25</h2>

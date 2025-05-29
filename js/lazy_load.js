@@ -1,43 +1,45 @@
 // Create intersection observer
-    const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', function() {
+    const options = {
+        root: null,
+        rootMargin: '50px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const player = entry.target;
-                if (!player.querySelector('audio')) {
-                    loadAudioPlayer(player);
-                }
-                // Unobserve after loading
-                observer.unobserve(player);
+                const playerDiv = entry.target;
+                loadAudioPlayer(playerDiv);
+                observer.unobserve(playerDiv); // Stop observing once loaded
             }
         });
-    }, {
-        rootMargin: '50px 0px' // Start loading when within 50px of viewport
+    }, options);
+
+    // Start observing all audio player divs
+    document.querySelectorAll('.audio-player').forEach(playerDiv => {
+        observer.observe(playerDiv);
     });
 
-    // Function to load audio player
+    // Function to load individual audio player
     function loadAudioPlayer(playerDiv) {
-    const album = encodeURIComponent(playerDiv.dataset.album);
-    const song = encodeURIComponent(playerDiv.dataset.song);
-    const discog = encodeURIComponent(playerDiv.dataset.discog);
-    const mp3_url = `https://individually-upon-offering-template.trycloudflare.com/discogs/${discog}/${album}/${song}.mp3`;
+        const album = encodeURIComponent(playerDiv.dataset.album);
+        const song = encodeURIComponent(playerDiv.dataset.song);
+        const discog = encodeURIComponent(playerDiv.dataset.discog);
+        const mp3_url = `https://gauge-flying-photos-rebecca.trycloudflare.com/discogs/${discog}/${album}/${song}.mp3`;
 
-    const audio = document.createElement('audio');
-    audio.controls = true;
-    audio.innerHTML = `<source src="${mp3_url}" type="audio/mpeg">`;
-    
-    // Apply the current volume setting to the new audio element
-    if (typeof currentVolume !== 'undefined') {
-        audio.volume = currentVolume;
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        audio.innerHTML = `<source src="${mp3_url}" type="audio/mpeg">`;
+        audio.volume = 0.05;
+
+        // Remove placeholder and add audio element
+        const placeholder = playerDiv.querySelector('.audio-placeholder');
+        if (placeholder) {
+            placeholder.remove();
+        }
+        playerDiv.appendChild(audio);
     }
-    
-    playerDiv.querySelector('.audio-placeholder').remove();
-    playerDiv.appendChild(audio);
-}
-
-    // Observe all audio player divs
-    document.querySelectorAll('.audio-player').forEach(player => {
-        observer.observe(player);
-    });
 
     // Handle column visibility toggle
     document.querySelector('.toggle-column[data-column="3"]').addEventListener('change', function() {
@@ -46,16 +48,12 @@
             player.style.display = this.checked ? 'block' : 'none';
         });
     });
+});
 
 // Function to set all audio elements' volume to 5%
 function setAllAudioVolume() {
-    // Get all audio elements on the page
     const audioElements = document.getElementsByTagName('audio');
-    
-    // Convert volume percentage to decimal (5% = 0.05)
     const volumeLevel = 0.05;
-    
-    // Set volume for each audio element
     Array.from(audioElements).forEach(audio => {
         audio.volume = volumeLevel;
     });
