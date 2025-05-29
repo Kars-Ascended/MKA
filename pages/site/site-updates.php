@@ -9,6 +9,15 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>29/05/25</h2>
+        <p>Hi all, making good progress on the rewrite, pushing the current state now.</p>
+        <p>Changes:</p>
+        <ul>
+            <li>Major Database additions!</li>
+            <li>New "hide non main" filter, this hides any duplicates like 6x6 single as it is now released under an album.</li>
+        </ul>
+
+    <main-element>
         <h2>28/05/25</h2>
         <p>Changes:</p>
         <ul>
