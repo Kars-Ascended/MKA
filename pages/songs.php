@@ -82,6 +82,15 @@
             </select>
             </label>
 
+            <label>
+            Hide non-main releases:
+            <select name="hide_non_main">
+                <option value="">-- Any --</option>
+                <option value="1" <?php if (($_GET['hide_non_main'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                <option value="0" <?php if (($_GET['hide_non_main'] ?? '') === '0') echo 'selected'; ?>>No</option>
+            </select>
+            </label>
+
             </div>
             <br>
             <button type="submit">Filter</button>

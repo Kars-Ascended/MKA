@@ -58,14 +58,15 @@ if (($handle = fopen($connectionsFile, "r")) !== FALSE) {
     $header = fgetcsv($handle);
     
     $stmt = $db->prepare('INSERT OR REPLACE INTO connections 
-        (song_ID, release_ID, track_number)
-        VALUES (?, ?, ?)');
+        (song_ID, release_ID, track_number, is_main_release)
+        VALUES (?, ?, ?, ?)');
     
     while (($data = fgetcsv($handle)) !== FALSE) {
         if (!empty($data[0]) && !empty($data[1])) { // Only import if both IDs exist
             $stmt->bindValue(1, $data[0]); // song_ID
             $stmt->bindValue(2, $data[1]); // release_ID
             $stmt->bindValue(3, $data[2]); // track_number
+            $stmt->bindValue(4, strtoupper($data[3]) === 'TRUE' ? 1 : 0); // is_main_release
             
             $result = $stmt->execute();
         }

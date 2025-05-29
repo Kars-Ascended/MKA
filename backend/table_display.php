@@ -46,6 +46,10 @@ if (!empty($_GET['discog'])) {
     $params[':discog'] = $_GET['discog'];
 }
 
+if (isset($_GET['hide_non_main']) && $_GET['hide_non_main'] === '1') {
+    $conditions[] = "c.is_main_release = 1";
+}
+
 $where = $conditions ? 'WHERE ' . implode(' AND ', $conditions) : '';
 
 $query = "SELECT s.*, r.title as album_title, c.track_number 

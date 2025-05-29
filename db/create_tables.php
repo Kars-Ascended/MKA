@@ -18,7 +18,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS songs (
 
 // Create releases table
 $db->exec("CREATE TABLE IF NOT EXISTS releases (
-    release_ID INTEGER PRIMARY KEY,
+    release_ID TEXT PRIMARY KEY,
     title TEXT,
     type TEXT,
     release_date TEXT
@@ -29,6 +29,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS connections (
     song_ID INTEGER,
     release_ID INTEGER,
     track_number INTEGER,
+    is_main_release BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (song_ID) REFERENCES songs(song_ID),
     FOREIGN KEY (release_ID) REFERENCES releases(release_ID),
     PRIMARY KEY (song_ID, release_ID)
