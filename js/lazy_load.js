@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const audio = document.createElement('audio');
         audio.controls = true;
         audio.innerHTML = `<source src="${mp3_url}" type="audio/mpeg">`;
-        audio.volume = 0.05;
+        
+        // Get current volume from settings
+        const savedVolume = parseFloat(document.cookie.split('; ')
+            .find(row => row.startsWith('audioVolume='))
+            ?.split('=')[1]) || 1;
+        audio.volume = savedVolume;
 
         // Remove placeholder and add audio element
         const placeholder = playerDiv.querySelector('.audio-placeholder');
