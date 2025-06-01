@@ -31,13 +31,10 @@
         <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find.</p>
 
         <h3>- I found a problem / something incorrect on the site</h3>
-        <p>Let me know in the discord or subreddit linked below.</p>
-
-        <h3>- Why does it take forever to load songs?</h3>
-        <p>Songs are hosted on an old laptop through a tunnel since my isp wont allow port forwarding and the website host wont allow anything bigger than 125mb on there. for now i recommend filtering as much as possible to help with the speeds, and ill find a better solution soon.</p>
+        <p>Let me know in the discord or subreddit linked <a href="/extras.php">here</a>.</p>
 
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
-        <p>I have a weird listing structure that i might change eventually, ill add a page explaining the structure soon.</p>
+        <p>The database is currently under a re-write, as such it is not 100% readable nor understandable right now, sorry :=</p>
         
         <h3>- [x] element is rendering weird</h3>
         <p>I update the site css almost daily adding new things, refresh the cache [ctrl + f5] and it should work!</p>
