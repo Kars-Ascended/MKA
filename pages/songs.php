@@ -40,12 +40,12 @@
 
             <label>
                 <div class="custom-select">
-                    Discog type:
-                    <select name="discog">
+                    Era:
+                    <select name="era">
                         <option value="">-- Any --</option>
-                        <option value="main" <?php if (($_GET['discog'] ?? '') === 'main') echo 'selected'; ?>>Main</option>
-                        <option value="pre-2010" <?php if (($_GET['discog'] ?? '') === 'pre-2010') echo 'selected'; ?>>Pre-2010</option>
-                        <option value="other" <?php if (($_GET['discog'] ?? '') === 'other') echo 'selected'; ?>>Other</option>
+                        <option value="main" <?php if (($_GET['era'] ?? '') === 'main') echo 'selected'; ?>>Main</option>
+                        <option value="pre-2010" <?php if (($_GET['era'] ?? '') === 'pre-2010') echo 'selected'; ?>>Pre-2010</option>
+                        <option value="other" <?php if (($_GET['era'] ?? '') === 'other') echo 'selected'; ?>>Other</option>
                     </select>
                 </div>
             </label>
@@ -105,7 +105,7 @@
         <label><input type="checkbox" class="toggle-column" data-column="6" checked> Explicit</label>
         <label><input type="checkbox" class="toggle-column" data-column="7" checked> Breakcore</label>
         <label><input type="checkbox" class="toggle-column" data-column="8" checked> Featured Artists</label>
-        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Discog Type</label>
+        <label><input type="checkbox" class="toggle-column" data-column="9" checked> Era</label>
         <label><input type="checkbox" class="toggle-column" data-column="10" checked> Release Date</label>
     </main-element>
 
@@ -121,7 +121,7 @@
             <th>Explicit?</th>
             <th>Loud / Breakcore?</th>
             <th>Featured Artists</th>
-            <th>Discog Type</th>
+            <th>Era Type</th>
             <th>Release Date</th>
         </tr>
 
@@ -135,7 +135,7 @@
                     <div class='audio-player' 
                          data-album='<?php echo htmlspecialchars($row['album_title'] ?? '', ENT_QUOTES); ?>' 
                          data-song='<?php echo htmlspecialchars($row['TRACK_TITLE'] ?? '', ENT_QUOTES); ?>' 
-                         data-discog='<?php echo htmlspecialchars($row['discog'] ?? '', ENT_QUOTES); ?>'>
+                         data-era='<?php echo htmlspecialchars($row['era'] ?? '', ENT_QUOTES); ?>'>
                         <div class='audio-placeholder'>Click to load audio</div>
                     </div>
                 <?php endif; ?>
@@ -156,7 +156,7 @@
             <td><?php echo isset($row['explicit']) ? ($row['explicit'] ? 'Yes' : 'No') : ''; ?></td>
             <td><?php echo isset($row['volume']) ? ($row['volume'] ? 'Yes' : 'No') : ''; ?></td>
             <td><?php echo (!empty($row['featured_artists']) && $row['featured_artists'] !== 'FALSE') ? htmlspecialchars($row['featured_artists']) : ''; ?></td>
-            <td><?php echo !is_null($row['discog']) ? htmlspecialchars($row['discog']) : ''; ?></td>
+            <td><?php echo !is_null($row['era']) ? htmlspecialchars($row['era']) : ''; ?></td>
             <td><?php echo !is_null($row['release_date']) ? htmlspecialchars($row['release_date']) : ''; ?></td>
         </tr>
         <?php endwhile; ?>

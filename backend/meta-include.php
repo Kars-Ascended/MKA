@@ -41,7 +41,7 @@
     <div class="parent" style="margin-left: auto;"> 
         <a button href="/extras.php">Credits</a>
         <a button id="settings-button">Settings</a>
-        <a button href="/user.php">Account</a>
+        <a button href="#" style="filter: brightness(0.6);">Account [soon]</a>
     </div>
 </div>
 

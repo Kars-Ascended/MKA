@@ -14,7 +14,7 @@ $count = $db->querySingle("SELECT COUNT(*) FROM songs");
 
 // Get a random song using today's seed
 $randomIndex = mt_rand(1, $count);
-$query = "SELECT s.TRACK_TITLE, s.spotify_link, s.youtube_link, s.discog,
+$query = "SELECT s.TRACK_TITLE, s.spotify_link, s.youtube_link, s.era,
                  r.title as album_title, r.type as release_type
           FROM songs s
           LEFT JOIN connections c ON s.song_ID = c.song_ID
@@ -28,12 +28,12 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
     <main-element style="position: relative;">
 
         <!-- Background Image -->
-        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
+        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['era']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
 
         <!-- Front -->
         <div id="daily-song">
 
-            <img src="/assets/covers/<?= htmlspecialchars($track['discog']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
+            <img src="/assets/covers/<?= htmlspecialchars($track['era']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
                  alt="Album Cover" id="album-cover">
 
             <div id="song-title">
@@ -41,7 +41,7 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
 
                 <!-- Lazy-load audio player placeholder -->
                 <div class="audio-player"
-                     data-discog="<?= htmlspecialchars($track['discog']) ?>"
+                     data-era="<?= htmlspecialchars($track['era']) ?>"
                      data-album="<?= htmlspecialchars($track['album_title']) ?>"
                      data-song="<?= htmlspecialchars($track['TRACK_TITLE']) ?>">
                     <div class="audio-placeholder">Loading audio...</div>

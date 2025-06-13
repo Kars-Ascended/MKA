@@ -25,22 +25,19 @@
     <main-element>
         <h2>FAQ</h2>
         <h3>- Where are the actual songs?</h3>
-        <p>Being added, most are actually there but unable to load. ill fix it once ive finished all the other features.</p>
+        <p>Being added, most are actually there but unable to load. ill fix it once ive finished all the other site features.</p>
 
         <h3>- What else do you plan to archive?</h3>
-        <p>Everything. his music, social posts, all images/videos, live shows, snippets shown, whatever we can find.</p>
+        <p>Songs, lyrics, releases, and possibly more. Unfortunatly Forrest's wishes are that i dont archive his posts (i think) so i will not have that public for the meantime, sorry</p>
 
         <h3>- I found a problem / something incorrect on the site</h3>
         <p>Let me know in the discord or subreddit linked <a href="/extras.php">here</a>.</p>
 
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
-        <p>The database is currently under a re-write, as such it is not 100% readable nor understandable right now, sorry :=</p>
+        <p>All content ever released to my knowledge should be here, if im missing something contact me again with the above message ^<br>If your trying to find content once posted on Fiji I will not be hosting that content publically as it is not public content and was presumably gained illegaly</p>
         
         <h3>- [x] element is rendering weird</h3>
         <p>I update the site css almost daily adding new things, refresh the cache [ctrl + f5] and it should work!</p>
-        <br>
-
-        <h3>A few songs might be missing from the database, if you find them please let me know</h3>
     </main-element>
 
     <main-element>
