@@ -25,7 +25,7 @@ function getCardPool() {
         'LEGENDARY' => 3,
         'MYTHICAL' => 1
     ];
-    // testing rarity weights
+    /* testing rarity weights
     $rarityWeights = [
         'COMMON' => 0,
         'UNCOMMON' => 20,
@@ -33,7 +33,7 @@ function getCardPool() {
         'EPIC' => 20,
         'LEGENDARY' => 20,
         'MYTHICAL' => 20
-    ];
+    ];*/
 
 
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
