@@ -1,45 +1,26 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Card Duel</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; }
-    .card { border: 1px solid #333; padding: 10px; margin: 5px; display: inline-block; cursor: pointer; width: 180px; vertical-align: top; }
-    .card img { width: 100%; height: 100px; object-fit: cover; }
-    .card-name { font-weight: bold; }
-    .card-desc { font-size: 0.9em; margin: 5px 0; }
-    .card-meta { font-size: 0.8em; color: #555; }
-    .rarity-Common    { border-color: #444; }
-    .rarity-Uncommon  { border-color: #228B22; }
-    .rarity-Rare      { border-color: #1E90FF; }
-    .rarity-Epic      { border-color: #9400D3; 
--webkit-box-shadow:0px 0px 74px 0px rgba(154,46,255,0.13);
--moz-box-shadow: 0px 0px 74px 0px rgba(154,46,255,0.13);
-box-shadow: 0px 0px 74px 0px rgba(154,46,255,0.13);
-    }
-    .rarity-Legendary { border-color: #FFD700; 
--webkit-box-shadow:0px 0px 74px 0px rgba(255,255,46,0.13);
--moz-box-shadow: 0px 0px 74px 0px rgba(255,255,46,0.13);
-box-shadow: 0px 0px 74px 0px rgba(255,255,46,0.13);
-}
-    .rarity-Mythical  { border-color: #FF4500; 
--webkit-box-shadow:0px 0px 74px 0px rgba(255,46,46,0.13);
--moz-box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
-box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
-}
-  </style>
+    <?php include '../../backend/meta-include.php'; ?>
+    <link rel="stylesheet" href="/css/cards.css">
+    <title>Card Duel</title>
 </head>
 <body>
-  <h1>Card Duel</h1>
-  <div id="status"></div>
-  <div id="hp"></div>
-  <div id="hand"></div>
-  <div id="enemy"></div>
-  <button id="skipBtn" onclick="skipTurn()" style="margin:10px 0;">Skip Turn (+5 Mana)</button>
+    <main-element class="welcome">
+        <h1 title>Card Duel</h1>
+    </main-element>
 
-  <script>
+    <main-element>
+      <div class="card-div">
+        <div id="status"></div>
+        <div id="hp"></div>
+        <div id="hand"></div>
+        <div id="enemy"></div>
+        <button id="skipBtn" onclick="skipTurn()" style="margin:10px 0;">Skip Turn (+5 Mana)</button>
+      </div>
+    </main-element>
+
+    <script>
     const gameId = new URLSearchParams(location.search).get('game');
     let playerNum = null;
     let lastStateJSON = null;
@@ -48,6 +29,14 @@ box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
       fetch(`cards.php?action=state&game=${gameId}`)
         .then(res => res.json())
         .then(state => {
+          if (state.expired) {
+            document.getElementById('status').innerText = state.message || "Game expired.";
+            document.getElementById('hand').innerHTML = '';
+            document.getElementById('hp').innerHTML = '';
+            document.getElementById('enemy').innerHTML = '';
+            document.getElementById('skipBtn').style.display = "none";
+            return;
+          }
           const stateJSON = JSON.stringify(state);
           if (force || stateJSON !== lastStateJSON) {
             updateUI(state);
@@ -69,7 +58,7 @@ box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
     function updateUI(state) {
       playerNum = state.playerNum;
       if (state.waiting) {
-        document.getElementById('status').innerText = "Waiting for another player to join...";
+        document.getElementById('status').innerText = "Waiting for another player to join... Make sure you add a code to the URL! (e.g. ...card-game.php?game=12345), set it to whatever. this is temporary until its actually released.";
         document.getElementById('hand').innerHTML = '';
         document.getElementById('hp').innerHTML = '';
         document.getElementById('enemy').innerHTML = '';
@@ -103,7 +92,7 @@ box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
       const blockHP = state[`player${playerNum}`].block_hp && state[`player${playerNum}`].block_hp > 0;
 
       // Reveal hands logic
-      const reveal = state.reveal_hands && state.reveal_hands > 0;
+      const reveal = (state.reveal_hands && state.reveal_hands > 0) || (state[`player${playerNum}`].reveal_enemy_hand && state[`player${playerNum}`].reveal_enemy_hand > 0);
 
       // Show your hand
       document.getElementById('hand').innerHTML = '';
@@ -163,6 +152,6 @@ box-shadow: 0px 0px 74px 0px rgba(255,46,46,0.13);
 
     setInterval(getGameState, 2000); // Poll for changes
     getGameState(true); // Initial load
-  </script>
+    </script>
 </body>
 </html>

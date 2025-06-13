@@ -1,11 +1,10 @@
 <?php
-header('Content-Type: text/html');
 
 // Open the SQLite database
 $db = new SQLite3(__DIR__ . '/../db/mka.db');
 
 // Get today's date and use it as a seed
-$today = date('yy-mm-dd');
+$today = date('yyyy-mm-dd');
 $seed = crc32($today);
 mt_srand($seed);
 
@@ -28,12 +27,12 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
     <main-element style="position: relative;">
 
         <!-- Background Image -->
-        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['era']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
+        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['release_type']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
 
         <!-- Front -->
         <div id="daily-song">
 
-            <img src="/assets/covers/<?= htmlspecialchars($track['era']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
+            <img src="/assets/covers/<?= htmlspecialchars($track['release_type']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
                  alt="Album Cover" id="album-cover">
 
             <div id="song-title">

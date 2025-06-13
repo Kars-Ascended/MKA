@@ -30,7 +30,6 @@
 
     background-color: var(--main);
     border-radius: var(--main-br-radius);
-    height: 3em;
 }
 
 .settings {
@@ -152,4 +151,61 @@
     .nav {
         transition: height 0.2s;
     }
+}
+
+/* Dropdown styles */
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-parent #dropdown-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    line-height: 1em;
+    border-radius: var(--main-br-radius);
+    transition: background 0.2s;
+    text-align: left;
+    /* Match [button] styles */
+    text-decoration: none;
+    /* Optional: mimic hover effect */
+}
+.dropdown-parent #dropdown-toggle:hover,
+.dropdown-parent.open #dropdown-toggle {
+    background: var(--secondary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: var(--main);
+    border: 1px solid var(--accent);
+    border-radius: var(--main-br-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2000;
+    flex-direction: column;
+}
+
+.dropdown-content a[button] {
+    display: block;
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0;
+    white-space: nowrap;
+    border-radius: 0.5em;
+}
+
+.dropdown-content a[button]:hover {
+    background: var(--secondary);
+}
+
+.dropdown-parent.open .dropdown-content {
+    display: flex;
 }

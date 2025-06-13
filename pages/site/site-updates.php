@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
     <?php include '../../backend/meta-include.php'; ?>
-    <?php include '../../backend/navs/site-nav.php'; ?>
     <title>Updates</title>
 </head>
 <body>
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
+
+    <main-element>
+        <h2>13/06/25</h2>
+        <p>Sorry for the wait, been working on accounts and stuff, you'll see why soon lol</p>
+        <p>Changes:</p>
+        <ul>
+            <li>New game, "Card Duel"</li>
+            <li>Major css changes + additions, alot more will load now and should function better (sorry mobile users still havent gotten to you)</li>
+            <li>Minor database additions</li>
+        </ul>
+        <p>More card duel changes coming soon, its alpha rn</p>
+
+    </main-element>
 
     <main-element>
         <h2>29/05/25</h2>

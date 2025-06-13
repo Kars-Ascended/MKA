@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <?php include '../../backend/meta-include.php'; ?>
-    <?php include '../../backend/navs/site-nav.php'; ?>
     <title>Information</title>
 </head>
 <body>

@@ -41,9 +41,9 @@ if (!empty($_GET['featured_artists'])) {
     $params[':featured_artists'] = '%' . $_GET['featured_artists'] . '%';
 }
 
-if (!empty($_GET['discog'])) {
-    $conditions[] = "s.discog = :discog";
-    $params[':discog'] = $_GET['discog'];
+if (!empty($_GET['era'])) {
+    $conditions[] = "s.era = :era";
+    $params[':era'] = $_GET['era'];
 }
 
 if (isset($_GET['hide_non_main']) && $_GET['hide_non_main'] === '1') {

@@ -29,22 +29,29 @@
         <a button href="/songs">Songs Database</a>
         <a button href="/lyrics">Lyrics Database</a>
         <a button href="/discography">Discography</a>
+        <a button href="" style="filter: brightness(0.6);">Mr.Kitty Content [Soon]</a>
+
     </div>
-    <div class="parent">
-        <a button href="/dailySong.php">Daily song</a>
-        <a button href="/lyricle.php">Lyricle</a>
-        <a button href="/dictionary.php">Dictionary [Beta]</a>
-        <a button href="" style="filter: brightness(0.6);">Card Duel [Soon]</a>
-    </div>
-    <div class="parent">
-    <a button href="/site/index.php">Site Information</a>
-    <a button href="" style="filter: brightness(0.6);">Mr.Kitty Content [Soon]</a>
-    </div>
-    <div class="parent" style="margin-left: auto;"> 
-        <a button href="/extras.php">Credits</a>
-        <a button id="settings-button">Settings</a>
-        <a button href="#" style="filter: brightness(0.6);">Account [Soon]</a>
-    </div>
+        <div class="parent dropdown-parent">
+            <button class="dropdown-toggle" type="button">Fun ▼</button>
+            <div class="dropdown-content">
+                <a button href="/fun/dailySong.php">Daily song</a>
+                <a button href="/fun/lyricle.php">Lyricle</a>
+                <!--<a button href="/dictionary.php">Dictionary [Beta]</a>-->
+                <a button href="/fun/card-game.php">Card Duel [Beta]</a>
+            </div>
+        </div>
+
+        <div class="parent dropdown-parent">
+            <button class="dropdown-toggle" type="button">Other Site Pages ▼</button>
+            <div class="dropdown-content">
+                <a button href="#" style="filter: brightness(0.6);">Account [Soon]</a>
+                <a button id="settings-button">Settings</a>
+                <a button href="/site/index.php">Site Information</a>
+                <a button href="/site/site-updates.php">Updates</a>
+                <a button href="/site/extras.php">Extras</a>
+            </div>
+        </div>
 </div>
 
 <div class="settings">
@@ -86,4 +93,28 @@
 
     <img src="/assets/settings.png" alt="Forrest">
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownParents = document.querySelectorAll('.dropdown-parent');
+    dropdownParents.forEach(parent => {
+        const toggle = parent.querySelector('.dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                parent.classList.toggle('open');
+            });
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        dropdownParents.forEach(parent => {
+            if (!parent.contains(e.target)) {
+                parent.classList.remove('open');
+            }
+        });
+    });
+});
+</script>
 

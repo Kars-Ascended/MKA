@@ -2,9 +2,9 @@
 session_start();
 
 $action = $_GET['action'] ?? '';
-$gameId = $_GET['game'] ?? '';
-$playerNum = $_GET['player'] ?? null;
-$cardIndex = $_GET['card'] ?? null;
+$gameId = isset($_GET['game']) ? basename($_GET['game']) : '';
+$playerNum = isset($_GET['player']) ? intval($_GET['player']) : null;
+$cardIndex = isset($_GET['card']) ? intval($_GET['card']) : null;
 
 $gameDir = 'games';
 if (!file_exists($gameDir)) mkdir($gameDir);
@@ -27,12 +27,12 @@ function getCardPool() {
     ];
     // testing rarity weights
     $rarityWeights = [
-        'COMMON' => 20,
+        'COMMON' => 0,
         'UNCOMMON' => 20,
         'RARE' => 20,
         'EPIC' => 20,
-        'LEGENDARY' => 15,
-        'MYTHICAL' => 5
+        'LEGENDARY' => 20,
+        'MYTHICAL' => 20
     ];
 
 
@@ -56,13 +56,38 @@ function getCardPool() {
     return $cards;
 }
 
+// Helper to clean up old games
+function cleanupOldGames($gameDir, $maxAge = 1200) { // 20 minutes = 1200 seconds
+    foreach (glob("$gameDir/*") as $file) {
+        if (is_file($file) && time() - filemtime($file) > $maxAge) {
+            unlink($file);
+        }
+    }
+}
+
+// Call cleanup on every request
+cleanupOldGames($gameDir);
+
+// Helper to delete a specific game's files
+function deleteGameFiles($gameId, $gameDir) {
+    foreach (["$gameId.json", "$gameId.p1", "$gameId.p2"] as $suffix) {
+        $file = "$gameDir/$suffix";
+        if (file_exists($file)) unlink($file);
+    }
+}
+
 function saveGame($state) {
-    global $gamesFile;
+    global $gamesFile, $gameId, $gameDir;
     file_put_contents($gamesFile, json_encode($state));
+    // If game is over, delete files
+    if (!empty($state['over'])) {
+        deleteGameFiles($gameId, $gameDir);
+    }
 }
 
 function loadGame() {
     global $gamesFile;
+    if (!file_exists($gamesFile)) return null;
     return json_decode(file_get_contents($gamesFile), true);
 }
 
@@ -124,6 +149,10 @@ if ($action === 'state') {
     }
 
     $state = loadGame();
+    if (!$state) {
+        echo json_encode(["expired" => true, "message" => "Game expired."]);
+        exit;
+    }
     $state['playerNum'] = $playerNum;
     echo json_encode($state);
     exit;
@@ -155,7 +184,7 @@ if ($action === 'play') {
     if (!file_exists($gamesFile)) exit;
 
     $state = loadGame();
-    if ($state['over']) exit;
+    if (!$state || $state['over']) exit;
 
     $player = "player$playerNum";
     $opponent = "player" . ($playerNum == 1 ? 2 : 1);
@@ -179,39 +208,36 @@ if ($action === 'play') {
     // EFFECTS
     switch ($cardName) {
         case "I see you, you see me":
-            // Reveal hands for 1 turn (set for opponent's next turn)
-            $state['reveal_hands'] = 2; // 2 means: this turn and next opponent's turn
+            $state['reveal_hands'] = 2;
             break;
         case "Fortresses keep you safe":
         case "My fragile bones cease to desist":
-            // Half next attack
             $state[$player]['half_next'] = true;
             break;
         case "Candlelight burning bright ":
-            // Burn a random card from opponent's hand
-            if (!empty($state[$opponent]['hand'])) {
+        case "You start to forget":
+            // Check for immune_steal on opponent
+            if (isset($state[$opponent]['immune_steal']) && $state[$opponent]['immune_steal']) {
+                unset($state[$opponent]['immune_steal']);
+                // No card is burned
+            } else if (!empty($state[$opponent]['hand'])) {
                 $burn = array_rand($state[$opponent]['hand']);
                 array_splice($state[$opponent]['hand'], $burn, 1);
             }
             break;
         case "All the way down":
-            // Remove opponent's mana
             $state[$opponent]['mana'] = 0;
             break;
         case "But it's a lie, you cannot heal":
-            // Block opponent from playing HP cards for 2 turns
             $state[$opponent]['block_hp'] = 2;
             break;
         case "Shatter, Shatter, Shatter!":
-            // Extra turn
             $state['extra_turns'][$player] = ($state['extra_turns'][$player] ?? 0) + 1;
             break;
         case "As a memory I beg to keep":
-            // Immunity to card stealing
             $state[$player]['immune_steal'] = true;
             break;
         case "Not good enough":
-            // Reroll hand
             $handCount = count($state[$player]['hand']);
             $state[$player]['hand'] = [];
             for ($i = 0; $i < $handCount; $i++) {
@@ -221,43 +247,74 @@ if ($action === 'play') {
             }
             break;
         case "No I will not fight":
-            // Skip turn, gain 5 mana
             $state[$player]['mana'] += 5;
-            // End turn logic below
             break;
         case "My hands will make you bleed":
         case "I'll hurt you to the beat":
         case "These blades I'm hiding":
-            // Deal 5 damage (check for defense)
-            $damage = 5;
-            if (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
-                $damage = ceil($damage / 2);
-                unset($state[$opponent]['half_next']);
-            }
+            $damage = calculateDamage(5, $state, $player, $opponent);
             $state[$opponent]['hp'] -= $damage;
             break;
         case "A blade of silver across your chest ":
-            // Deal 10 damage (check for defense)
             $damage = 10;
-            if (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
+            if (isset($state[$player]['damage_buff'])) $damage *= $state[$player]['damage_buff'];
+            if (isset($state[$player]['next_attack_buff'])) {
+                $damage *= $state[$player]['next_attack_buff'];
+                unset($state[$player]['next_attack_buff']);
+            }
+            if (isset($state[$opponent]['immune_next']) && $state[$opponent]['immune_next']) {
+                $damage = 0;
+                unset($state[$opponent]['immune_next']);
+            } elseif (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
                 $damage = ceil($damage / 2);
                 unset($state[$opponent]['half_next']);
             }
             $state[$opponent]['hp'] -= $damage;
             break;
         case "I’ll wear the blood, You'll wear the wounds ":
-            // Deal 20 damage (check for defense)
             $damage = 20;
-            if (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
+            if (isset($state[$player]['damage_buff'])) $damage *= $state[$player]['damage_buff'];
+            if (isset($state[$player]['next_attack_buff'])) {
+                $damage *= $state[$player]['next_attack_buff'];
+                unset($state[$player]['next_attack_buff']);
+            }
+            if (isset($state[$opponent]['immune_next']) && $state[$opponent]['immune_next']) {
+                $damage = 0;
+                unset($state[$opponent]['immune_next']);
+            } elseif (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
                 $damage = ceil($damage / 2);
                 unset($state[$opponent]['half_next']);
             }
             $state[$opponent]['hp'] -= $damage;
             break;
         case "They want to hurt, I want to heal":
-            // Heal 10 HP
             $state[$player]['hp'] += 10;
             break;
+        case "Nothing will hurt us":
+            $state[$player]['immune_next'] = true;
+            break;
+        case "Armed to the teeth":
+            $state[$player]['damage_buff'] = isset($state[$player]['damage_buff']) ? $state[$player]['damage_buff'] * 1.1 : 1.1;
+            break;
+        case "When blood runs dry I’ll never heal":
+            $state[$player]['next_attack_buff'] = 1.25;
+            $state[$player]['block_hp'] = 2;
+            break;
+        case "Set you on fire":
+            $state[$opponent]['burning'] = 4;
+            break;
+        case "Can't you see?":
+            $state[$player]['reveal_enemy_hand'] = 1;
+            break;
+    }
+
+    // Apply burning effect at the start of each turn
+    foreach (['player1', 'player2'] as $p) {
+        if (isset($state[$p]['burning']) && $state[$p]['burning'] > 0) {
+            $state[$p]['hp'] -= 4;
+            $state[$p]['burning']--;
+            if ($state[$p]['burning'] <= 0) unset($state[$p]['burning']);
+        }
     }
 
     // Remove HP card block if set and decrement
@@ -269,10 +326,19 @@ if ($action === 'play') {
     // Remove played card
     array_splice($state[$player]['hand'], $cardIndex, 1);
 
+    // Lose if no cards left in hand
+    if (count($state[$player]['hand']) === 0) {
+        $state['over'] = true;
+        $state['winner'] = ($playerNum == 1 ? 2 : 1);
+        saveGame($state);
+        exit;
+    }
+
     // Draw a card if deck not empty
     if (count($state[$player]['deck']) > 0) {
         $state[$player]['hand'][] = array_shift($state[$player]['deck']);
     }
+    // If deck is empty, do nothing (no draw)
 
     // Give 5 mana for playing a card
     $state[$player]['mana'] += 5;
@@ -285,6 +351,8 @@ if ($action === 'play') {
     if ($state[$opponent]['hp'] <= 0) {
         $state['over'] = true;
         $state['winner'] = $playerNum;
+        saveGame($state);
+        exit;
     }
 
     // Turn logic
@@ -310,8 +378,30 @@ if ($action === 'play') {
         $state['reveal_hands']--;
         if ($state['reveal_hands'] <= 0) unset($state['reveal_hands']);
     }
+    // Decrement reveal_enemy_hand
+    if ($turnChanged && isset($state[$player]['reveal_enemy_hand'])) {
+        $state[$player]['reveal_enemy_hand']--;
+        if ($state[$player]['reveal_enemy_hand'] <= 0) unset($state[$player]['reveal_enemy_hand']);
+    }
 
     saveGame($state);
     exit;
+}
+
+function calculateDamage($base, &$state, $player, $opponent) {
+    $damage = $base;
+    if (isset($state[$player]['damage_buff'])) $damage *= $state[$player]['damage_buff'];
+    if (isset($state[$player]['next_attack_buff'])) {
+        $damage *= $state[$player]['next_attack_buff'];
+        unset($state[$player]['next_attack_buff']);
+    }
+    if (isset($state[$opponent]['immune_next']) && $state[$opponent]['immune_next']) {
+        $damage = 0;
+        unset($state[$opponent]['immune_next']);
+    } elseif (isset($state[$opponent]['half_next']) && $state[$opponent]['half_next']) {
+        $damage = ceil($damage / 2);
+        unset($state[$opponent]['half_next']);
+    }
+    return $damage;
 }
 ?>

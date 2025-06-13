@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadAudioPlayer(playerDiv) {
         const album = encodeURIComponent(playerDiv.dataset.album);
         const song = encodeURIComponent(playerDiv.dataset.song);
-        const discog = encodeURIComponent(playerDiv.dataset.discog);
-        const mp3_url = `https://gauge-flying-photos-rebecca.trycloudflare.com/discogs/${discog}/${album}/${song}.mp3`;
+        const era = encodeURIComponent(playerDiv.dataset.era);
+        const mp3_url = `https://gauge-flying-photos-rebecca.trycloudflare.com/discogs/${era}/${album}/${song}.mp3`;
 
         const audio = document.createElement('audio');
         audio.controls = true;
