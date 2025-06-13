@@ -48,11 +48,13 @@ $db->exec("CREATE TABLE IF NOT EXISTS dictionary (
 $db->exec("CREATE TABLE IF NOT EXISTS cards (
     card_ID INTEGER PRIMARY KEY,
     name TEXT,
+    song TEXT,
     description TEXT,
     type TEXT,
     rarity TEXT,
     mana_cost INTEGER,
-    image TEXT
+    image TEXT,
+    dealing TEXT
 )");
 
 $db->close();

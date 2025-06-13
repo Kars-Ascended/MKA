@@ -98,16 +98,18 @@ $cardsFile = __DIR__ . '/../data/cards.csv';
 if (($handle = fopen($cardsFile, "r")) !== FALSE) {
     $header = fgetcsv($handle);
     $stmt = $db->prepare('INSERT OR REPLACE INTO cards 
-        (card_ID, name, description, type, rarity, mana_cost, image)
-        VALUES (?, ?, ?, ?, ?, ?, ?)');
+        (card_ID, name, song, description, type, rarity, mana_cost, image, dealing)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
     while (($data = fgetcsv($handle)) !== FALSE) {
         $stmt->bindValue(1, $data[0]); // card_ID
         $stmt->bindValue(2, $data[1]); // name
+        $stmt->bindValue(3, $data[2]); // song
         $stmt->bindValue(3, $data[2]); // description
         $stmt->bindValue(4, $data[3]); // type
         $stmt->bindValue(5, $data[4]); // rarity
         $stmt->bindValue(6, $data[5]); // mana_cost
         $stmt->bindValue(7, $data[6]); // image
+        $stmt->bindValue(8, $data[7]); // dealing
         $stmt->execute();
     }
     fclose($handle);
