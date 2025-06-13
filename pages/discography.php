@@ -22,9 +22,50 @@
                 
                 <div class="filter-group">
                     <h3>Content:</h3>
-                    <label><input type="checkbox" name="has_explicit" value="1" <?php echo isset($_GET['has_explicit']) ? 'checked' : ''; ?>> Contains Explicit Tracks</label>
-                    <label><input type="checkbox" name="has_features" value="1" <?php echo isset($_GET['has_features']) ? 'checked' : ''; ?>> Has Featured Artists</label>
-                    <label><input type="checkbox" name="has_breakcore" value="1" <?php echo isset($_GET['has_breakcore']) ? 'checked' : ''; ?>> Contains Breakcore</label>
+                    <div style="display: flex; gap: 1em;">
+                    <label>
+                        <div class="custom-select">
+                            Contains Explicit Tracks:
+                            <select name="has_explicit">
+                                <option value="">-- Any --</option>
+                                <option value="yes" <?php if (($_GET['has_explicit'] ?? '') === 'yes') echo 'selected'; ?>>Yes</option>
+                                <option value="no" <?php if (($_GET['has_explicit'] ?? '') === 'no') echo 'selected'; ?>>No</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label>
+                        <div class="custom-select">
+                            Has Featured Artists:
+                            <select name="has_features">
+                                <option value="">-- Any --</option>
+                                <option value="yes" <?php if (($_GET['has_features'] ?? '') === 'yes') echo 'selected'; ?>>Yes</option>
+                                <option value="no" <?php if (($_GET['has_features'] ?? '') === 'no') echo 'selected'; ?>>No</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label>
+                        <div class="custom-select">
+                            Contains Breakcore:
+                            <select name="has_breakcore">
+                                <option value="">-- Any --</option>
+                                <option value="yes" <?php if (($_GET['has_breakcore'] ?? '') === 'yes') echo 'selected'; ?>>Yes</option>
+                                <option value="no" <?php if (($_GET['has_breakcore'] ?? '') === 'no') echo 'selected'; ?>>No</option>
+                            </select>
+                        </div>
+                    </label>
+                    </div>
+                    <label>
+                        <!--
+                        <div class="custom-select">
+                            Hide Non-Main Releases:
+                            <select name="hide_non_main">
+                                <option value="">-- Any --</option>
+                                <option value="yes" <?php if (($_GET['hide_non_main'] ?? '') === 'yes') echo 'selected'; ?>>Yes</option>
+                                <option value="no" <?php if (($_GET['hide_non_main'] ?? '') === 'no') echo 'selected'; ?>>No</option>
+                            </select>
+                        </div>
+                        -->
+                    </label>
                 </div>
             </div>
             <button type="submit">Apply Filters</button>
@@ -58,18 +99,26 @@
                 }, $_GET['type']);
                 $conditions[] = "r.type IN (" . implode(",", $types) . ")";
             }
-            
-            if (isset($_GET['has_explicit'])) {
-                $conditions[] = "MAX(s.explicit) = 1";
+
+            if (!empty($_GET['has_explicit']) && $_GET['has_explicit'] !== '') {
+                $explicitValue = ($_GET['has_explicit'] === 'yes') ? 1 : 0;
+                $conditions[] = "MAX(s.explicit) = " . $explicitValue;
             }
-            
-            if (isset($_GET['has_features'])) {
+
+            if (!empty($_GET['has_features']) && $_GET['has_features'] !== '') {
+                $featuresValue = ($_GET['has_features'] === 'yes') ? 1 : 0;
                 $conditions[] = "MAX(CASE WHEN s.featured_artists IS NOT NULL AND s.featured_artists != '' 
-                                AND s.featured_artists != 'FALSE' THEN 1 ELSE 0 END) = 1";
+                                AND s.featured_artists != 'FALSE' THEN 1 ELSE 0 END) = " . $featuresValue;
             }
-            
-            if (isset($_GET['has_breakcore'])) {
-                $conditions[] = "MAX(s.volume) = 1";
+
+            if (!empty($_GET['has_breakcore']) && $_GET['has_breakcore'] !== '') {
+                $breakcoreValue = ($_GET['has_breakcore'] === 'yes') ? 1 : 0;
+                $conditions[] = "MAX(s.volume) = " . $breakcoreValue;
+            }
+
+            if (!empty($_GET['hide_non_main']) && $_GET['hide_non_main'] !== '') {
+                $nonMainValue = ($_GET['hide_non_main'] === 'yes') ? 1 : 0;
+                $conditions[] = "MAX(CASE WHEN s.non_main_release = 1 THEN 1 ELSE 0 END) = " . $nonMainValue;
             }
 
             if (!empty($conditions)) {

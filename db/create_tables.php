@@ -44,6 +44,17 @@ $db->exec("CREATE TABLE IF NOT EXISTS dictionary (
     description TEXT
 )");
 
+// Create cards table
+$db->exec("CREATE TABLE IF NOT EXISTS cards (
+    card_ID INTEGER PRIMARY KEY,
+    name TEXT,
+    description TEXT,
+    type TEXT,
+    rarity TEXT,
+    mana_cost INTEGER,
+    image TEXT
+)");
+
 $db->close();
 echo "Tables created successfully!";
 ?>
