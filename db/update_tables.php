@@ -8,8 +8,8 @@ if (($handle = fopen($songsFile, "r")) !== FALSE) {
     
     $stmt = $db->prepare('INSERT OR REPLACE INTO songs 
         (song_ID, TRACK_TITLE, DURATION, Lyrics, spotify_link, youtube_link, 
-        explicit, volume, featured_artists, discog, release_date)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        explicit, volume, featured_artists, era, sub_era, release_date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
     
     while (($data = fgetcsv($handle)) !== FALSE) {
         $explicit = strtolower(trim($data[6])) === 'true' ? 1 : 0;
@@ -24,8 +24,9 @@ if (($handle = fopen($songsFile, "r")) !== FALSE) {
         $stmt->bindValue(7, $explicit); // explicit
         $stmt->bindValue(8, $volume);   // volume
         $stmt->bindValue(9, $data[8]);  // featured_artists
-        $stmt->bindValue(10, $data[9]); // discog
-        $stmt->bindValue(11, $data[10]); // release_date
+        $stmt->bindValue(10, $data[9]); // era
+        $stmt->bindValue(11, $data[10]); // sub_era
+        $stmt->bindValue(12, $data[11]); // release_date
         
         $result = $stmt->execute();
     }
@@ -38,14 +39,16 @@ if (($handle = fopen($releasesFile, "r")) !== FALSE) {
     $header = fgetcsv($handle);
     
     $stmt = $db->prepare('INSERT OR REPLACE INTO releases 
-        (release_ID, title, type, release_date)
-        VALUES (?, ?, ?, ?)');
+        (release_ID, title, type, release_date, era, sub_era)
+        VALUES (?, ?, ?, ?, ?, ?)');
     
     while (($data = fgetcsv($handle)) !== FALSE) {
         $stmt->bindValue(1, $data[0]); // release_ID
         $stmt->bindValue(2, $data[1]); // title
         $stmt->bindValue(3, $data[2]); // type
         $stmt->bindValue(4, $data[3]); // release_date
+        $stmt->bindValue(5, $data[4]); // era
+        $stmt->bindValue(6, $data[5]); // sub_era
         
         $result = $stmt->execute();
     }

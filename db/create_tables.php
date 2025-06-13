@@ -12,7 +12,8 @@ $db->exec("CREATE TABLE IF NOT EXISTS songs (
     explicit BOOLEAN,
     volume BOOLEAN,
     featured_artists TEXT,
-    discog TEXT,
+    era TEXT,
+    sub_era TEXT,
     release_date TEXT
 )");
 
@@ -21,7 +22,9 @@ $db->exec("CREATE TABLE IF NOT EXISTS releases (
     release_ID TEXT PRIMARY KEY,
     title TEXT,
     type TEXT,
-    release_date TEXT
+    release_date TEXT,
+    era TEXT,
+    sub_era TEXT
 )");
 
 // Create connections table

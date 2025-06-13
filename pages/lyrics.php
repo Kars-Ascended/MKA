@@ -32,55 +32,69 @@
             </label>
         </div>
         <br>
-        <div>
-        <label>
-            Explicit:
-            <select name="explicit">
-                <option value="">-- Any --</option>
-                <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
-            </select>
-        </label>
+        <div style="display: flex; gap: 1em;">
+            <label>
+                <div class="custom-select">
+                    Explicit:
+                    <select name="explicit">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['explicit'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['explicit'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
 
-        <label>
-            Discog type:
-            <select name="discog">
-                <option value="">-- Any --</option>
-                <option value="main" <?php if (($_GET['discog'] ?? '') === 'main') echo 'selected'; ?>>Main</option>
-                <option value="beatMARIO" <?php if (($_GET['discog'] ?? '') === 'beatMARIO') echo 'selected'; ?>>beatMARIO</option>
-                <option value="Remix" <?php if (($_GET['discog'] ?? '') === 'Remix') echo 'selected'; ?>>Remix</option>
-                <option value="Single" <?php if (($_GET['discog'] ?? '') === 'Single') echo 'selected'; ?>>Single</option>
-                <option value="Cover" <?php if (($_GET['discog'] ?? '') === 'Cover') echo 'selected'; ?>>Cover</option>
-            </select>
-        </label>
+            <label>
+                <div class="custom-select">
+                    Discog type:
+                    <select name="discog">
+                        <option value="">-- Any --</option>
+                        <option value="main" <?php if (($_GET['discog'] ?? '') === 'main') echo 'selected'; ?>>Main</option>
+                        <option value="pre-2010" <?php if (($_GET['discog'] ?? '') === 'pre-2010') echo 'selected'; ?>>Pre-2010</option>
+                        <option value="other" <?php if (($_GET['discog'] ?? '') === 'other') echo 'selected'; ?>>Other</option>
+                    </select>
+                </div>
+            </label>
 
-        <label>
-            Breakcore:
-            <select name="volume">
-                <option value="">-- Any --</option>
-                <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
-                <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
-            </select>
-        </label>
+            <label>
+                <div class="custom-select">
+                    Breakcore:
+                    <select name="volume">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['volume'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['volume'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
 
-        <label>
-            Hide Instrumentals:
+            <label> 
+                <div class="custom-select">
+                    Features:
+                    <select name="has_features">
+                        <option value="">-- Any --</option>
+                        <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
+                        <option value="0" <?php if (($_GET['has_features'] ?? '') === '0') echo 'selected'; ?>>No</option>
+                    </select>
+                </div>
+            </label>
+
+            <label>
+            Instrumentals:
             <select name="hide_instrumental">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['hide_instrumental'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
                 <option value="0" <?php if (($_GET['hide_instrumental'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
-        </label>
+            </label>
 
-        <label>
-            Hide non-main releases:
+            <label>
+            Non-main releases:
             <select name="hide_non_main">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['hide_non_main'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
                 <option value="0" <?php if (($_GET['hide_non_main'] ?? '') === '0') echo 'selected'; ?>>No</option>
             </select>
-        </label>
-
+            </label>
         <label>
             Wrap every:
             <select id="columnSelector">
@@ -92,7 +106,7 @@
             </select>
         </label>
 
-        </div>
+            </div>
         <br>
         <button type="submit">Filter</button>
     </form>

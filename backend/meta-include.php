@@ -41,6 +41,7 @@
     <div class="parent" style="margin-left: auto;"> 
         <a button href="/extras.php">Credits</a>
         <a button id="settings-button">Settings</a>
+        <a button href="/user.php">Account</a>
     </div>
 </div>
 

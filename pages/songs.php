@@ -11,7 +11,6 @@
     </main-element>
 
     <main-element>
-        <h3>-- Currently the databse is under a re-write, as such most information probably wont load. you can read more <a href="/pages/site/site-updates.php">here</a>. --</h3>
         <form method="get"> <!-- Search Filters -->
             <div class="parent">
             <label>
@@ -64,7 +63,7 @@
 
             <label> 
                 <div class="custom-select">
-                    Has Features:
+                    Features:
                     <select name="has_features">
                         <option value="">-- Any --</option>
                         <option value="1" <?php if (($_GET['has_features'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
@@ -74,7 +73,7 @@
             </label>
 
             <label>
-            Hide Instrumentals:
+            Instrumentals:
             <select name="hide_instrumental">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['hide_instrumental'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
@@ -83,7 +82,7 @@
             </label>
 
             <label>
-            Hide non-main releases:
+            Non-main releases:
             <select name="hide_non_main">
                 <option value="">-- Any --</option>
                 <option value="1" <?php if (($_GET['hide_non_main'] ?? '') === '1') echo 'selected'; ?>>Yes</option>
