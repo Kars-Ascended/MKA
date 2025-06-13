@@ -33,6 +33,7 @@
     <div class="parent">
         <a button href="/dailySong.php">Daily song</a>
         <a button href="/lyricle.php">Lyricle</a>
+        <a button href="/dictionary.php">Dictionary</a>
     </div>
     <div class="parent">
     <a button href="/site/index.php">Site Information</a>

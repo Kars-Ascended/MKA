@@ -77,6 +77,22 @@ if (($handle = fopen($connectionsFile, "r")) !== FALSE) {
     fclose($handle);
 }
 
+// Import dictionary
+$dictionaryFile = __DIR__ . '/../data/dictionary.csv';
+if (($handle = fopen($dictionaryFile, 'r')) !== FALSE) {
+    $stmt = $db->prepare('INSERT OR REPLACE INTO dictionary (term, description) VALUES (?, ?)');
+    
+    while (($data = fgetcsv($handle)) !== FALSE) {
+        if (count($data) >= 2) { // Ensure we have both term and description
+            $stmt->bindValue(1, $data[0]); // term
+            $stmt->bindValue(2, $data[1]); // description
+            
+            $result = $stmt->execute();
+        }
+    }
+    fclose($handle);
+}
+
 $db->close();
 echo "Data import completed successfully!";
 ?>

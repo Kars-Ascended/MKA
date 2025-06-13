@@ -20,14 +20,14 @@ tr:nth-child(odd) {
 }
 
 /* Lyrics Table */
-.lyrics-grid {
+.lyrics-grid, .dictionary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-.lyrics-item {
+.lyrics-item, .dictionary-item {
     background-color: var(--secondary);
     border: 1px solid #ddd;
     padding: 15px;

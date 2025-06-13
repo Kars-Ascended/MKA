@@ -38,6 +38,12 @@ $db->exec("CREATE TABLE IF NOT EXISTS connections (
     PRIMARY KEY (song_ID, release_ID)
 )");
 
+// Create dictionary table
+$db->exec("CREATE TABLE IF NOT EXISTS dictionary (
+    term TEXT PRIMARY KEY,
+    description TEXT
+)");
+
 $db->close();
 echo "Tables created successfully!";
 ?>
