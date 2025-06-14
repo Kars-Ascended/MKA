@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../backend/meta-include.php'; ?>
+    <?php include '../../backend/meta-include.php'; ?>
     <link rel="stylesheet" href="/css/lyricle.css">
     <title>Lyricle</title>
 </head>

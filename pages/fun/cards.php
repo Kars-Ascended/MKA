@@ -18,12 +18,12 @@ function getCardPool() {
     $result = $db->query('SELECT * FROM cards');
     $cards = [];
     $rarityWeights = [
-        'COMMON' => 60,
-        'UNCOMMON' => 20,
-        'RARE' => 10,
-        'EPIC' => 5,
-        'LEGENDARY' => 3,
-        'MYTHICAL' => 1
+        'COMMON'    => 45,
+        'UNCOMMON'  => 25,
+        'RARE'      => 15,
+        'EPIC'      => 8,
+        'LEGENDARY' => 5,
+        'MYTHICAL'  => 2,
     ];
     /* testing rarity weights
     $rarityWeights = [
@@ -301,7 +301,7 @@ if ($action === 'play') {
             $state[$player]['block_hp'] = 2;
             break;
         case "Set you on fire":
-            $state[$opponent]['burning'] = 4;
+            $state[$opponent]['burning'] = 5; // Set burning effect for 5 turns
             break;
         case "Can't you see?":
             $state[$player]['reveal_enemy_hand'] = 1;
@@ -311,7 +311,7 @@ if ($action === 'play') {
     // Apply burning effect at the start of each turn
     foreach (['player1', 'player2'] as $p) {
         if (isset($state[$p]['burning']) && $state[$p]['burning'] > 0) {
-            $state[$p]['hp'] -= 4;
+            $state[$p]['hp'] -= 2; // 2 damage per turn
             $state[$p]['burning']--;
             if ($state[$p]['burning'] <= 0) unset($state[$p]['burning']);
         }
