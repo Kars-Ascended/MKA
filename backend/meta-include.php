@@ -23,35 +23,84 @@
 
 <!-- NAV -->
 <div class="nav">
-    <button id="mobile-menu-btn" style="display:none;">Navbar</button>
-    <div class="parent">
-        <a button href="/home">Home</a>
-        <a button href="/songs">Songs Database</a>
-        <a button href="/lyrics">Lyrics Database</a>
-        <a button href="/discography">Discography</a>
-        <a button href="" style="filter: brightness(0.6);">Mr.Kitty Content [Soon]</a>
+    <a button href="/home">
+        <span class="icon">🏠</span>
+        <span class="label">Home</span>
+    </a>
+    <a button href="/songs">
+        <span class="icon">🎵</span>
+        <span class="label">Songs Database</span>
+    </a>
+    <a button href="/lyrics">
+        <span class="icon">📝</span>
+        <span class="label">Lyrics Database</span>
+    </a>
+    <a button href="/discography">
+        <span class="icon">💿</span>
+        <span class="label">Discography</span>
+    </a>
+    <a button href="" style="filter: brightness(0.6);">
+        <span class="icon">⏳</span>
+        <span class="label">Mr.Kitty Content [Soon]</span>
+    </a>
+    <a button href="/fun/dailySong.php">
+        <span class="icon">🌞</span>
+        <span class="label">Daily Song</span>
+    </a>
+    <a button href="/fun/lyricle.php">
+        <span class="icon">🎤</span>
+        <span class="label">Lyricle</span>
+    </a>
+    <a button href="/fun/card-game.php">
+        <span class="icon">🃏</span>
+        <span class="label">Card Duel [Beta]</span>
+    </a>
+    <a button href="#" style="filter: brightness(0.6);">
+        <span class="icon">👤</span>
+        <span class="label">Account [Soon]</span>
+    </a>
+    <a button id="settings-button">
+        <span class="icon">⚙️</span>
+        <span class="label">Settings</span>
+    </a>
+    <a button href="/site/index.php">
+        <span class="icon">ℹ️</span>
+        <span class="label">Site Information</span>
+    </a>
+    <a button href="/site/site-updates.php">
+        <span class="icon">📰</span>
+        <span class="label">Updates</span>
+    </a>
+    <a button href="/site/extras.php">
+        <span class="icon">✨</span>
+        <span class="label">Extras</span>
+    </a>
+</div> <!-- End of .nav -->
 
+<!-- Mobile Top Navbar Button -->
+<div class="mobile-navbar-top">
+    <button id="open-mobile-navbar">☰ Navbar</button>
+</div>
+<!-- Mobile Fullscreen Navbar Overlay -->
+<div class="mobile-navbar-overlay" id="mobile-navbar-overlay">
+    <div class="mobile-navbar-content">
+        <button id="close-mobile-navbar" class="close-btn">✕</button>
+        <nav>
+            <a href="/home" class="mobile-nav-btn"><span class="icon">🏠</span> Home</a>
+            <a href="/songs" class="mobile-nav-btn"><span class="icon">🎵</span> Songs Database</a>
+            <a href="/lyrics" class="mobile-nav-btn"><span class="icon">📝</span> Lyrics Database</a>
+            <a href="/discography" class="mobile-nav-btn"><span class="icon">💿</span> Discography</a>
+            <a href="" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">⏳</span> Mr.Kitty Content [Soon]</a>
+            <a href="/fun/dailySong.php" class="mobile-nav-btn"><span class="icon">🌞</span> Daily Song</a>
+            <a href="/fun/lyricle.php" class="mobile-nav-btn"><span class="icon">🎤</span> Lyricle</a>
+            <a href="/fun/card-game.php" class="mobile-nav-btn"><span class="icon">🃏</span> Card Duel [Beta]</a>
+            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">👤</span> Account [Soon]</a>
+            <a href="#" id="mobile-settings" class="mobile-nav-btn"><span class="icon">⚙️</span> Settings</a>
+            <a href="/site/index.php" class="mobile-nav-btn"><span class="icon">ℹ️</span> Site Information</a>
+            <a href="/site/site-updates.php" class="mobile-nav-btn"><span class="icon">📰</span> Updates</a>
+            <a href="/site/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
+        </nav>
     </div>
-        <div class="parent dropdown-parent">
-            <button class="dropdown-toggle" type="button">Fun ▼</button>
-            <div class="dropdown-content">
-                <a button href="/fun/dailySong.php">Daily song</a>
-                <a button href="/fun/lyricle.php">Lyricle</a>
-                <!--<a button href="/dictionary.php">Dictionary [Beta]</a>-->
-                <a button href="/fun/card-game.php">Card Duel [Beta]</a>
-            </div>
-        </div>
-
-        <div class="parent dropdown-parent">
-            <button class="dropdown-toggle" type="button">Other Site Pages ▼</button>
-            <div class="dropdown-content">
-                <a button href="#" style="filter: brightness(0.6);">Account [Soon]</a>
-                <a button id="settings-button">Settings</a>
-                <a button href="/site/index.php">Site Information</a>
-                <a button href="/site/site-updates.php">Updates</a>
-                <a button href="/site/extras.php">Extras</a>
-            </div>
-        </div>
 </div>
 
 <div class="settings">
@@ -64,10 +113,8 @@
     <div class="theme-control">
         <label for="themeSelect">Theme: </label>
         <select id="themeSelect">
-            <option value="default">Kurple [Default]</option>
-            <option value="blue">The Blues</option>
-            <option value="mono">Mono</option>
-            <option value="light">Kurple Light [Beta]</option>
+            <option value="blue">The Blues [Default]</option>
+            <option value="lightblue">Light Blues</option>
         </select>
     </div>
     
@@ -116,5 +163,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+    // Mobile settings button toggles settings panel
+    document.addEventListener('DOMContentLoaded', function() {
+        var mobileSettings = document.getElementById('mobile-settings');
+        var settingsPanel = document.querySelector('.settings');
+        if (mobileSettings && settingsPanel) {
+            mobileSettings.addEventListener('click', function(e) {
+                e.preventDefault();
+                settingsPanel.classList.add('active');
+                settingsPanel.classList.remove('inactive');
+            });
+        }
+    });
+
+    // Mobile navbar overlay open/close
+    document.addEventListener('DOMContentLoaded', function() {
+        var openBtn = document.getElementById('open-mobile-navbar');
+        var closeBtn = document.getElementById('close-mobile-navbar');
+        var overlay = document.getElementById('mobile-navbar-overlay');
+        if (openBtn && overlay) {
+            openBtn.addEventListener('click', function() {
+                overlay.classList.add('active');
+            });
+        }
+        if (closeBtn && overlay) {
+            closeBtn.addEventListener('click', function() {
+                overlay.classList.remove('active');
+            });
+        }
+        // Optional: close overlay when clicking outside nav
+        overlay && overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) overlay.classList.remove('active');
+        });
+    });
 </script>
 

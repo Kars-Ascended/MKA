@@ -5,14 +5,12 @@
     --main-br-radius-x2: 14px;
     --box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
 
-    /* Colours */
-    --main: #202030;
-    --secondary: #39304A;
-    --accent: #783cb1;
-    --accent-secondary: #b338ec;
-    --white: #F2F4F3;
-
-
+    /* The Blues (Default) Theme Colors */
+    --main: #1A1A2E;
+    --secondary: #16213E;
+    --accent: #0F52BA;
+    --accent-secondary: #0066CC;
+    --white: #F0F6FF;
 }
 
 /* Global Reset */
@@ -27,9 +25,9 @@ table *, table *::before, table *::after {
 
 /* Base Elements */
 body {
+    margin-left: 4em;
     font-family: Arial;
-    padding-top: 0.5em;
-    margin-top: 4em !important;
+    padding-left: 0.5em !important;
     min-height: calc(100vh - 4.5em);
     background-color: var(--main);
 }
@@ -37,7 +35,8 @@ body {
 @media only screen and (max-width: 768px) {
     body {
         margin:0;
-        margin-top: 1em !important;
+        margin-top: 3.5em !important;
+        padding-left: 0em !important;
     }
 }
 

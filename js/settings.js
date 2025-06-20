@@ -79,27 +79,6 @@ function initSettingsPanel() {
 
 // Theme functionality
 const themes = {
-    default: {
-        main: '#202030',
-        secondary: '#39304A',
-        accent: '#783cb1',
-        accentSecondary: '#b338ec',
-        white: '#F2F4F3'
-    },
-    dark: {
-        main: '#161620',
-        secondary: '#251D30',
-        accent: '#5C2E88',
-        accentSecondary: '#8A2BB3',
-        white: '#E0E2E1'
-    },
-    light: {
-        main: '#F0F0F5',
-        secondary: '#E6E0F0',
-        accent: '#783cb1',
-        accentSecondary: '#b338ec',
-        white: '#202030'
-    },
     blue: {
         main: '#1A1A2E',
         secondary: '#16213E',
@@ -107,12 +86,12 @@ const themes = {
         accentSecondary: '#0066CC',
         white: '#F0F6FF'
     },
-    mono: {
-        main: '#1A1A1A',
-        secondary: '#2A2A2A',
-        accent: '#404040',
-        accentSecondary: '#505050',
-        white: '#FFFFFF'
+    lightblue: {
+        main: '#F0F6FF',           // Light background
+        secondary: '#D6E6FF',      // Lighter secondary
+        accent: '#0F52BA',         // Keep accent the same
+        accentSecondary: '#3399FF',// Lighter accent secondary
+        white: '#1A1A2E',           // Dark text for contrast
     }
 };
 
@@ -120,7 +99,7 @@ function initThemeControl() {
     const themeSelect = document.getElementById('themeSelect');
     
     // Load saved theme from cookie or default
-    const savedTheme = getCookie('siteTheme') || 'default';
+    const savedTheme = getCookie('siteTheme') || 'blue';
     themeSelect.value = savedTheme;
     applyTheme(savedTheme);
     
@@ -200,44 +179,4 @@ document.addEventListener('DOMContentLoaded', function() {
     initSettingsPanel();
     initThemeControl();
     initTableOptionsControl();
-
-    // Cursor select (if present)
-    const cursorSelect = document.getElementById('cursorSelect');
-    if (cursorSelect) {
-        const savedCursor = localStorage.getItem('cursor');
-        if (savedCursor) {
-            document.body.style.cursor = savedCursor;
-            cursorSelect.value = savedCursor;
-        }
-        cursorSelect.addEventListener('change', function() {
-            const selectedCursor = this.value;
-            if (selectedCursor === 'heart' || selectedCursor === 'star') {
-                document.body.style.cursor = `url('/assets/cursors/${selectedCursor}.cur'), auto`;
-            } else {
-                document.body.style.cursor = selectedCursor;
-            }
-            localStorage.setItem('cursor', selectedCursor);
-        });
-    }
-
-    // Mobile nav menu (support multiple navs)
-    document.querySelectorAll('.nav').forEach(nav => {
-        const menuBtn = nav.querySelector('#mobile-menu-btn');
-        const parentElements = nav.querySelectorAll('.parent');
-        let expanded = false;
-
-        if (menuBtn && nav) {
-            menuBtn.addEventListener('click', function() {
-                if (!expanded) {
-                    nav.style.height = '70vh';
-                    parentElements.forEach(el => el.style.display = 'block');
-                    expanded = true;
-                } else {
-                    nav.style.height = '';
-                    parentElements.forEach(el => el.style.display = '');
-                    expanded = false;
-                }
-            });
-        }
-    });
 });

@@ -3,33 +3,64 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 4em;
+    height: 100vh;
+    width: 4em;
     z-index: 1000;
     padding-inline: 0.5em;
     background-color: var(--secondary);
     border-bottom: 1px solid var(--accent);
     display: flex;
+    flex-direction: column; /* Make nav vertical */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    transition: width 0.25s;
+    overflow-x: hidden;
+    border-right: 1px solid var(--accent);
 }
 
-.nav [button], .nav .parent [button]{
+.nav:hover {
+    width: 25%; /* Expand width on hover */
+}
+
+.nav [button], .nav .parent [button] {
+    display: flex;
+    align-items: center;
+    width: 100%;
     line-height: 1em;
     text-decoration: none;
-    margin: 0.5em;
-    margin-top: 0.5em;
+    margin: 0.5em 0;
+    background: none;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: background 10s;
+    padding: 0.5em;
+    border-radius: 0.5em;
 }
 
-.nav .parent {
-    margin: 0;
-    padding: 0;
-    margin-inline: 0.5em;
-    display: flex;
-    gap: 0;
+.nav [button] .icon, .nav .parent [button] .icon {
+    margin-right: 0.5em;
+    font-size: 1.5em; /* Adjust icon size */
+    display: inline-block;
+}
 
-    background-color: var(--main);
-    border-radius: var(--main-br-radius);
+.nav [button] .label, .nav .parent [button] .label {
+    display: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+.nav:hover [button] .label, .nav:hover .parent [button] .label {
+    display: inline;
+    opacity: 1;
+    margin-left: 0.5em;
+}
+
+/* Optional: highlight button on hover */
+.nav [button]:hover, .nav .parent [button]:hover {
+    background-color: var(--accent);
 }
 
 .settings {
@@ -99,113 +130,119 @@
     }
 }
 
+/* Hide settings image when screen too small */
 @media only screen and (max-width: 1400px) {
     .settings img {
         display: none;
     }
 }
 
-/* Mobile styles */
-@media only screen and (max-width: 768px) {
-
-    .nav .parent {
-        height: 20%;
-        display: none;
-        line-height: 3em;
-    }
-
-    .settings {
-        width: 80vw;
-        height: 50vh;
-        left: -100%;
-        transform: translateX(-70%);
-        transform: translateY(-50%);
-        img {
-            display: none;
-        }
-    }
-
-    @keyframes slide-in {
-        0% {
-            left: -150%;
-        }
-        100% {
-            left: 10%;
-
-        }
-    }
-
-    @keyframes slide-out {
-        0% {
-            left: 10%;
-        }
-        100% {
-            left: 100%;
-        }
-    }
-
-    #mobile-menu-btn {
-        display: block !important;
-        width: 100%
-    }
-    .nav {
-        transition: height 0.2s;
-    }
-}
-
-/* Dropdown styles */
-.dropdown-parent {
-    position: relative;
-}
-
-.dropdown-parent #dropdown-toggle {
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    padding: 0.5em 1em;
-    margin: 0.5em;
-    line-height: 1em;
-    border-radius: var(--main-br-radius);
-    transition: background 0.2s;
-    text-align: left;
-    /* Match [button] styles */
-    text-decoration: none;
-    /* Optional: mimic hover effect */
-}
-.dropdown-parent #dropdown-toggle:hover,
-.dropdown-parent.open #dropdown-toggle {
-    background: var(--secondary);
-}
-
-.dropdown-content {
+/* Mobile Navbar Styles */
+.mobile-navbar {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    background-color: var(--main);
-    border: 1px solid var(--accent);
-    border-radius: var(--main-br-radius);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 2000;
-    flex-direction: column;
 }
 
-.dropdown-content a[button] {
-    display: block;
-    margin: 0;
-    padding: 0.5em 1em;
-    border-radius: 0;
-    white-space: nowrap;
-    border-radius: 0.5em;
-}
-
-.dropdown-content a[button]:hover {
-    background: var(--secondary);
-}
-
-.dropdown-parent.open .dropdown-content {
-    display: flex;
+@media (max-width: 800px) {
+    .nav {
+        display: none !important;
+    }
+    .mobile-navbar-top {
+        display: block;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        width: 100vw;
+        height: 48px;
+        background: var(--secondary, #16213E);
+        z-index: 3000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .mobile-navbar-top button {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        color: var(--white, #F0F6FF);
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+    .mobile-navbar-overlay {
+        display: none;
+        position: fixed;
+        z-index: 4000;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(20, 20, 40, 0.98);
+        transition: opacity 0.2s;
+    }
+    .mobile-navbar-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    .mobile-navbar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 64px;
+        height: 100%;
+    }
+    .mobile-navbar-content nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em; /* Reduced gap */
+    }
+    .mobile-navbar-content nav a {
+        color: var(--white, #F0F6FF);
+        font-size: 1.3em;
+        text-decoration: none;
+        padding: 0.7em 2em;
+        border-radius: 0.5em;
+        width: 80%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        transition: background 0.2s;
+    }
+    .mobile-navbar-content nav a.mobile-nav-btn {
+        background: var(--secondary, #16213E);
+        border: 1px solid var(--accent, #0F52BA);
+        color: var(--white, #F0F6FF);
+        font-size: 1.15em;
+        text-decoration: none;
+        padding: 0.7em 2em;
+        border-radius: 0.5em;
+        width: 80%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        margin-bottom: 0; /* Remove extra margin between buttons */
+        transition: background 0.2s, border 0.2s;
+    }
+    .mobile-navbar-content nav a.mobile-nav-btn:active,
+    .mobile-navbar-content nav a.mobile-nav-btn:hover {
+        background: var(--accent, #0F52BA);
+        border: 1px solid var(--white, #F0F6FF);
+    }
+    .mobile-navbar-content .close-btn {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        top: 12px;
+        right: 18px;
+        background: none;
+        border: none;
+        color: var(--white, #F0F6FF);
+        font-size: 2em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        line-height: 1;
+    }
 }

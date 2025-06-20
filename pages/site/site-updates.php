@@ -8,6 +8,17 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>20/06/25</h2>
+        <p>Nothing too important to note right now, proper css rewrite comes later, just cleanup for now</p>
+        <p>Changes:</p>
+        <ul>
+            <li>Cleanup / Fixes I probably forgot to mention</li>
+            <li>Reworked site css + themes</li>
+            <li>Made the mobile experience z times better</li>
+            <p>will make it z*2 times better soon</p>
+            <li></li>
+
+    <main-element>
         <h2>13/06/25</h2>
         <p>Sorry for the wait, been working on accounts and stuff, you'll see why soon lol</p>
         <p>Changes:</p>

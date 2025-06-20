@@ -41,5 +41,6 @@
         <h2>Roadmap</h2>
         <img src="../assets/roadmap.png" alt="Roadmap" style="width: 100%; height: auto;">
     </main-element>
+    <?php include '../../backend/meta/footer.php'; ?>
 </body>
 </html>

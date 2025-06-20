@@ -27,22 +27,22 @@ $track = $result->fetchArray(SQLITE3_ASSOC); ?>
     <main-element style="position: relative;">
 
         <!-- Background Image -->
-        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['release_type']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png');"></div>
+        <div class="background-image" style="background-image: url('/assets/covers/<?= htmlspecialchars($track['release_type'] ?? '') ?>/<?= htmlspecialchars($track['album_title'] ?? '') ?>.png');"></div>
 
         <!-- Front -->
         <div id="daily-song">
 
-            <img src="/assets/covers/<?= htmlspecialchars($track['release_type']) ?>/<?= htmlspecialchars($track['album_title']) ?>.png" 
+            <img src="/assets/covers/<?= htmlspecialchars($track['release_type'] ?? '') ?>/<?= htmlspecialchars($track['album_title'] ?? '') ?>.png" 
                  alt="Album Cover" id="album-cover">
 
             <div id="song-title">
-                <h1><?= htmlspecialchars($track['TRACK_TITLE']) ?> - <?= htmlspecialchars($track['album_title']) ?></h1>
+                <h1><?= htmlspecialchars($track['TRACK_TITLE'] ?? '') ?> - <?= htmlspecialchars($track['album_title'] ?? '') ?></h1>
 
                 <!-- Lazy-load audio player placeholder -->
                 <div class="audio-player"
-                     data-era="<?= htmlspecialchars($track['era']) ?>"
-                     data-album="<?= htmlspecialchars($track['album_title']) ?>"
-                     data-song="<?= htmlspecialchars($track['TRACK_TITLE']) ?>">
+                     data-era="<?= htmlspecialchars($track['era'] ?? '') ?>"
+                     data-album="<?= htmlspecialchars($track['album_title'] ?? '') ?>"
+                     data-song="<?= htmlspecialchars($track['TRACK_TITLE'] ?? '') ?>">
                     <div class="audio-placeholder">Loading audio...</div>
                 </div>
             </div>
