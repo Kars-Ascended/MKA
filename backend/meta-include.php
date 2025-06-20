@@ -117,7 +117,7 @@
             <option value="lightblue">Light Blues</option>
         </select>
     </div>
-    
+    ^ Light mode half broken right now, sorry!
     <h3>- Table Settings</h3>
     <div class="table-options">
         <label><input type="checkbox" id="tableAltRows" checked> Alternating Row Color</label>
@@ -138,6 +138,7 @@
         </label>
     </div>
 
+    <p>Mobile users please refresh the page to close the settings, sorry again!</p>
     <img src="/assets/settings.png" alt="Forrest">
 </div>
 

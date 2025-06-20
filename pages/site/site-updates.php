@@ -16,7 +16,9 @@
             <li>Reworked site css + themes</li>
             <li>Made the mobile experience z times better</li>
             <p>will make it z*2 times better soon</p>
-            <li></li>
+        </ul>
+        <p>will rework background image soon, not sure what to do with it right now</p>
+    </main-element>
 
     <main-element>
         <h2>13/06/25</h2>

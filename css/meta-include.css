@@ -63,6 +63,10 @@
     background-color: var(--accent);
 }
 
+.mobile-navbar-top, .mobile-navbar-overlay, .mobile-navbar-content {
+    display: none; /* Hide mobile navbar by default */
+}
+
 .settings {
     background-color: var(--secondary);
     position: fixed;
@@ -134,6 +138,29 @@
 @media only screen and (max-width: 1400px) {
     .settings img {
         display: none;
+    }
+
+    .settings {
+        width: 100vw;
+        height: 70vh;
+    }
+
+    @keyframes slide-in {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+
+    @keyframes slide-out {
+        0% {
+            left: 25%;
+        }
+        100% {
+            left: 100%;
+        }
     }
 }
 

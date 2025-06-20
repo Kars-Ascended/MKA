@@ -28,24 +28,22 @@
         <p>Being added, most are actually there but unable to load. ill fix it once ive finished all the other site features.</p>
 
         <h3>- What else do you plan to archive?</h3>
-        <p>Songs, lyrics, releases, and possibly more. Unfortunatly <a href="dictionary.php?term=Forrest">Forrest</a>'s wishes are that i dont archive his posts (i think) so i will not have that public for the meantime, sorry</p>
+        <p>Songs, lyrics, releases, and possibly more. Unfortunatly Forrest's wishes are that i dont archive his posts (i think) so i will not have that public for the meantime, sorry</p>
 
         <h3>- I found a problem / something incorrect on the site</h3>
         <p>Let me know in the discord or subreddit linked <a href="/extras.php">here</a>.</p>
 
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
-        <p>All content ever released to my knowledge should be here, if im missing something contact me again with the above message ^<br>If your trying to find content once posted on <a href="dictionary.php?term=Fiji">Fiji</a> I will not be hosting that content publically as it is not public content and was presumably gained illegaly</p>
+        <p>All content ever released to my knowledge should be here, if im missing something contact me again with the above message ^<br>If your trying to find content once posted on Fiji I will not be hosting that content publically as it is not public content and was presumably gained illegaly</p>
         
         <h3>- [x] element is rendering weird</h3>
         <p>I update the site css almost daily adding new things, refresh the cache [ctrl + f5] and it should work!</p>
     </main-element>
 
     <main-element>
-        <h2>Know Issues</h2>
-        <p>- Mobile formating is... eh</p>
-        <p>- Mobile lyrics wrap break above 2</p>
+        <h2>Known Issues: 2</h2>
+        <p>- Mobile lyrics wrap break above two</p>
         <p>- Some songs just... dont load?</p>
-        <p>- CSS looks weird at ratios not ~9:16 or ~16:9, so no squares like 4:3</p>
     </main-element>
     <?php include '../backend/meta/footer.php'; ?>
 </body>

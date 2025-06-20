@@ -29,7 +29,11 @@ body {
     font-family: Arial;
     padding-left: 0.5em !important;
     min-height: calc(100vh - 4.5em);
-    background-color: var(--main);
+    background-color: var(--accent);
+    background-image: url('../assets/body.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -120,6 +124,7 @@ main-element {
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
     box-shadow: var(--box-shadow);
+    background-color: rgba(22, 33, 62, 0.75);
 }
 
 @media only screen and (max-width: 768px) {
@@ -137,7 +142,7 @@ main-element {
 .welcome {
     width: 90vw !important;
     display: flex;
-    background-image: url('../assets/icon.png');
+    background-image: url('../assets/welcome.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
