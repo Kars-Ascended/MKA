@@ -30,5 +30,6 @@
         <span>- Sam - </span><span style="color:gray">Database Helper</span> <br>
     </main-element>
     </div>
+    <?php include '../../backend/meta/footer.php'; ?>
 </body>
 </html>

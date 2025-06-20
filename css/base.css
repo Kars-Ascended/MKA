@@ -137,6 +137,26 @@ main-element {
 .welcome {
     width: 90vw !important;
     display: flex;
+    background-image: url('../assets/icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Needed for overlay */
+}
+
+.welcome::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6); /* Adjust opacity as needed */
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.welcome > * {
+    position: relative;
+    z-index: 1;
 }
 
 [title] {

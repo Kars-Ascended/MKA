@@ -133,7 +133,6 @@
             </div>
         <?php endwhile; ?>
     </div>
-
 </body>
 </html>
 

@@ -47,10 +47,6 @@
         <p>- Some songs just... dont load?</p>
         <p>- CSS looks weird at ratios not ~9:16 or ~16:9, so no squares like 4:3</p>
     </main-element>
-
-    <main-element>
-        <h2>Connect</h2>
-        <p>Join us on the <a href="https://reddit.com/r/mrkittyfans" target="_blank">subreddit</a> and <a href="https://discord.gg/H8MWmdkGcZ" target="_blank">discord</a>.</p>
-    </main-element>
+    <?php include '../backend/meta/footer.php'; ?>
 </body>
 </html>

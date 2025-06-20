@@ -160,5 +160,6 @@
             item.style.backgroundImage = `url('${imagePath}')`;
         });
     </script>
+    <?php include '../backend/meta/footer.php'; ?>
 </body>
 </html>

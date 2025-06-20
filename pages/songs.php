@@ -166,6 +166,6 @@
 // Close the database connection
 $db->close();
 ?>
-
+    <?php include '../backend/meta/footer.php'; ?>
 </body>
 </html>
