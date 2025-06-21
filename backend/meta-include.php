@@ -12,14 +12,14 @@
 <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/meta-include.css">
-<link rel="stylesheet" href="/css/table.css">
+<link rel="stylesheet" href="/css/base.css?v=<?= filemtime('base.css') ?>">
+<link rel="stylesheet" href="/css/meta-include.css?v=<?= filemtime('meta-include.css') ?>">
+<link rel="stylesheet" href="/css/table.css?v=<?= filemtime('table.css') ?>">
 
 <!-- JS Scripts -->
-<script src="/js/column_hide.js" defer></script>
-<script src="/js/lazy_load.js" defer></script>
-<script src="/js/settings.js" defer></script>
+<script src="/js/column_hide.js?v=<?= filemtime(filename: 'column_hide.js') ?>" defer></script>
+<script src="/js/lazy_load.js?v=<?= filemtime(filename: 'lazy_load.js') ?>" defer></script>
+<script src="/js/settings.js?v=<?= filemtime(filename: 'settings.js') ?>" defer></script>
 
 <!-- NAV -->
 <div class="nav">
@@ -39,9 +39,9 @@
         <span class="icon">💿</span>
         <span class="label">Discography</span>
     </a>
-    <a button href="" style="filter: brightness(0.6);">
+    <a button href="/posts.php">
         <span class="icon">⏳</span>
-        <span class="label">Mr.Kitty Content [Soon]</span>
+        <span class="label">Mr.Kitty Content</span>
     </a>
     <a button href="/fun/dailySong.php">
         <span class="icon">🌞</span>
@@ -90,7 +90,7 @@
             <a href="/songs" class="mobile-nav-btn"><span class="icon">🎵</span> Songs Database</a>
             <a href="/lyrics" class="mobile-nav-btn"><span class="icon">📝</span> Lyrics Database</a>
             <a href="/discography" class="mobile-nav-btn"><span class="icon">💿</span> Discography</a>
-            <a href="" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">⏳</span> Mr.Kitty Content [Soon]</a>
+            <a href="/posts.php" class="mobile-nav-btn"><span class="icon">⏳</span> Mr.Kitty Posts</a>
             <a href="/fun/dailySong.php" class="mobile-nav-btn"><span class="icon">🌞</span> Daily Song</a>
             <a href="/fun/lyricle.php" class="mobile-nav-btn"><span class="icon">🎤</span> Lyricle</a>
             <a href="/fun/card-game.php" class="mobile-nav-btn"><span class="icon">🃏</span> Card Duel [Beta]</a>

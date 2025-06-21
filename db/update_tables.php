@@ -115,6 +115,20 @@ if (($handle = fopen($cardsFile, "r")) !== FALSE) {
     fclose($handle);
 }
 
+// Import posts
+$postsFile = __DIR__ . '/../data/posts.csv';
+if (file_exists($postsFile) && ($handle = fopen($postsFile, "r")) !== FALSE) {
+    $header = fgetcsv($handle);
+    $stmt = $db->prepare('INSERT OR REPLACE INTO posts (date, platform, optional_text) VALUES (?, ?, ?)');
+    while (($data = fgetcsv($handle)) !== FALSE) {
+        $stmt->bindValue(1, $data[0]); // date
+        $stmt->bindValue(2, $data[1]); // platform
+        $stmt->bindValue(3, $data[2]); // optional_text
+        $stmt->execute();
+    }
+    fclose($handle);
+}
+
 $db->close();
 echo "Data import completed successfully!";
 ?>

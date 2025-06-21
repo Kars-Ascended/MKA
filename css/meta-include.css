@@ -18,6 +18,10 @@
     border-right: 1px solid var(--accent);
 }
 
+.nav-button-parent {
+    background-color: red;
+}
+
 .nav:hover {
     width: 25%; /* Expand width on hover */
 }

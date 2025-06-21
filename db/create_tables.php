@@ -57,6 +57,14 @@ $db->exec("CREATE TABLE IF NOT EXISTS cards (
     dealing TEXT
 )");
 
+// Create posts table
+$db->exec("CREATE TABLE IF NOT EXISTS posts (
+    post_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    date TEXT NOT NULL,
+    platform TEXT NOT NULL,
+    optional_text TEXT
+)");
+
 $db->close();
 echo "Tables created successfully!";
 ?>
