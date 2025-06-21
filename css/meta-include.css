@@ -217,6 +217,10 @@
         justify-content: flex-start;
         padding-top: 64px;
         height: 100%;
+        overflow-y: auto;           /* Make content scrollable */
+        max-height: 100vh;          /* Prevent overflow beyond viewport */
+        box-sizing: border-box;     /* Ensure padding is included in height */
+        position: relative;         /* For close button positioning */
     }
     .mobile-navbar-content nav {
         width: 100%;
