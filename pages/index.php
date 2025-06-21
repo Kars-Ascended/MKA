@@ -35,9 +35,6 @@
 
         <h3>- I cant find [x] / [x] is listed incorrectly!</h3>
         <p>All content ever released to my knowledge should be here, if im missing something contact me again with the above message ^<br>If your trying to find content once posted on Fiji I will not be hosting that content publically as it is not public content and was presumably gained illegaly</p>
-        
-        <h3>- [x] element is rendering weird</h3>
-        <p>I update the site css almost daily adding new things, refresh the cache [ctrl + f5] and it should work!</p>
     </main-element>
 
     <main-element>
