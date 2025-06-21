@@ -1,3 +1,5 @@
+<?php $root = $_SERVER['DOCUMENT_ROOT']; ?>
+
 <!-- Site-wide html tags -->
 <meta charset="UTF-8">  <!-- Ensures correct text encoding -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Makes it mobile-friendly -->
@@ -12,9 +14,9 @@
 <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
 
 <!-- CSS Stylesheets -->
-<link rel="stylesheet" href="/css/base.css?v=<?= filemtime('base.css') ?>">
-<link rel="stylesheet" href="/css/meta-include.css?v=<?= filemtime('meta-include.css') ?>">
-<link rel="stylesheet" href="/css/table.css?v=<?= filemtime('table.css') ?>">
+<link rel="stylesheet" href="/css/base.css?v=<?= filemtime($root . '/css/base.css') ?>">
+<link rel="stylesheet" href="/css/meta-include.css?v=<?= filemtime($root . '/css/meta-include.css') ?>">
+<link rel="stylesheet" href="/css/table.css?v=<?= filemtime($root . '/css/table.css') ?>">
 
 <!-- JS Scripts -->
 <script src="/js/column_hide.js?v=<?= filemtime(filename: 'column_hide.js') ?>" defer></script>
@@ -39,7 +41,7 @@
         <span class="icon">💿</span>
         <span class="label">Discography</span>
     </a>
-    <a button href="/posts.php">
+    <a button href="#" style="filter: brightness(0.6);">
         <span class="icon">⏳</span>
         <span class="label">Mr.Kitty Content</span>
     </a>
@@ -51,7 +53,7 @@
         <span class="icon">🎤</span>
         <span class="label">Lyricle</span>
     </a>
-    <a button href="/fun/card-game.php">
+    <a button href="#" style="filter: brightness(0.6);">
         <span class="icon">🃏</span>
         <span class="label">Card Duel [Beta]</span>
     </a>
@@ -90,10 +92,10 @@
             <a href="/songs" class="mobile-nav-btn"><span class="icon">🎵</span> Songs Database</a>
             <a href="/lyrics" class="mobile-nav-btn"><span class="icon">📝</span> Lyrics Database</a>
             <a href="/discography" class="mobile-nav-btn"><span class="icon">💿</span> Discography</a>
-            <a href="/posts.php" class="mobile-nav-btn"><span class="icon">⏳</span> Mr.Kitty Posts</a>
+            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">⏳</span> Mr.Kitty Posts [Soon]</a>
             <a href="/fun/dailySong.php" class="mobile-nav-btn"><span class="icon">🌞</span> Daily Song</a>
             <a href="/fun/lyricle.php" class="mobile-nav-btn"><span class="icon">🎤</span> Lyricle</a>
-            <a href="/fun/card-game.php" class="mobile-nav-btn"><span class="icon">🃏</span> Card Duel [Beta]</a>
+            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);" ><span class="icon">🃏</span> Card Duel [Beta]</a>
             <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">👤</span> Account [Soon]</a>
             <a href="#" id="mobile-settings" class="mobile-nav-btn"><span class="icon">⚙️</span> Settings</a>
             <a href="/site/index.php" class="mobile-nav-btn"><span class="icon">ℹ️</span> Site Information</a>
