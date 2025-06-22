@@ -77,6 +77,10 @@
         <span class="icon">✨</span>
         <span class="label">Extras</span>
     </a>
+    <a button href="/underground/" style="filter: brightness(0.6);">
+        <span class="icon">🕳️</span>
+        <span class="label">Underground [Soon]</span>
+    </a>
 </div> <!-- End of .nav -->
 
 <!-- Mobile Top Navbar Button -->
@@ -101,6 +105,7 @@
             <a href="/site/index.php" class="mobile-nav-btn"><span class="icon">ℹ️</span> Site Information</a>
             <a href="/site/site-updates.php" class="mobile-nav-btn"><span class="icon">📰</span> Updates</a>
             <a href="/site/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
+            <a href="/underground/" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">🕳️</span> Underground [Soon]</a>
         </nav>
     </div>
 </div>
