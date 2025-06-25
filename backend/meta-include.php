@@ -41,10 +41,6 @@
         <span class="icon">💿</span>
         <span class="label">Discography</span>
     </a>
-    <a button href="#" style="filter: brightness(0.6);">
-        <span class="icon">⏳</span>
-        <span class="label">Mr.Kitty Content</span>
-    </a>
     <a button href="/fun/dailySong.php">
         <span class="icon">🌞</span>
         <span class="label">Daily Song</span>
@@ -52,14 +48,6 @@
     <a button href="/fun/lyricle.php">
         <span class="icon">🎤</span>
         <span class="label">Lyricle</span>
-    </a>
-    <a button href="#" style="filter: brightness(0.6);">
-        <span class="icon">🃏</span>
-        <span class="label">Card Duel [Beta]</span>
-    </a>
-    <a button href="#" style="filter: brightness(0.6);">
-        <span class="icon">👤</span>
-        <span class="label">Account [Soon]</span>
     </a>
     <a button id="settings-button">
         <span class="icon">⚙️</span>
@@ -77,10 +65,6 @@
         <span class="icon">✨</span>
         <span class="label">Extras</span>
     </a>
-    <a button href="/underground/" style="filter: brightness(0.6);">
-        <span class="icon">🕳️</span>
-        <span class="label">Underground [Soon]</span>
-    </a>
 </div> <!-- End of .nav -->
 
 <!-- Mobile Top Navbar Button -->
@@ -96,16 +80,12 @@
             <a href="/songs" class="mobile-nav-btn"><span class="icon">🎵</span> Songs Database</a>
             <a href="/lyrics" class="mobile-nav-btn"><span class="icon">📝</span> Lyrics Database</a>
             <a href="/discography" class="mobile-nav-btn"><span class="icon">💿</span> Discography</a>
-            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">⏳</span> Mr.Kitty Posts [Soon]</a>
             <a href="/fun/dailySong.php" class="mobile-nav-btn"><span class="icon">🌞</span> Daily Song</a>
             <a href="/fun/lyricle.php" class="mobile-nav-btn"><span class="icon">🎤</span> Lyricle</a>
-            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);" ><span class="icon">🃏</span> Card Duel [Beta]</a>
-            <a href="#" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">👤</span> Account [Soon]</a>
             <a href="#" id="mobile-settings" class="mobile-nav-btn"><span class="icon">⚙️</span> Settings</a>
             <a href="/site/index.php" class="mobile-nav-btn"><span class="icon">ℹ️</span> Site Information</a>
             <a href="/site/site-updates.php" class="mobile-nav-btn"><span class="icon">📰</span> Updates</a>
             <a href="/site/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
-            <a href="/underground/" class="mobile-nav-btn" style="filter: brightness(0.6);"><span class="icon">🕳️</span> Underground [Soon]</a>
         </nav>
     </div>
 </div>
