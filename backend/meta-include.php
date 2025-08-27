@@ -41,7 +41,7 @@
         <span class="icon">💿</span>
         <span class="label">Discography</span>
     </a>
-    <a button href="/fun/dailySong.php">
+    <a button href="/dailySong.php">
         <span class="icon">🌞</span>
         <span class="label">Daily Song</span>
     </a>
@@ -65,12 +65,13 @@
         <span class="icon">✨</span>
         <span class="label">Extras</span>
     </a>
-</div> --> <!-- End of .nav -->
+</div>  -->
+<!-- End of .nav -->
 
-<!-- Mobile Top Navbar Button
+<!-- Mobile Top Navbar Button -->
 <div class="mobile-navbar-top">
     <button id="open-mobile-navbar">☰ Navbar</button>
-</div> -->
+</div>
 <!-- Mobile Fullscreen Navbar Overlay
 <div class="mobile-navbar-overlay" id="mobile-navbar-overlay">
     <div class="mobile-navbar-content">
@@ -88,8 +89,8 @@
             <a href="/site/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
         </nav>
     </div>
-</div> -->
-
+</div> 
+ -->
 <div class="settings">
     <h1 title>Settings</h1 title>
     <h3>- Main</h3>

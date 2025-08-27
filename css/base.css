@@ -30,10 +30,20 @@ body {
     padding-left: 0.5em !important;
     min-height: calc(100vh - 4.5em);
     background-color: var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     background-image: url('../assets/body.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
+    filter: blur(12px);
 }
 
 @media only screen and (max-width: 768px) {
