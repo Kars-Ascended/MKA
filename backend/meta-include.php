@@ -23,7 +23,7 @@
 <script src="/js/lazy_load.js?v=<?= filemtime(filename: 'lazy_load.js') ?>" defer></script>
 <script src="/js/settings.js?v=<?= filemtime(filename: 'settings.js') ?>" defer></script>
 
-<!-- NAV
+<!-- NAV  -->
 <div class="nav">
     <a button href="/home">
         <span class="icon">🏠</span>
@@ -41,7 +41,7 @@
         <span class="icon">💿</span>
         <span class="label">Discography</span>
     </a>
-    <a button href="/dailySong.php">
+    <a button href="/fun/dailySong.php">
         <span class="icon">🌞</span>
         <span class="label">Daily Song</span>
     </a>
@@ -61,11 +61,11 @@
         <span class="icon">📰</span>
         <span class="label">Updates</span>
     </a>
-    <a button href="/site/extras.php">
+    <a button href="/extras.php">
         <span class="icon">✨</span>
         <span class="label">Extras</span>
     </a>
-</div>  -->
+</div>
 <!-- End of .nav -->
 
 <!-- Mobile Top Navbar Button -->
@@ -73,6 +73,7 @@
     <button id="open-mobile-navbar">☰ Navbar</button>
 </div>
 <!-- Mobile Fullscreen Navbar Overlay
+ -->
 <div class="mobile-navbar-overlay" id="mobile-navbar-overlay">
     <div class="mobile-navbar-content">
         <button id="close-mobile-navbar" class="close-btn">✕</button>
@@ -86,11 +87,10 @@
             <a href="#" id="mobile-settings" class="mobile-nav-btn"><span class="icon">⚙️</span> Settings</a>
             <a href="/site/index.php" class="mobile-nav-btn"><span class="icon">ℹ️</span> Site Information</a>
             <a href="/site/site-updates.php" class="mobile-nav-btn"><span class="icon">📰</span> Updates</a>
-            <a href="/site/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
+            <a href="/extras.php" class="mobile-nav-btn"><span class="icon">✨</span> Extras</a>
         </nav>
     </div>
 </div> 
- -->
 <div class="settings">
     <h1 title>Settings</h1 title>
     <h3>- Main</h3>
@@ -101,8 +101,8 @@
     <div class="theme-control">
         <label for="themeSelect">Theme: </label>
         <select id="themeSelect">
-            <option value="blue">The Blues [Default]</option>
-            <option value="lightblue">Light Blues</option>
+            <option value="cotton">Cotton Candy [Default]</option>
+            <option value="darkcandy">Dark Candy</option>
         </select>
     </div>
     ^ Light mode half broken right now, sorry!

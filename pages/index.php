@@ -15,7 +15,7 @@
 <body>
     <main-element class="welcome" style="height: 15em;">
             <div class="left">
-                <img src="../assets/icons/mk-logo.png" alt="Image">
+                <img src="../assets/icons/mk-logo.png" alt="Logo">
             </div>
             <div class="right" style="margin: auto; font-size: 1.5em;">
                 <h1 title>Hey, welcome to the <u>M</u>r. <u>K</u>itty <u>A</u>rchive [MKA]</h1>

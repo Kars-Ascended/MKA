@@ -79,19 +79,23 @@ function initSettingsPanel() {
 
 // Theme functionality
 const themes = {
-    blue: {
-        main: '#1A1A2E',
-        secondary: '#16213E',
-        accent: '#0F52BA',
-        accentSecondary: '#0066CC',
-        white: '#F0F6FF'
-    },
-    lightblue: {
-        main: '#F0F6FF',           // Light background
-        secondary: '#D6E6FF',      // Lighter secondary
-        accent: '#0F52BA',         // Keep accent the same
-        accentSecondary: '#3399FF',// Lighter accent secondary
-        white: '#1A1A2E',           // Dark text for contrast
+    cotton: {
+        main: '#e3e8ff',              // Light blue
+        secondary: '#587385ff',         // Soft purple
+        accent: '#c1b6fc',            // Medium blue
+        accentSecondary: '#9195ceff',   // Light purple
+        white: '#ffffffff',              // Pure white
+        mainElement: '#57455eb0',
+        /* NOT 'main-element' cause js dont like it */
+        },
+        darkcandy: {
+        main: '#1a1a2e',              // Dark blue
+        secondary: '#16213e',         // Very dark blue
+        accent: '#0f3460',            // Deep blue
+        accentSecondary: '#53354a',   // Dark purple
+        white: '#eaeaea',             // Off-white
+        mainElement: '#22223b',       // Very dark purple/blue
+        /* NOT 'main-element' cause js dont like it */
     }
 };
 
@@ -99,7 +103,7 @@ function initThemeControl() {
     const themeSelect = document.getElementById('themeSelect');
     
     // Load saved theme from cookie or default
-    const savedTheme = getCookie('siteTheme') || 'blue';
+    const savedTheme = getCookie('siteTheme') || 'cotton';
     themeSelect.value = savedTheme;
     applyTheme(savedTheme);
     
@@ -119,6 +123,7 @@ function applyTheme(themeName) {
     root.style.setProperty('--accent', theme.accent);
     root.style.setProperty('--accent-secondary', theme.accentSecondary);
     root.style.setProperty('--white', theme.white);
+    root.style.setProperty('--mainElement', theme.mainElement);
 }
 
 // Table options checkboxes (alternating rows, dark mode, borders)

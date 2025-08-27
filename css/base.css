@@ -5,12 +5,14 @@
     --main-br-radius-x2: 14px;
     --box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
 
-    /* The Blues (Default) Theme Colors */
-    --main: #1A1A2E;
-    --secondary: #16213E;
-    --accent: #0F52BA;
-    --accent-secondary: #0066CC;
-    --white: #F0F6FF;
+    /* Default Theme Colors */
+    --main: #e3e8ff;
+    --secondary: #587385ff;
+    --accent: #c1b6fc;
+    --accent-secondary: #9195ceff;
+    --white: #ffffffff;
+    --mainElement: #57455eb0;
+    /* NOT 'main-element' cause js dont like it */
 }
 
 /* Global Reset */
@@ -31,7 +33,6 @@ body {
     min-height: calc(100vh - 4.5em);
     background-color: var(--accent);
     position: relative;
-    overflow: hidden;
 }
 
 body::before {
@@ -43,7 +44,6 @@ body::before {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
-    filter: blur(12px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -58,15 +58,15 @@ body::before {
 input, select, .button, .main {
     border-radius: 0.5em;
     padding: 0.4em;
-    background-color: var(--secondary);
+    background-color: var(--mainElement);
     border: 1px solid var(--accent);
     cursor: pointer;
 }
 
 /* Buttons */
 [button], button {
-    background-color: var(--accent) !important;
-    border: none;
+    background-color: var(--mainElement) !important;
+    border: 10px solid var(--accent);
     padding: 0.5em;
     border-radius: var(--main-br-radius);
     cursor: pointer;
@@ -134,7 +134,7 @@ main-element {
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
     box-shadow: var(--box-shadow);
-    background-color: rgba(22, 33, 62, 0.75);
+    background-color: var(--mainElement); /* NOT 'main-element' cause js dont like it */
 }
 
 @media only screen and (max-width: 768px) {
@@ -152,7 +152,9 @@ main-element {
 .welcome {
     width: 90vw !important;
     display: flex;
-    background-image: url('../assets/welcome.png');
+    background-image: 
+        linear-gradient(rgba(175, 252, 255, 0.822), rgba(252, 158, 255, 0.5)),
+        url('../assets/welcome.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

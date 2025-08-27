@@ -23,7 +23,7 @@
 }
 
 .nav:hover {
-    width: 25%; /* Expand width on hover */
+    width: 20%; /* Expand width on hover */
 }
 
 .nav [button], .nav .parent [button] {
@@ -74,11 +74,11 @@
 .settings {
     background-color: var(--secondary);
     position: fixed;
-    left: -100%;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 50vh;
-    width: 50vw;
+    left:100%;
+    top: 25%;
+    transform: translateY(-25%);
+    height: 75vh;
+    width: 75vw;
     z-index: 10000;
     border: 1px solid var(--accent);
     border-radius: var(--main-br-radius);
@@ -122,7 +122,7 @@
 
 @keyframes slide-in {
     0% {
-        left: -100%;
+        left: 100%;
     }
     100% {
         left: 25%;
