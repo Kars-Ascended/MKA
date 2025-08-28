@@ -7,9 +7,9 @@
 
     /* Default Theme Colors */
     --main: #e3e8ff;
-    --secondary: #587385ff;
+    --secondary: rgb(108, 103, 131);
     --accent: #c1b6fc;
-    --accent-secondary: #9195ceff;
+    --accent-secondary: #c1b6fc;
     --white: #ffffffff;
     --mainElement: #57455eb0;
     /* NOT 'main-element' cause js dont like it */
@@ -19,7 +19,7 @@
 *, *::before, *::after {
     box-sizing: border-box !important;
     color: var(--white);
-}
+}   
 
 table *, table *::before, table *::after {
     color: inherit;
@@ -27,9 +27,8 @@ table *, table *::before, table *::after {
 
 /* Base Elements */
 body {
-    margin-left: 4em;
+    margin-top: 4em;
     font-family: Arial;
-    padding-left: 0.5em !important;
     min-height: calc(100vh - 4.5em);
     background-color: var(--accent);
     position: relative;

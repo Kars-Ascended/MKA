@@ -23,7 +23,61 @@
 <script src="/js/lazy_load.js?v=<?= filemtime(filename: 'lazy_load.js') ?>" defer></script>
 <script src="/js/settings.js?v=<?= filemtime(filename: 'settings.js') ?>" defer></script>
 
-<!-- NAV  -->
+<div class="topbar">
+    <div class="topbar-category">
+        <h3>Main Navigation</h3>
+        <a button href="/home">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </a>
+        <a button href="/songs">
+            <span class="icon">🎵</span>
+            <span class="label">Songs Database</span>
+        </a>
+        <a button href="/lyrics">
+            <span class="icon">📝</span>
+            <span class="label">Lyrics Database</span>
+        </a>
+        <a button href="/discography">
+            <span class="icon">💿</span>
+            <span class="label">Discography</span>
+        </a>
+    </div>
+
+    <div class="topbar-category">
+        <h3>Fun Features</h3>
+        <a button href="/fun/dailySong.php">
+            <span class="icon">🌞</span>
+            <span class="label">Daily Song</span>
+        </a>
+        <a button href="/fun/lyricle.php">
+            <span class="icon">🎤</span>
+            <span class="label">Lyricle</span>
+        </a>
+        <a button href="/extras.php">
+            <span class="icon">✨</span>
+            <span class="label">Extras</span>
+        </a>
+    </div>
+
+    <div class="topbar-category">
+        <h3>Site Info</h3>
+        <a button id="settings-button">
+            <span class="icon">⚙️</span>
+            <span class="label">Settings</span>
+        </a>
+        <a button href="/site/index.php">
+            <span class="icon">ℹ️</span>
+            <span class="label">Site Information</span>
+        </a>
+        <a button href="/site/site-updates.php">
+            <span class="icon">📰</span>
+            <span class="label">Updates</span>
+        </a>
+    </div>
+</div>
+
+<!-- OLD NAV 
 <div class="nav">
     <a button href="/home">
         <span class="icon">🏠</span>
@@ -65,7 +119,7 @@
         <span class="icon">✨</span>
         <span class="label">Extras</span>
     </a>
-</div>
+</div> -->
 <!-- End of .nav -->
 
 <!-- Mobile Top Navbar Button -->
@@ -106,7 +160,8 @@
         </select>
     </div>
     ^ Light mode half broken right now, sorry!
-    <h3>- Table Settings</h3>
+    <h3>- Table Settings Soon!</h3>
+<!-- 
     <div class="table-options">
         <label><input type="checkbox" id="tableAltRows" checked> Alternating Row Color</label>
         <label>Borders:
@@ -125,6 +180,7 @@
             </select>
         </label>
     </div>
+-->
 
     <p>Mobile users please refresh the page to close the settings, sorry again!</p>
     <img src="/assets/settings.png" alt="Forrest">

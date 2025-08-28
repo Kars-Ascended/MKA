@@ -7,63 +7,66 @@ table {
 th, td {
     padding: 10px;
     border: 1px solid gray;
+    border: 1px solid var(--accent);
     text-align: left;
     background-color: var(--almost-black);
 }
 
 tr:nth-child(even) {
     background-color: #383838;
+    background-color: var(--mainElement);
 }
-
 tr:nth-child(odd) {
     background-color: #242424;
+    background-color: var(--mainElement);
 }
 
-/* Lyrics Table */
-.lyrics-grid, .dictionary-grid {
+td img {
+    max-width: 3em;
+    padding: 0;
+    margin: 0;
+}
+
+table * {
+    text-decoration: none;
+}
+
+/* Hidden Columns */
+.hidden-column {
+    display: none;
+}
+
+/* Grid Layouts */
+.lyrics-grid,
+.dictionary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-.lyrics-item, .dictionary-item {
-    background-color: var(--secondary);
-    border: 1px solid #ddd;
+.lyrics-item,
+.dictionary-item {
+    background-color: var(--mainElement);
+    border: 1px solid var(--accent);
+    border-radius: var(--main-br-radius);
+    box-shadow: var(--box-shadow);
     padding: 15px;
-    border-radius: 5px;
-}
-
-.hidden-column {
-    display: none; /* Gives functionality to the checkboxes in songs.php */
 }
 
 /* Form Elements */
-
 .parent {
     display: flex;
-    gap: 1rem; /* optional spacing between items */
-  }
-  
-  .parent label {
+    gap: 1rem;
+}
+.parent label {
     display: flex;
     flex: 1;
     align-items: center;
-  }
-  
-  .parent input {
-    flex: 1;
-    margin-left: 0.5rem; /* space between text and input */
-  }
-
-td img {
-    max-width: 3em;
-    padding:0;
-    margin:0;
 }
-
-table * {
-    text-decoration: none;
+.parent input {
+    flex: 1;
+    margin-left: 0.5rem;
 }
 
 /* Mobile Styles */
@@ -71,87 +74,11 @@ table * {
     .parent {
         flex-direction: column;
     }
-
     .lyrics-grid {
-        padding:0;
+        padding: 0;
         gap: 0;
     }
-
     .lyrics-item {
-        margin:0;
+        margin: 0;
     }
-}
-
-/* Table theme: Dark (default) */
-.table-theme-dark:not(.table-alt-rows) tr,
-.table-theme-dark:not(.table-alt-rows) th,
-.table-theme-dark:not(.table-alt-rows) td {
-    background-color: #23232b !important;
-    color: #F2F4F3 !important;
-}
-.table-theme-dark.table-alt-rows tr:nth-child(even) {
-    background-color: #2d2d39 !important;
-    color: #F2F4F3 !important;
-}
-.table-theme-dark.table-alt-rows tr:nth-child(odd) {
-    background-color: #23232b !important;
-    color: #F2F4F3 !important;
-}
-
-/* Table theme: Light */
-.table-theme-light:not(.table-alt-rows) tr,
-.table-theme-light:not(.table-alt-rows) th,
-.table-theme-light:not(.table-alt-rows) td {
-    background-color: #F2F4F3 !important;
-    color: #000000 !important;
-}
-.table-theme-light.table-alt-rows tr:nth-child(even) {
-    background-color: #d3d6d5 !important;
-    color: #1d0303 !important;
-}
-.table-theme-light.table-alt-rows tr:nth-child(odd) {
-    background-color: #F2F4F3 !important;
-    color: #000000 !important;
-}
-
-/* Table theme: Kurple */
-.table-theme-kurple:not(.table-alt-rows) tr,
-.table-theme-kurple:not(.table-alt-rows) th,
-.table-theme-kurple:not(.table-alt-rows) td {
-    background-color: #39304A !important;
-    color: #F2F4F3 !important;
-}
-.table-theme-kurple.table-alt-rows tr:nth-child(even) {
-    background-color: #4d3c6b !important;
-    color: #F2F4F3 !important;
-}
-.table-theme-kurple.table-alt-rows tr:nth-child(odd) {
-    background-color: #39304A !important;
-    color: #F2F4F3 !important;
-}
-
-/* Border styles */
-.table-border-none th, .table-border-none td {
-    border: none !important;
-}
-.table-border-row th, .table-border-row td {
-    border-top: 1px solid #888 !important;
-    border-bottom: 1px solid #888 !important;
-    border-left: none !important;
-    border-right: none !important;
-}
-.table-border-column th, .table-border-column td {
-    border-left: 1px solid #888 !important;
-    border-right: 1px solid #888 !important;
-    border-top: none !important;
-    border-bottom: none !important;
-}
-.table-border-all th, .table-border-all td {
-    border: 1px solid #888 !important;
-}
-
-/* Always have a surrounding border */
-.table-has-outer-border {
-    border: 1px solid #888 !important;
-    overflow: hidden;
 }

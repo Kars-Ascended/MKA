@@ -8,6 +8,15 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
+        <h2>28/08/25</h2>
+        <p>Site reopened, fixed hopefully every bug, if not lmk <a href="https://discord.gg/x4GSKa5fB9" target="_blank">here</a></p>
+        <p>Changes:</p>
+        <ul>
+            <li>Complete CSS Revamp</li>
+        </ul>
+    </main-element>
+
+    <main-element>
         <h2>20/06/25</h2>
         <p>Nothing too important to note right now, proper css rewrite comes later, just cleanup for now</p>
         <p>Changes:</p>

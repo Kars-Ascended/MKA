@@ -113,7 +113,7 @@
     <table>
         <tr>
             <th>Album</th>
-            <th>Track #</th>
+            <th>#</th>
             <th>Title</th>
             <th>Song</th>
             <th>Duration</th>
