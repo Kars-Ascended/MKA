@@ -39,7 +39,7 @@ body::before {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image: url('../assets/body.jpg');
+    background-image: url('../assets/body6.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
@@ -153,7 +153,7 @@ main-element[notice] {
     display: flex;
     background-image: 
         linear-gradient(rgba(175, 252, 255, 0.822), rgba(252, 158, 255, 0.5)),
-        url('../assets/welcome.png');
+        url('../assets/welcome6.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
