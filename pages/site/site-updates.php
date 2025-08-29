@@ -8,11 +8,13 @@
     <main-element class="welcome"> <h1 title>Site Updates</h1> </main-element>
 
     <main-element>
-        <h2>28/08/25</h2>
-        <p>Site reopened, fixed hopefully every bug, if not lmk <a href="https://discord.gg/x4GSKa5fB9" target="_blank">here</a></p>
+        <h2>30/08/25</h2>
+        <p>Site reopened, i dont have much motivation to maintain and perfect this as not many people have shown a interest to the site, if you do have anything to say let me know <a href="https://discord.gg/x4GSKa5fB9" target="_blank">here</a></p>
+        <p>I will work on fixing bugs and adding more stuff, but it will be a slow process until interest is shown</p>
         <p>Changes:</p>
         <ul>
             <li>Complete CSS Revamp</li>
+            <li>Multiple bug fixes</li>
         </ul>
     </main-element>
 

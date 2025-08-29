@@ -65,7 +65,7 @@ input, select, .button, .main {
 /* Buttons */
 [button], button {
     background-color: var(--mainElement) !important;
-    border: 10px solid var(--accent);
+    border: 1px solid var(--accent);
     padding: 0.5em;
     border-radius: var(--main-br-radius);
     cursor: pointer;
@@ -136,16 +136,16 @@ main-element {
     background-color: var(--mainElement); /* NOT 'main-element' cause js dont like it */
 }
 
-@media only screen and (max-width: 768px) {
-    main-element.welcome {
-        width: 100vw !important;
-        border-inline: 0 !important;
-    }
-
-    main-element {
-        width: 95vw !important;
-    }
+main-element[notice] {
+    position: absolute;
+    bottom:0; left: 0;
+    width: 40%;
+    height: 25%;
+    background-color: var(--secondary);
+    margin:0;
+    z-index: 10000;
 }
+
 
 /* Welcome Section */
 .welcome {
@@ -175,19 +175,20 @@ main-element {
     z-index: 1;
 }
 
+@media only screen and (max-width: 768px) {
+    main-element.welcome {
+        width: 100vw !important;
+        border-inline: 0 !important;
+    }
+
+    main-element {
+        width: 95vw !important;
+    }
+}
+
 [title] {
     margin-inline: auto;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-main-element[notice] {
-    position: absolute;
-    bottom:0; left: 0;
-    width: 40%;
-    height: 25%;
-    background-color: var(--secondary);
-    margin:0;
-    z-index: 10000;
 }

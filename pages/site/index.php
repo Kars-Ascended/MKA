@@ -9,7 +9,7 @@
 
     <main-element>
         <?php
-        $host = 'https://gauge-flying-photos-rebecca.trycloudflare.com';
+        $host = 'https://neo-reserves-deployment-stage.trycloudflare.com';
         
         $ch = curl_init($host);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -38,8 +38,10 @@
     </main-element>
 
     <main-element>
-        <h2>Roadmap</h2>
+        <h2>Roadmap [adding soon]</h2>
+        <!-- 
         <img src="../assets/roadmap.png" alt="Roadmap" style="width: 100%; height: auto;">
+        -->
     </main-element>
     <?php include '../../backend/meta/footer.php'; ?>
 </body>

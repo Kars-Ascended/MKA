@@ -4,6 +4,14 @@
     <?php include '../backend/meta-include.php'; ?>
     <?php include '../backend/table_display.php'; ?>
     <title>Lyrics Database</title>
+    <style>
+        .lyrics-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(var(--columns, 2), 1fr);
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -97,14 +105,14 @@
             </label>
         <label>
             Wrap every:
-            <select id="columnSelector">
-                <option value="1">1 column</option>
-                <option value="2" selected>2 columns</option>
-                <option value="3">3 columns</option>
-                <option value="4">4 columns</option>
-                <option value="5">5 columns</option>
+            <select name="columns" id="columnSelector">
+                <option value="1" <?php if (($_GET['columns'] ?? '') === '1') echo 'selected'; ?>>1 column</option>
+                <option value="2" <?php if (($_GET['columns'] ?? '') === '2') echo 'selected'; ?>>2 columns</option>
+                <option value="3" <?php if (($_GET['columns'] ?? '') === '3') echo 'selected'; ?>>3 columns</option>
+                <option value="4" <?php if (($_GET['columns'] ?? '') === '4') echo 'selected'; ?>>4 columns</option>
+                <option value="5" <?php if (($_GET['columns'] ?? '') === '5') echo 'selected'; ?>>5 columns</option>
             </select>
-        </label>
+</label>
 
             </div>
         <br>
@@ -133,6 +141,17 @@
             </div>
         <?php endwhile; ?>
     </div>
+    <script>
+    // Set initial columns based on URL parameter or default to 2
+    const urlParams = new URLSearchParams(window.location.search);
+    const columns = urlParams.get('columns') || '2';
+    document.documentElement.style.setProperty('--columns', columns);
+    
+    // Update columns when selection changes
+    document.getElementById('columnSelector').addEventListener('change', function() {
+        document.documentElement.style.setProperty('--columns', this.value);
+    });
+</script>
 </body>
 </html>
 

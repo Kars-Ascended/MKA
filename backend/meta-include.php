@@ -23,6 +23,7 @@
 <script src="/js/lazy_load.js?v=<?= filemtime(filename: 'lazy_load.js') ?>" defer></script>
 <script src="/js/settings.js?v=<?= filemtime(filename: 'settings.js') ?>" defer></script>
 
+<!-- Desktop Navbar -->
 <div class="topbar">
     <div class="topbar-category">
         <h3>Main Navigation</h3>
@@ -54,9 +55,9 @@
             <span class="icon">🎤</span>
             <span class="label">Lyricle</span>
         </a>
-        <a button href="/extras.php">
-            <span class="icon">✨</span>
-            <span class="label">Extras</span>
+        <a button href="#" style="background-color: black !important;">
+            <span class="icon">🃏</span>
+            <span class="label">Card Game [Soon]</span>
         </a>
     </div>
 
@@ -74,60 +75,19 @@
             <span class="icon">📰</span>
             <span class="label">Updates</span>
         </a>
+        <a button href="/site/extras.php">
+            <span class="icon">✨</span>
+            <span class="label">Extras</span>
+        </a>
     </div>
 </div>
-
-<!-- OLD NAV 
-<div class="nav">
-    <a button href="/home">
-        <span class="icon">🏠</span>
-        <span class="label">Home</span>
-    </a>
-    <a button href="/songs">
-        <span class="icon">🎵</span>
-        <span class="label">Songs Database</span>
-    </a>
-    <a button href="/lyrics">
-        <span class="icon">📝</span>
-        <span class="label">Lyrics Database</span>
-    </a>
-    <a button href="/discography">
-        <span class="icon">💿</span>
-        <span class="label">Discography</span>
-    </a>
-    <a button href="/fun/dailySong.php">
-        <span class="icon">🌞</span>
-        <span class="label">Daily Song</span>
-    </a>
-    <a button href="/fun/lyricle.php">
-        <span class="icon">🎤</span>
-        <span class="label">Lyricle</span>
-    </a>
-    <a button id="settings-button">
-        <span class="icon">⚙️</span>
-        <span class="label">Settings</span>
-    </a>
-    <a button href="/site/index.php">
-        <span class="icon">ℹ️</span>
-        <span class="label">Site Information</span>
-    </a>
-    <a button href="/site/site-updates.php">
-        <span class="icon">📰</span>
-        <span class="label">Updates</span>
-    </a>
-    <a button href="/extras.php">
-        <span class="icon">✨</span>
-        <span class="label">Extras</span>
-    </a>
-</div> -->
-<!-- End of .nav -->
 
 <!-- Mobile Top Navbar Button -->
 <div class="mobile-navbar-top">
     <button id="open-mobile-navbar">☰ Navbar</button>
 </div>
-<!-- Mobile Fullscreen Navbar Overlay
- -->
+
+<!-- Mobile Navbar Overlay -->
 <div class="mobile-navbar-overlay" id="mobile-navbar-overlay">
     <div class="mobile-navbar-content">
         <button id="close-mobile-navbar" class="close-btn">✕</button>
@@ -145,6 +105,8 @@
         </nav>
     </div>
 </div> 
+
+<!-- Settings -->
 <div class="settings">
     <h1 title>Settings</h1 title>
     <h3>- Main</h3>
@@ -159,33 +121,13 @@
             <option value="darkcandy">Dark Candy</option>
         </select>
     </div>
-    ^ Light mode half broken right now, sorry!
+    ^ Themes broken rn, stuck in light mode 😭
     <h3>- Table Settings Soon!</h3>
-<!-- 
-    <div class="table-options">
-        <label><input type="checkbox" id="tableAltRows" checked> Alternating Row Color</label>
-        <label>Borders:
-            <select id="tableBorderStyle">
-                <option value="none">None</option>
-                <option value="row">Row</option>
-                <option value="column">Column</option>
-                <option value="all">All</option>
-            </select>
-        </label>
-        <label>Table Theme:
-            <select id="tableThemeSelect">
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-                <option value="kurple">Kurple</option>
-            </select>
-        </label>
-    </div>
--->
-
     <p>Mobile users please refresh the page to close the settings, sorry again!</p>
     <img src="/assets/settings.png" alt="Forrest">
 </div>
 
+<!-- Other Scripts -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownParents = document.querySelectorAll('.dropdown-parent');

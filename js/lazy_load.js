@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const album = encodeURIComponent(playerDiv.dataset.album);
         const song = encodeURIComponent(playerDiv.dataset.song);
         const era = encodeURIComponent(playerDiv.dataset.era);
-        const mp3_url = `https://spas-exclude-surface-carmen.trycloudflare.com/mka/discogs/${era}/${album}/${song}.mp3`;
+        const mp3_url = `https://neo-reserves-deployment-stage.trycloudflare.com/mka/discogs/${era}/${album}/${song}.mp3`;
 
         const audio = document.createElement('audio');
         audio.controls = true;

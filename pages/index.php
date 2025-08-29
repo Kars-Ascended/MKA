@@ -23,7 +23,7 @@
     </main-element>
 
     <main-element>
-        <h1>Site is currently under maintainance, will be up soon!</h1>
+        <h1>Site is back! please read on <a href="/site/site-updates.php">updates</a></h1>
     </main-element>
 
     <main-element>

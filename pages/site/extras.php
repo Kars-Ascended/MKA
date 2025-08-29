@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../backend/meta-include.php'; ?>
+    <?php include '../../backend/meta-include.php'; ?>
     <title>Extras</title>
 </head>
 <body>
@@ -32,6 +32,6 @@
     </main-element>
     </div>
  -->
-    <?php include '../backend/meta/footer.php'; ?>
+    <?php include '../../backend/meta/footer.php'; ?>
 </body>
 </html>
